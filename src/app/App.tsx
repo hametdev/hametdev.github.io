@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Code2, Bot, Smartphone, Zap, Mail, Phone, Linkedin, MapPin, Clock } from 'lucide-react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { AufixPrivacyPolicy } from '@/app/components/aufix-privacy-policy';
 
-export default function App() {
+function HomePage() {
   const services = [
     {
       icon: Code2,
@@ -202,5 +204,16 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/aufix-privacy-policy" element={<AufixPrivacyPolicy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
