@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Code2, Bot, Smartphone, Zap, Mail, Phone, Linkedin, MapPin, Clock } from 'lucide-react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import { AufixPrivacyPolicy } from '@/app/components/aufix-privacy-policy';
 
 function HomePage() {
@@ -209,11 +209,11 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/aufix-privacy-policy" element={<AufixPrivacyPolicy />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
