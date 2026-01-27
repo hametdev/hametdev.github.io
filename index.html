@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hamet Agency</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "cream": "#F9F8F4",
+                        "sand": "#EAE8E4",
+                        "charcoal": "#1C1C1C",
+                        "taupe": "#595552",
+                        "accent": "#D1CCC2",
+                        "clay": "#9E968B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'blob': 'blob 20s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                        'drift': 'drift 30s linear infinite alternate',
+                        'breathe': 'breathe 10s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9) rotate(5deg)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        drift: {
+                            '0%': { transform: 'rotate(0deg) translate(0, 0)' },
+                            '100%': { transform: 'rotate(5deg) translate(50px, 20px)' },
+                        },
+                        breathe: {
+                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                            '50%': { opacity: '0.4', transform: 'scale(1.05)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-display overflow-x-hidden antialiased selection:bg-taupe selection:text-white relative">
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 bg-cream/80 z-0"></div>
+        <div
+            class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-sand/70 rounded-full mix-blend-multiply filter blur-[120px] animate-blob opacity-80">
+        </div>
+        <div
+            class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000 opacity-60">
+        </div>
+        <div
+            class="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#E0DDD5]/60 rounded-full mix-blend-multiply filter blur-[80px] animate-drift animation-delay-4000 opacity-70">
+        </div>
+        <div
+            class="absolute bottom-[-20%] right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-taupe/10 rounded-full mix-blend-multiply filter blur-[120px] animate-breathe animation-delay-2000 opacity-50">
+        </div>
+        <div
+            class="absolute bottom-[20%] left-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-clay/20 rounded-full mix-blend-multiply filter blur-[90px] animate-float animation-delay-6000 opacity-40">
+        </div>
+        <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
+    </div>
+    <div class="relative z-10">
+        <div
+            class="fixed top-10 left-0 w-full z-50 flex justify-center px-12 md:px-32 pointer-events-none transition-all duration-300">
+            <div class="layout-container flex justify-center w-full max-w-[1280px]">
+                <div
+                    class="flex flex-1 w-full px-6 py-2 items-center justify-between glass-nav rounded-3xl pointer-events-auto">
+                    <div class="flex items-center gap-3 text-charcoal">
+                        <div
+                            class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 1L12.5 8.5L20 11L12.5 13.5L10 21L7.5 13.5L0 11L7.5 8.5L10 1Z" />
+                                <path d="M19.5 3L20.5 6L23.5 7L20.5 8L19.5 11L18.5 8L15.5 7L18.5 6L19.5 3Z"
+                                    opacity="0.9" />
+                            </svg>
+                        </div>
+                        <h2 class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</h2>
+                    </div>
+                    <div class="hidden md:flex flex-1 justify-center gap-2">
+                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
+                            href="#services">Services</a>
+                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
+                            href="#process">Process</a>
+                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
+                            href="#work">Work</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button
+                            class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold">
+                            <span class="truncate">Let's Talk</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative flex flex-col min-h-screen w-full pt-20">
+            <div class="relative flex flex-col items-center justify-center min-h-[90vh] w-full overflow-hidden">
+                <div
+                    class="relative z-10 px-4 md:px-10 flex flex-col items-center max-w-[1000px] text-center space-y-10 mt-10">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/40 border border-charcoal/5 text-xs font-semibold text-taupe backdrop-blur-sm animate-float shadow-sm">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-charcoal opacity-20"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-charcoal/70"></span>
+                        </span>
+                        Accepting new projects for Q4
+                    </div>
+                    <h1
+                        class="text-charcoal text-6xl md:text-8xl font-medium leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
+                        We Build the <br />
+                        <span class="italic font-light text-taupe relative h-[1.2em] w-full block overflow-visible">
+                            <span class="absolute top-0 left-1/2 whitespace-nowrap text-center"
+                                style="transform: translateX(-50%);"
+                                id="text-cycler">Future of Business</span>
+                        </span>
+                    </h1>
+                    <p class="text-taupe text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
+                        Premium web development, AI integration, and workflow automation. We craft digital experiences
+                        that feel natural, intuitive, and profoundly effective.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center pt-6">
+                        <button
+                            class="flex h-14 px-8 items-center justify-center rounded-full glass-button-dark text-base font-medium">
+                            View Our Work
+                        </button>
+                        <button
+                            class="flex h-14 px-8 items-center justify-center rounded-full glass-button text-base font-medium">
+                            Our Process
+                        </button>
+                    </div>
+                </div>
+                <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-charcoal/30">
+                    <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+                </div>
+            </div>
+            <div class="w-full border-y border-charcoal/5 bg-white/10 backdrop-blur-md z-20">
+                <div
+                    class="max-w-[1280px] mx-auto px-6 py-10 flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-60">
+                    <div
+                        class="text-lg font-bold tracking-widest text-taupe hover:text-charcoal transition-colors cursor-default">
+                        ACME</div>
+                    <div
+                        class="text-lg font-bold tracking-widest text-taupe hover:text-charcoal transition-colors cursor-default">
+                        LAYER</div>
+                    <div
+                        class="text-lg font-bold tracking-widest text-taupe hover:text-charcoal transition-colors cursor-default">
+                        SISPHER</div>
+                    <div
+                        class="text-lg font-bold tracking-widest text-taupe hover:text-charcoal transition-colors cursor-default">
+                        CIRCLES</div>
+                    <div
+                        class="text-lg font-bold tracking-widest text-taupe hover:text-charcoal transition-colors cursor-default">
+                        CATALYST</div>
+                </div>
+            </div>
+            <div class="relative py-28 px-4 md:px-10 flex justify-center bg-transparent" id="services">
+                <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-16 relative z-10">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-charcoal/10 pb-8">
+                        <div class="flex flex-col gap-4 max-w-[600px]">
+                            <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">Our Expertise</h2>
+                            <h3 class="text-charcoal text-4xl md:text-5xl font-medium leading-tight font-display">
+                                Services engineered for <span class="italic text-taupe/70">growth</span>
+                            </h3>
+                        </div>
+                        <button
+                            class="hidden md:flex items-center gap-2 text-charcoal font-bold hover:text-taupe transition-colors group">
+                            View all services
+                            <span
+                                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="glass-panel p-10 rounded-2xl flex flex-col gap-8 group hover:border-charcoal/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden">
+                            <div
+                                class="w-14 h-14 rounded-full bg-sand/80 flex items-center justify-center text-charcoal group-hover:scale-110 transition-transform duration-500 shadow-inner">
+                                <span class="material-symbols-outlined font-light"
+                                    style="font-size: 28px;">devices</span>
+                            </div>
+                            <div class="flex flex-col gap-3 relative z-10">
+                                <h4 class="text-charcoal text-2xl font-semibold font-display">Web &amp; Mobile Apps</h4>
+                                <p class="text-taupe text-base leading-relaxed">
+                                    Custom digital experiences built for scale using modern frameworks like React,
+                                    Next.js, and Flutter. We prioritize clean code and user-centric design.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="glass-panel p-10 rounded-2xl flex flex-col gap-8 group hover:border-charcoal/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden">
+                            <div
+                                class="w-14 h-14 rounded-full bg-sand/80 flex items-center justify-center text-charcoal group-hover:scale-110 transition-transform duration-500 shadow-inner">
+                                <span class="material-symbols-outlined font-light"
+                                    style="font-size: 28px;">smart_toy</span>
+                            </div>
+                            <div class="flex flex-col gap-3 relative z-10">
+                                <h4 class="text-charcoal text-2xl font-semibold font-display">AI Integrations</h4>
+                                <p class="text-taupe text-base leading-relaxed">
+                                    Leveraging LLMs and machine learning to power your data insights. From chatbots to
+                                    predictive models, we bring intelligence to your stack.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="glass-panel p-10 rounded-2xl flex flex-col gap-8 group hover:border-charcoal/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden">
+                            <div
+                                class="w-14 h-14 rounded-full bg-sand/80 flex items-center justify-center text-charcoal group-hover:scale-110 transition-transform duration-500 shadow-inner">
+                                <span class="material-symbols-outlined font-light"
+                                    style="font-size: 28px;">precision_manufacturing</span>
+                            </div>
+                            <div class="flex flex-col gap-3 relative z-10">
+                                <h4 class="text-charcoal text-2xl font-semibold font-display">Automation</h4>
+                                <p class="text-taupe text-base leading-relaxed">
+                                    Streamlined workflows to save time. We connect your favorite tools (Zapier, n8n,
+                                    custom scripts) to eliminate manual errors and boost efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative py-28 px-4 md:px-10 flex justify-center bg-white/20 backdrop-blur-sm" id="process">
+                <div class="layout-content-container flex flex-col max-w-[1100px] w-full gap-16">
+                    <div class="text-center max-w-2xl mx-auto space-y-4">
+                        <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">How We Work</h2>
+                        <h3 class="text-charcoal text-3xl md:text-4xl font-medium font-display">From concept to launch
+                            in three steps</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                        <div
+                            class="hidden md:block absolute top-12 left-[16%] right-[16%] h-[1px] bg-gradient-to-r from-transparent via-charcoal/20 to-transparent">
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-6 relative z-10">
+                            <div
+                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display italic text-charcoal backdrop-blur-md">
+                                01</div>
+                            <div class="space-y-2 px-4">
+                                <h4 class="text-xl font-bold text-charcoal font-display">Discovery</h4>
+                                <p class="text-taupe text-sm leading-relaxed">We deep dive into your business goals,
+                                    target audience, and technical requirements to build a solid roadmap.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-6 relative z-10">
+                            <div
+                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display italic text-charcoal backdrop-blur-md">
+                                02</div>
+                            <div class="space-y-2 px-4">
+                                <h4 class="text-xl font-bold text-charcoal font-display">Build &amp; Refine</h4>
+                                <p class="text-taupe text-sm leading-relaxed">Our team develops your solution in agile
+                                    sprints, keeping you in the loop with regular updates and feedback sessions.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-6 relative z-10">
+                            <div
+                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display italic text-charcoal backdrop-blur-md">
+                                03</div>
+                            <div class="space-y-2 px-4">
+                                <h4 class="text-xl font-bold text-charcoal font-display">Launch &amp; Scale</h4>
+                                <p class="text-taupe text-sm leading-relaxed">We handle the deployment and provide
+                                    ongoing support to ensure your product scales seamlessly with growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative py-28 px-4 md:px-10 flex justify-center bg-transparent" id="work">
+                <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-12">
+                    <div class="flex flex-col gap-3 text-center md:text-left">
+                        <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Selected Work</h2>
+                        <p class="text-taupe text-lg">See how we transform ideas into reality.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div
+                            class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMoateOIuKyIwgcFWueeWkrSNrQIyXTjNF-X-Oa93kH7GxBNUmMi2BfmgE_syUfL-LDrgnbgQ-OsAn-yqpBdNNldI44e61U4XgCX0wZ3EvihbqQrSTqbbFQb_TUS1k2fvnYEc8nLtkEABNIDkpjiM6LaFUy00e9laDmR99kVL-wgwTuAamFiXWD2mkN1cNa6Vq4k0xgdjDsgX6N8wKC0bndzeo8qXfhGRA5Q6XdALZsTxvYx8Ky_UwNjV8b5XqZQj6pS_Y0AeJAEzG');">
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <span
+                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">FinTech</span>
+                                <h3 class="text-white text-3xl font-bold mb-2 font-display">Nova Dashboard</h3>
+                                <p
+                                    class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
+                                    Full-stack development &amp; real-time data integration.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtPOqdm5kvDL2dH_KR7gVo-bLQNbTddSrT_nLsFMiNyY-31FrOQ-n_hi3NQb4AqCkeW9dSccPJTJI5OvabBMYs0gaCdicBzCwptazuFa2k23ea21zMnvIRvrl1T3l7N0FtcLLX3WDTzEJmpCusQKxCYUa3Unb_HNkt4hWwkz-Bxa15OzZmTx-DMjhE2DiA0jzSlRhXp0qn4dCqHUNFeT1aeVkUAW7qFnMMpTtkhaiobDJ9KMdiX6q5E9biE7K19vrUnxaBEdDqmqlT');">
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <span
+                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">AI
+                                    Solution</span>
+                                <h3 class="text-white text-3xl font-bold mb-2 font-display">Synthetix Core</h3>
+                                <p
+                                    class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
+                                    Machine learning model integration for enterprise.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-8">
+                        <button
+                            class="flex items-center gap-2 border-b border-charcoal/20 pb-1 text-charcoal text-sm font-semibold hover:border-charcoal transition-colors uppercase tracking-widest">
+                            View Entire Portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative py-32 px-4 flex justify-center bg-charcoal text-cream overflow-hidden z-20">
+                <div
+                    class="absolute top-0 right-0 w-[600px] h-[600px] bg-taupe/20 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-black/40 rounded-full blur-[80px] pointer-events-none -translate-x-1/3 translate-y-1/3">
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center max-w-3xl gap-10">
+                    <h2 class="text-cream text-5xl md:text-7xl font-medium tracking-tight leading-none font-display">
+                        Ready to scale?</h2>
+                    <p class="text-white/60 text-xl font-light max-w-xl">Let's discuss how we can engineer the perfect
+                        digital solution for your business.</p>
+                    <button
+                        class="flex min-w-[200px] items-center justify-center overflow-hidden rounded-full h-14 px-10 glass-button text-lg font-bold">
+                        Start a Project
+                    </button>
+                </div>
+            </div>
+            <footer class="bg-[#111111] py-12 border-t border-white/5 relative z-20">
+                <div class="layout-container flex justify-center w-full px-4 md:px-10">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1200px] text-taupe text-sm gap-6">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-taupe" style="font-size: 18px;">pentagon</span>
+                            <p>© 2024 Hamet Agency. All rights reserved.</p>
+                        </div>
+                        <div class="flex gap-8">
+                            <a class="hover:text-cream transition-colors" href="#">Privacy</a>
+                            <a class="hover:text-cream transition-colors" href="#">Terms</a>
+                            <a class="hover:text-cream transition-colors" href="#">Twitter</a>
+                            <a class="hover:text-cream transition-colors" href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="fixed bottom-8 right-8 z-50">
+                <button class="flex items-center justify-center w-14 h-14 glass-button-dark rounded-full">
+                    <span class="material-symbols-outlined">chat_bubble</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
