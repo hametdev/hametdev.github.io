@@ -1,4 +1,4 @@
-const phrases = ["Future of Business", "Next Digital Era", "Modern Experience"];
+const phrases = ["Next Digital Era", "Future of Business", "Growth Engine"];
 let phraseIndex = 0;
 const textElement = document.getElementById('text-cycler');
 
