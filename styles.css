@@ -122,6 +122,6 @@ body {
 }
 
 .bg-noise {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDOf8ybKIQsPOjAJ-5Qu8CP-XwPoyADS54B_iH49aMAAL_Hb8w2FaixZYvyGxE0hsIqB3FfwuOpD9OIOfLDv0Mb9SDZnJBzbDX5hY-tRZe2YubBBT9oV_fEYK5iVqlu5DVwDZOSNtBW_iQ77utpNIJKML1jSn1JvAhK2KluvJvJNHO5mSWync9SVJ_-W6FHhFoabQ_rC-Wy50PCOaO0dHI9ln8ZhIteBLOySFOaRCcSPpy53XqRCBhuWmMb9prqQYAxGlnCIlcPFfe9);
+    background-image: url('noise.png');
     pointer-events: none
 }

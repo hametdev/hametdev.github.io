@@ -4,7 +4,43 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Hamet Agency</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Hamet Agency - We build premium websites, mobile applications, and integrate AI & automation solutions. Digital experiences engineered for growth." />
+    <meta name="keywords" content="digital agency, web development, mobile apps, artificial intelligence, AI integration, process automation, software house" />
+    <meta name="author" content="Hamet Agency" />
+    <meta name="theme-color" content="#1C1C1C" />
+    <link rel="canonical" href="https://hamet.agency/en/" />
+    <link rel="alternate" hreflang="pl" href="https://hamet.agency/" />
+    <link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hamet.agency/en/" />
+    <meta property="og:title" content="Hamet Agency | Web Development, Mobile Apps, AI" />
+    <meta property="og:description" content="We craft digital experiences that feel natural, intuitive, and profoundly effective for your business growth." />
+    <meta property="og:image" content="https://hamet.agency/og_hamet.webp" />
+    <meta property="og:locale" content="en_US" />
+
+    <title>Hamet Agency | Web, Mobile apps, AI</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Hamet Agency",
+      "url": "https://hamet.agency/en/",
+      "logo": "https://hamet.agency/hero_bg.webp",
+      "image": "https://hamet.agency/hero_bg.webp",
+      "description": "Hamet Agency - Premium web development, mobile applications, AI integration, and workflow automation.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      },
+      "priceRange": "$$",
+      "telephone": "+48791474721",
+      "email": "smappcorp@gmail.com"
+    }
+    </script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -92,7 +128,7 @@
         <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
     </div>
     <div class="relative z-10">
-        <img src="../hero_bg.png" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-70" alt="Hero Background">
+        <img src="../hero_bg.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-70" alt="Hero Background">
         <!-- Smooth Gradient Overlay -->
         <div class="absolute top-0 left-0 w-full h-[110vh] -z-10" 
              style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
@@ -144,8 +180,8 @@
                     <h1
                         class="text-white text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
                         We Build <br />
-                        <span class="font-bold text-white relative h-[1.2em] w-full block overflow-visible">
-                            <span class="absolute top-0 left-1/2 whitespace-nowrap text-center"
+                        <span class="font-bold text-white relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
+                            <span class="absolute top-0 left-1/2 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
                                 style="transform: translateX(-50%);"
                                 id="text-cycler">Websites</span>
                         </span>
@@ -156,11 +192,11 @@
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 md:pt-0 relative z-30">
                         <a href="#valuation"
-                            class="flex h-14 px-8 items-center justify-center rounded-full glass-button-dark text-base font-medium">
+                            class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button-dark text-sm md:text-base font-medium">
                             Get Quote
                         </a>
                         <a href="#contact"
-                            class="flex h-14 px-8 items-center justify-center rounded-full glass-button text-base font-medium">
+                            class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button text-sm md:text-base font-medium">
                             Contact
                         </a>
                     </div>
@@ -191,6 +227,7 @@
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
                                 <img src="../web.webp" 
                                      alt="Websites & Apps" 
+                                     loading="lazy"
                                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
                             </div>
@@ -207,6 +244,11 @@
                                 <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
                                     Attractive landing pages, complex websites, and web applications adapted to any device and business needs.
                                 </p>
+                                <!-- Price -->
+                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
+                                    <span class="text-cream text-lg font-bold">from 799 zł</span>
+                                </div>
                             </div>
                         </div>
 
@@ -220,6 +262,7 @@
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
                                 <img src="../app.webp" 
                                      alt="Mobile Apps" 
+                                     loading="lazy"
                                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
                             </div>
@@ -236,6 +279,11 @@
                                 <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
                                     Cross-platform mobile solutions, one app - two platforms. Fast deployment, testing, and publishing on iOS and Android.
                                 </p>
+                                <!-- Price -->
+                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
+                                    <span class="text-cream text-lg font-bold">from 2999 zł</span>
+                                </div>
                             </div>
                         </div>
 
@@ -249,6 +297,7 @@
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
                                 <img src="../ai.webp" 
                                      alt="AI Tools" 
+                                     loading="lazy"
                                      class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
                             </div>
@@ -260,6 +309,11 @@
                                         <span class="material-symbols-outlined font-light" style="font-size: 20px;">smart_toy</span>
                                     </div>
                                     <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">AI Tools</h4>
+                                <!-- Price -->
+                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
+                                    <span class="text-cream text-lg font-bold">from 999 zł</span>
+                                </div>
                                 </div>
                                 <!-- Description -->
                                 <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
@@ -333,7 +387,7 @@
                         <div
                             class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../aufix.webp');">
+                                style="background-image: url('../aufix.webp');" role="img" aria-label="Aufix App">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -353,7 +407,7 @@
                         <div
                             class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../brinme.webp');">
+                                style="background-image: url('../brinme.webp');" role="img" aria-label="BrinMe App">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -373,7 +427,7 @@
                         <div
                             class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../druk.webp');">
+                                style="background-image: url('../druk.webp');" role="img" aria-label="Druk3DWaw Website">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -443,14 +497,14 @@
                         <div class="relative z-10 flex flex-col items-center text-center max-w-3xl gap-10">
                             <h2 class="text-cream text-4xl md:text-7xl font-medium tracking-tight leading-none font-display">
                                 Get in Touch</h2>
-                            <p class="text-white/60 text-xl font-light max-w-xl">Reach out to us directly to discuss your project.</p>
-                            <div class="flex flex-col md:flex-row gap-6 w-full justify-center">
-                                <a href="mailto:smappcorp@gmail.com" class="flex items-center justify-center gap-3 px-8 py-5 glass-button glass-button-active text-charcoal text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 min-w-[280px]">
-                                    <span class="material-symbols-outlined">mail</span>
+                            <p class="text-white/80 text-xl font-light max-w-xl">Reach out to us directly to discuss your project.</p>
+                            <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-center px-4">
+                                <a href="mailto:smappcorp@gmail.com" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                    <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
                                     smappcorp@gmail.com
                                 </a>
-                                <a href="https://wa.me/791474721" class="flex items-center justify-center gap-3 px-8 py-5 glass-button glass-button-active text-charcoal text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 min-w-[280px]">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-6 md:h-6 flex-shrink-0">
+                                <a href="https://wa.me/791474721" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0">
                                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                     </svg>
                                     WhatsApp
@@ -463,7 +517,7 @@
                     <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">
                         <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
                             <div
-                                class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-taupe text-sm gap-6">
+                                class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
                                 <div class="flex items-center gap-2">
                                     <p>© 2026 Hamet Agency. All rights reserved.</p>
                                 </div>
