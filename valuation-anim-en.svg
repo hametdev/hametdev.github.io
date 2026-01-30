@@ -1,0 +1,64 @@
+<svg width="345" height="230" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Input Field Representation -->
+    <g transform="translate(0, 140)">
+        <rect x="20" y="0" width="260" height="50" rx="25" fill="#FAFAFA" stroke="#333" stroke-width="1.5" />
+        <text x="40" y="30" font-family="Manrope, sans-serif" font-size="14" fill="#333" opacity="0.6">Send message...</text>
+        
+        <!-- Send Button (Paper Plane) -->
+        <g transform="translate(248, 25)">
+                <circle cx="0" cy="0" r="16" fill="#333" opacity="0.05" /> 
+                <path d="M-2 4 L8 0 L-2 -4 L0 0 Z" fill="#333" cursor="pointer" />
+        </g>
+    </g>
+    
+    <!-- Draggable File Animation -->
+    <g>
+            <!-- Wrapper for Translation -->
+        <g>
+            <animateTransform 
+                attributeName="transform"
+                type="translate"
+                values="150,50; 150,90; 220,165; 220,165; 220,165"
+                keyTimes="0; 0.3; 0.6; 0.8; 1"
+                dur="4s"
+                repeatCount="indefinite"
+                calcMode="spline"
+                keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0 0 1 1; 0 0 1 1"
+            />
+            
+            <!-- Wrapper for Scale -->
+            <g>
+                <animateTransform 
+                    attributeName="transform"
+                    type="scale"
+                    values="1; 1; 0.35; 0.35; 0.35"
+                    keyTimes="0; 0.3; 0.6; 0.8; 1"
+                    dur="4s"
+                    repeatCount="indefinite"
+                    calcMode="spline"
+                    keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0 0 1 1; 0 0 1 1"
+                />
+                
+                <!-- File Icon centered at 0,0 -->
+                <g opacity="1">
+                    <path d="M-25 -32 L25 -32 L25 32 L-25 32 Z" fill="#EAE8E4" stroke="#333" stroke-width="1.5" />
+                    <path d="M10 -32 L10 -17 L25 -17" fill="none" stroke="#333" stroke-width="1.5" />
+                    <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="-15" y1="0" x2="15" y2="0" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="-15" y1="10" x2="0" y2="10" stroke="#333" stroke-width="1.5" stroke-linecap="round" />
+                    
+                    <!-- Fade out at the end -->
+                    <animate 
+                        attributeName="opacity"
+                        values="1; 1; 0; 0"
+                        keyTimes="0; 0.8; 0.9; 1"
+                        dur="4s"
+                        repeatCount="indefinite"
+                    />
+                </g>
+            </g>
+        </g>
+        <!-- Arrow/Path indicator (Optional, kept subtle) -->
+        <path d="M150 90 Q 150 140 200 150" stroke="#333" stroke-width="1" stroke-dasharray="4 4" opacity="0.1" fill="none" />
+    </g>
+</svg>

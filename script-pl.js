@@ -1,4 +1,4 @@
-const phrases = ["Websites", "Mobile Apps", "AI Integrations"];
+const phrases = ["Strony internetowe", "Aplikacje mobilne", "Integracje AI"];
 let phraseIndex = 0;
 const textElement = document.getElementById('text-cycler');
 

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Polityka Prywatności - Hamet Agency</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "cream": "#F9F8F4",
+                        "sand": "#EAE8E4",
+                        "charcoal": "#1C1C1C",
+                        "taupe": "#595552",
+                        "accent": "#D1CCC2",
+                        "clay": "#9E968B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-display antialiased selection:bg-taupe selection:text-white bg-sand text-charcoal">
+    <div class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12">
+        <div class="max-w-3xl w-full bg-sand rounded-3xl p-8 md:p-12 border border-charcoal/10 shadow-xl relative overflow-hidden">
+             <!-- Background decoration matching main site sytle -->
+             <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-taupe/5 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+
+            <div class="mb-12 relative z-10">
+                <a href="index.html" class="inline-flex items-center gap-2 text-taupe hover:text-charcoal transition-colors mb-8 text-sm font-semibold uppercase tracking-wider">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="rotate-180">
+                        <path d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    Powrót
+                </a>
+            </div>
+
+            <!-- Polish Version -->
+            <div class="relative z-10">
+                <h1 class="text-3xl md:text-4xl font-bold mb-6 font-display text-charcoal">Polityka Prywatności</h1>
+                <div class="space-y-4 text-taupe leading-relaxed">
+                    <p>
+                        Szanujemy Twoją prywatność. Niniejsza strona internetowa <strong>nie zbiera, nie przechowuje ani nie przetwarza</strong> żadnych danych osobowych użytkowników.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-2">
+                        <li>Nie używamy plików cookies (ciasteczek).</li>
+                        <li>Nie stosujemy narzędzi śledzących ani analitycznych.</li>
+                        <li>Nie posiadamy formularzy kontaktowych zapisujących dane w bazie.</li>
+                        <li>Wszelka komunikacja odbywa się bezpośrednio za pośrednictwem zewnętrznych klientów poczty e-mail lub komunikatora WhatsApp.</li>
+                    </ul>
+                    <p class="mt-4">
+                        Korzystanie z naszej strony jest w pełni anonimowe i bezpieczne.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
