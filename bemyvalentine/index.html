@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>For My Valentine ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'love-red': '#ff3366',
+                        'soft-pink': '#fff0f5',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&subset=cyrillic&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff0f5;
+            /* Fallback */
+            color: #1e293b;
+            /* Slate 800 */
+            overflow: hidden;
+            /* No scrolling */
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Fixed Background Gradient Layer */
+        .bg-gradient-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffffff 50%, #ffe4e1 100%);
+            z-index: -20;
+        }
+
+        .slider-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.6s ease-in-out;
+            transform: scale(0.95);
+            pointer-events: none;
+            z-index: 0;
+            padding: 0;
+            /* Removing padding to fix shifting */
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+            z-index: 20;
+        }
+
+        /* Nav Buttons - Light Theme */
+        .nav-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: #db2777;
+            /* Pink 600 */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 8px 30px rgba(219, 39, 119, 0.2);
+        }
+
+        .nav-btn.prev {
+            left: 30px;
+        }
+
+        .nav-btn.next {
+            right: 30px;
+        }
+
+        .nav-btn.hidden {
+            display: none;
+        }
+
+        /* Parallax Background - Subtle Hearts */
+        .parallax-bg {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background-image: radial-gradient(#f9a8d4 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            transition: transform 0.1s ease-out;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Glass Card - Light */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .heart-btn {
+            background: radial-gradient(circle at 30% 30%, #ff5c8d, #ff3366);
+            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
+            animation: pulse-heart 2s infinite;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .heart-btn:active {
+            transform: scale(0.9);
+        }
+
+        @keyframes pulse-heart {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.4);
+                transform: scale(1);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(255, 51, 102, 0);
+                transform: scale(1.05);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 51, 102, 0);
+                transform: scale(1);
+            }
+        }
+
+        /* Progress Dots */
+        .dots-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 50;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #db2777;
+            /* Pink 600 */
+            transform: scale(1.3);
+        }
+
+        /* Confetti */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        /* Floating Hearts Animation */
+        @keyframes float-heart {
+            0% {
+                transform: translateY(110vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: var(--opacity);
+            }
+
+            90% {
+                opacity: var(--opacity);
+            }
+
+            100% {
+                transform: translateY(-10vh) translateX(var(--drift)) rotate(20deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Login Overlay -->
+    <div id="login-overlay"
+        class="fixed inset-0 z-[100] flex flex-col items-center justify-center transition-opacity duration-700 bg-white/30 backdrop-blur-xl">
+        <!-- Lang Switcher -->
+        <div class="absolute top-6 right-6 flex gap-4 z-10">
+            <button class="lang-btn text-pink-600 font-bold tracking-widest scale-110 active-lang" data-lang="by">
+                BY</button>
+            <div class="h-6 w-px bg-slate-300"></div>
+            <button class="lang-btn text-slate-400 hover:text-pink-600 transition-colors font-bold tracking-widest"
+                data-lang="ua">UA</button>
+        </div>
+
+        <div class="text-center space-y-8 animate-fade-in px-6">
+            <div class="mb-4">
+                <span class="material-symbols-outlined text-6xl text-pink-500 animate-pulse">lock_open</span>
+            </div>
+            <h2 class="text-2xl font-light tracking-widest uppercase text-slate-700 font-sans" data-i18n="secret_word">
+                Сакрэтнае
+                слова?</h2>
+
+            <div class="relative w-full max-w-xs mx-auto">
+                <input type="text" id="password-input"
+                    class="w-full px-6 py-4 bg-white/50 border border-slate-300 rounded-full text-center text-xl text-slate-800 focus:outline-none focus:border-pink-500 focus:bg-white/80 transition-all placeholder-slate-400 shadow-sm font-sans"
+                    placeholder="Увядзі тутака..." autocomplete="off" data-i18n-placeholder="placeholder_input">
+                <button id="submit-pass"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-pink-600 rounded-full hover:bg-pink-500 transition-colors shadow-md">
+                    <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+                </button>
+            </div>
+
+            <p id="error-msg" class="text-rose-500 text-sm h-6 opacity-0 transition-opacity font-medium font-sans"
+                data-i18n="error_msg">Няправільна, паспрабуй зноў 😈</p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content"
+        class="opacity-0 transition-opacity duration-1000 pointer-events-none w-full h-full relative">
+
+        <!-- Background Layers -->
+        <div class="bg-gradient-layer"></div>
+        <div class="parallax-bg" id="parallax-bg" style="z-index: -10;"></div>
+        <!-- Floating Hearts Layer -->
+        <div id="hearts-container" class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: -5;"></div>
+
+        <!-- Music Control (Optional) -->
+        <!-- <button id="music-btn" class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md text-white/80">
+            <span class="material-symbols-outlined">music_note</span>
+        </button> -->
+
+        <!-- Navigation Buttons -->
+        <button class="nav-btn prev hidden" id="prevBtn">
+            <span class="material-symbols-outlined text-2xl">arrow_back</span>
+        </button>
+        <button class="nav-btn next" id="nextBtn">
+            <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+        </button>
+
+        <!-- Slider Container -->
+        <div class="slider-container">
+
+            <!-- Slide 1: Intro (Light) -->
+            <div class="slide active w-full px-4" data-index="0">
+                <span class="text-6xl mb-4 animate-bounce">💌</span>
+                <h1 class="text-6xl md:text-8xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400 mb-6 text-center drop-shadow-sm"
+                    data-i18n="intro_title">
+                    Прывітанне, <br> Машанька ❤️
+                </h1>
+                <p class="text-slate-500 text-lg uppercase tracking-[0.2em] font-medium animate-pulse"
+                    data-i18n="intro_subtitle">
+                    У мяне ёсць пытанне...
+                </p>
+                <div class="mt-12 text-slate-400 text-sm" data-i18n="tap_continue">Цісні стрэлку далей</div>
+            </div>
+
+            <!-- Slide 2: The Beginning (Light) -->
+            <div class="slide w-full px-4" data-index="1">
+                <div class="flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full h-full justify-center">
+                    <!-- Photo Area (Collage) -->
+                    <div
+                        class="w-full md:w-1/2 relative h-[500px] flex justify-center items-center perspective-1000 mt-10 md:mt-0 order-1 md:order-1">
+                        <!-- Photo 1 (Left, Tilted) -->
+                        <div
+                            class="absolute transform -rotate-12 -translate-x-12 translate-y-4 hover:scale-110 hover:rotate-0 hover:z-50 transition-all duration-500 z-10 w-56 md:w-72 shadow-2xl rounded-2xl border-4 border-white bg-white">
+                            <img src="photo_2026-02-13_18-43-08.jpg" class="w-full h-72 object-cover rounded-xl"
+                                alt="Memory 1">
+                        </div>
+
+                        <!-- Photo 2 (Right, Tilted) -->
+                        <div
+                            class="absolute transform rotate-12 translate-x-12 translate-y-8 hover:scale-110 hover:rotate-0 hover:z-50 transition-all duration-500 z-10 w-56 md:w-72 shadow-2xl rounded-2xl border-4 border-white bg-white">
+                            <img src="photo_2026-02-13_18-43-34.jpg" class="w-full h-72 object-cover rounded-xl"
+                                alt="Memory 2">
+                        </div>
+
+                        <!-- Photo 3 (Center, Main) -->
+                        <div
+                            class="absolute transform -rotate-2 hover:scale-110 hover:rotate-0 hover:z-50 transition-all duration-500 z-20 w-64 md:w-80 shadow-2xl rounded-2xl border-4 border-white bg-white">
+                            <img src="photo_2026-02-13_18-43-28.jpg" class="w-full h-80 object-cover rounded-xl"
+                                alt="Memory 3">
+                        </div>
+                    </div>
+                    <!-- Text Area -->
+                    <div
+                        class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center h-full order-2 md:order-2 px-4">
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-slate-800 leading-tight"
+                            data-i18n="slide2_title">Але спачатку паглядзі, якія яркія ў нас адносіны</h2>
+                        <div class="glass-card p-6 rounded-2xl mb-8">
+                            <p class="text-lg leading-relaxed text-slate-600 font-medium italic"
+                                data-i18n="slide2_text">
+                                "Памятаеш, як усё пачалося? Азіраючыся назад, дзіўна, колькі мы прайшлі разам. Кожны
+                                момант з табою — мой любімы ўспамін."
+                            </p>
+                        </div>
+                        <!-- Footer Link 2 -->
+                        <p class="text-rose-500 font-bold tracking-wider animate-pulse text-lg md:text-xl mt-4"
+                            data-i18n="slide2_footer">
+                            Але яркія не толькі адносіны, але і мы самі ў рэальнасці...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Reasons Why (Light) -->
+            <div class="slide w-full px-4" data-index="2">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8 text-center text-slate-800"
+                    data-i18n="slide3_title">У рэальнасці мы жоўтыя міньёны</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full px-4 mb-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/60 transition-colors duration-300">
+                        <img src="Gemini_Generated_Image_8tz7ps8tz7ps8tz7.png"
+                            class="w-48 h-48 rounded-full object-cover mb-4 border-4 border-white shadow-lg"
+                            alt="Minions 1">
+                        <h3 class="text-2xl font-bold mb-2 text-rose-500" data-i18n="card2_title">Шалёныя</h3>
+                        <p class="text-sm text-slate-500" data-i18n="card1_text">Умеем весяліцца як ніхто іншы.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/60 transition-colors duration-300 transform scale-105 border-rose-200">
+                        <img src="Gemini_Generated_Image_fgeybpfgeybpfgey.png"
+                            class="w-56 h-56 rounded-full object-cover mb-4 border-4 border-white shadow-lg"
+                            alt="Minions 2">
+                        <h3 class="text-2xl font-bold mb-2 text-rose-500" data-i18n="card1_title">Лепшыя</h3>
+                        <p class="text-sm text-slate-500" data-i18n="card2_text">Заўсёды разам, што б ні здарылася!</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/60 transition-colors duration-300">
+                        <img src="Gemini_Generated_Image_fjcwcffjcwcffjcw.png"
+                            class="w-48 h-48 rounded-full object-cover mb-4 border-4 border-white shadow-lg"
+                            alt="Minions 3">
+                        <h3 class="text-2xl font-bold mb-2 text-rose-500" data-i18n="card3_title">Рамантычныя</h3>
+                        <p class="text-sm text-slate-500" data-i18n="card3_text">У глыбіні душы мы самыя мілыя.</p>
+                    </div>
+                </div>
+                <!-- Footer Link 3 -->
+                <div class="mt-4 text-center">
+                    <p class="text-slate-600 font-bold tracking-wider text-lg md:text-xl italic animate-pulse"
+                        data-i18n="slide3_footer">
+                        Таму ад імя сябе сапраўднага хачу спытаць у цябе... ↓
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 4: The Question & Video -->
+            <div class="slide bg-black" data-index="3" style="z-index: 50;">
+                <!-- Fullscreen Video Container -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden bg-black">
+                    <!-- Blurred Background Video -->
+                    <video
+                        class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-60 scale-110 pointer-events-none intro-video-sync"
+                        playsinline muted>
+                        <source src="YouCut_20260213_175538861.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Main Video (Contain, Audio Enabled) -->
+                    <video class="relative z-10 w-full h-full object-contain intro-video-sync" playsinline>
+                        <source src="YouCut_20260213_175538861.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Gradient Overlay (Bottom) -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-20 pointer-events-none">
+                    </div>
+                </div>
+
+                <!-- Content Overlay (Z-30) -->
+                <div
+                    class="relative z-30 w-full h-full flex flex-col items-center justify-end pb-24 px-4 pointer-events-none">
+
+                    <!-- Subtitles -->
+                    <div id="subtitle-container"
+                        class="absolute bottom-40 w-full text-center px-4 transition-opacity duration-300">
+                        <p class="text-2xl md:text-4xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] leading-tight"
+                            id="subtitle-text"></p>
+                    </div>
+
+                    <!-- Heart Button (Hidden initially) -->
+                    <div id="final-cta"
+                        class="opacity-0 translate-y-10 transition-all duration-1000 flex flex-col items-center pointer-events-auto">
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-8 drop-shadow-lg text-center"
+                            data-i18n="final_question">
+                            Будзеш маёй <br> Валянцінкай?
+                        </h2>
+                        <button id="final-btn"
+                            class="heart-btn w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center cursor-pointer group hover:scale-110 transition-transform duration-300">
+                            <span
+                                class="material-symbols-outlined text-5xl md:text-6xl text-white drop-shadow-md">favorite</span>
+                        </button>
+                        <p class="mt-4 text-white/50 text-sm font-light tracking-widest text-center"
+                            data-i18n="final_yes">ТАК?</p>
+                    </div>
+
+                    <!-- Unmute (Top Right) -->
+                    <button id="unmute-btn"
+                        class="absolute top-6 right-6 bg-black/40 p-3 rounded-full backdrop-blur-md hover:bg-black/60 transition-colors pointer-events-auto">
+                        <span class="material-symbols-outlined text-white text-xl">volume_off</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dots UI -->
+        <div class="dots-container" id="dotsContainer">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+    </div>
+
+
+    <!-- Success Overlay -->
+    <div id="success-overlay"
+        class="fixed inset-0 z-[100] bg-black/90 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-1000">
+        <img src="Gemini_Generated_Image_tzbh8utz33bh8utzbh.png" alt="Love"
+            class="w-80 h-auto rounded-3xl shadow-2xl mb-8 animate-fade-in border-4 border-white/20">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-love-red animate-bounce text-center drop-shadow-lg"
+            data-i18n="success_love">Я цябе кахаю ❤️</h1>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script>
+        // --- TRANSLATIONS ---
+        const translations = {
+            by: {
+                secret_word: "Сакрэтнае слова?",
+                placeholder_input: "Увядзі тутака...",
+                error_msg: "Няправільна, паспрабуй зноў 😈",
+                intro_title: "Прывітанне, <br> Машанька ❤️",
+                intro_subtitle: "У МЯНЕ ЁСЦЬ ПЫТАННЕ...",
+                tap_continue: "Цісні стрэлку далей",
+                slide2_title: "Але спачатку паглядзі, якія яркія ў нас адносіны",
+                slide2_text: "\"Азіраючыся назад, дзіўна, колькі мы прайшлі разам. Кожны момант з табою - мой любімы ўспамін❤️\"",
+                slide2_footer: "Але яркія не толькі адносіны, але і мы самі ў рэальнасці... ",
+                slide3_title: "У рэальнасці мы жоўтыя міньёны",
+                card1_title: "Лепшыя",
+                card1_text: "Умеем весяліцца як ніхто іншы",
+                card2_title: "Шалёныя",
+                card2_text: "Заўсёды разам, што б ні здарылася!",
+                card3_title: "Рамантычныя",
+                card3_text: "У глыбіні душы мы самыя мілыя.",
+                slide3_footer: "Таму ад імя сябе сапраўднага хачу спытаць у цябе... ",
+                final_question: "Будзеш маёй <br> Валянцінкай?",
+                final_yes: "ТАК?",
+                success_love: "Я цябе кахаю ❤️",
+                subtitles: [
+                    { start: 0, end: 1.25, text: "Прывітанне детка 👋" },
+                    { start: 1.25, end: 3.0, text: "Ты вольная заўтра ўвечары? 😏" },
+                    { start: 3.0, end: 5.0, text: "Можа правядзем наступную ноч разам? 🔥" }
+                ]
+            },
+            ua: {
+                secret_word: "Таємне слово?",
+                placeholder_input: "Введи тут...",
+                error_msg: "Неправильно, спробуй знову 😈",
+                intro_title: "Привіт, <br> Машенька ❤️",
+                intro_subtitle: "У МЕНЕ Є ПИТАННЯ...",
+                tap_continue: "Тисни стрілку далі",
+                slide2_title: "Але спочатку подивись, які яскраві у нас стосунки",
+                slide2_text: "\"Озираючись назад, дивно, скільки ми пройшли разом. Кожен момент з тобою — мій улюблений спогад ❤️\"",
+                slide2_footer: "Але яскраві не тільки стосунки, але й ми самі в реальності... ",
+                slide3_title: "В реальності ми жовті міньйони",
+                card1_title: "Найкращі",
+                card1_text: "Вміємо веселитися як ніхто інший",
+                card2_title: "Шалені",
+                card2_text: "Завжди разом, що б не сталося!",
+                card3_title: "Романтичні",
+                card3_text: "В глибині душі ми наймиліші.",
+                slide3_footer: "Тому від імені себе справжнього хочу запитати у тебе... ",
+                final_question: "Будеш моєю <br> Валентинкою?",
+                final_yes: "ТАК?",
+                success_love: "Я тебе кохаю ❤️",
+                subtitles: [
+                    { start: 0, end: 1.25, text: "Привіт детка 👋" },
+                    { start: 1.25, end: 3.0, text: "Ти вільна завтра ввечері? 😏" },
+                    { start: 3.0, end: 5.0, text: "Може проведемо наступну ніч разом? 🔥" }
+                ]
+            }
+        };
+
+        let currentLang = 'by';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            const content = translations[lang];
+
+            // Update Text Elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (content[key]) {
+                    el.innerHTML = content[key]; // innerHTML to allow <br>
+                }
+            });
+
+            // Update Plcaeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (content[key]) {
+                    el.placeholder = content[key];
+                }
+            });
+
+            // Update Toggle Styles
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('text-pink-600', 'scale-110');
+                    btn.classList.remove('text-slate-400');
+                } else {
+                    btn.classList.remove('text-pink-600', 'scale-110');
+                    btn.classList.add('text-slate-400');
+                }
+            });
+        }
+
+        // Lang Switcher Listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                updateLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize Lang
+        updateLanguage('by');
+
+
+        // --- PASSWORD LOGIC ---
+        const passInput = document.getElementById('password-input');
+        const submitBtn = document.getElementById('submit-pass');
+        const errorMsg = document.getElementById('error-msg');
+        const loginOverlay = document.getElementById('login-overlay');
+        const mainContent = document.getElementById('main-content');
+        // Video elements defined later
+        const CORRECT_PASS = "писька";
+
+        function checkPass() {
+            if (passInput.value.toLowerCase().trim() === CORRECT_PASS) {
+                // Success
+                errorMsg.style.opacity = '0';
+                loginOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loginOverlay.style.display = 'none';
+                    mainContent.classList.remove('opacity-0', 'pointer-events-none');
+                }, 700);
+            } else {
+                // Error
+                errorMsg.style.opacity = '1';
+                passInput.parentElement.classList.add('animate-pulse');
+                setTimeout(() => passInput.parentElement.classList.remove('animate-pulse'), 500);
+            }
+        }
+
+        submitBtn.addEventListener('click', checkPass);
+        passInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') checkPass();
+        });
+
+
+        // --- VIDEO SUBTITLES LOGIC ---
+        const mainVideo = document.querySelector('.slide[data-index="3"] video:not(.blur-2xl)'); // Select main video
+        const syncVideos = document.querySelectorAll('.intro-video-sync');
+        const subtitleText = document.getElementById('subtitle-text');
+        const unmuteBtn = document.getElementById('unmute-btn');
+        const finalCta = document.getElementById('final-cta');
+
+        function updateSubtitles() {
+            if (mainVideo.paused && !mainVideo.ended) return;
+
+            const currentTime = mainVideo.currentTime;
+
+            // Hide subs at end
+            if (currentTime >= mainVideo.duration || mainVideo.ended) {
+                subtitleText.style.opacity = 0;
+                return;
+            }
+
+            // Get Current Lang Subtitles
+            const currentSubtitles = translations[currentLang].subtitles;
+            const currentSub = currentSubtitles.find(s => currentTime >= s.start && currentTime < s.end);
+
+            if (currentSub) {
+                subtitleText.innerText = currentSub.text;
+                subtitleText.style.opacity = 1;
+            } else {
+                subtitleText.style.opacity = 0;
+            }
+
+            if (!mainVideo.ended && !mainVideo.paused) {
+                requestAnimationFrame(updateSubtitles);
+            }
+        }
+
+        // On Video End
+        mainVideo.addEventListener('ended', () => {
+            // Show Button
+            finalCta.classList.remove('opacity-0', 'translate-y-10');
+            // Hide Subtitles
+            subtitleText.style.opacity = 0;
+
+            syncVideos.forEach(v => v.pause());
+        });
+
+        function playVideos() {
+            // Reset state
+            finalCta.classList.add('opacity-0', 'translate-y-10');
+            subtitleText.style.opacity = 0;
+
+            syncVideos.forEach(v => {
+                v.currentTime = 0;
+                v.muted = false; // Enable audio
+
+                // Attempt play logic
+                const playPromise = v.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Auto-play prevented, waiting for interaction");
+                        // If autoplay blocked, mute and try again just to show visuals
+                        v.muted = true;
+                        v.play();
+                        // Update button to show current state (muted)
+                        unmuteBtn.innerHTML = '<span class="material-symbols-outlined text-white text-lg">volume_off</span>';
+                    });
+                }
+            });
+            updateSubtitles();
+        }
+
+        function pauseVideos() {
+            syncVideos.forEach(v => {
+                v.pause();
+                v.currentTime = 0;
+            });
+            finalCta.classList.add('opacity-0', 'translate-y-10');
+        }
+
+        // Handle Audio
+        unmuteBtn.addEventListener('click', () => {
+            const isMuted = !mainVideo.muted;
+            syncVideos.forEach(v => {
+                v.muted = isMuted;
+            });
+
+            unmuteBtn.innerHTML = isMuted ?
+                '<span class="material-symbols-outlined text-white text-lg">volume_off</span>' :
+                '<span class="material-symbols-outlined text-white text-lg">volume_up</span>';
+        });
+
+        // --- SLIDER LOGIC ---
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            // Update Slides
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            // Play video ONLY on last slide
+            if (currentSlide === totalSlides - 1) {
+                playVideos();
+            } else {
+                pauseVideos();
+            }
+
+            // Update Dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) dot.classList.add('active');
+                else dot.classList.remove('active');
+            });
+
+            // Update Buttons Visibility
+            if (currentSlide === 0) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+            }
+
+            if (currentSlide === totalSlides - 1) {
+                nextBtn.classList.add('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+            }
+        }
+
+        // Button Listeners
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextBtn.click();
+            if (e.key === 'ArrowLeft') prevBtn.click();
+        });
+
+        // --- SUCCESS LOGIC ---
+        const finalBtn = document.getElementById('final-btn');
+        const successOverlay = document.getElementById('success-overlay');
+
+        finalBtn.addEventListener('click', () => {
+            launchConfetti();
+            successOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        });
+
+        // --- MOUSE PARALLAX ---
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            document.getElementById('parallax-bg').style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+        // --- CONFETTI ---
+        function launchConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#ff3366', '#ffffff', '#ffadc6'];
+
+            for (let i = 0; i < 200; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 20,
+                    vy: (Math.random() - 0.5) * 20,
+                    size: Math.random() * 5 + 5,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 150
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let active = false;
+                particles.forEach((p) => {
+                    if (p.life > 0) {
+                        active = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.2; // gravity
+                        p.life--;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+                if (active) requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        // --- FLOATING HEARTS ---
+        function initFloatingHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartCount = 30; // Amount of hearts
+
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('span');
+                heart.classList.add('material-symbols-outlined', 'absolute');
+                heart.innerText = 'favorite';
+
+                // Randomize properties
+                const size = Math.random() * 24 + 10; // 10px to 34px
+                const left = Math.random() * 100; // 0 to 100vw
+                const duration = Math.random() * 20 + 15; // 15s to 35s
+                const delay = Math.random() * -30; // Start already mid-air
+                const drift = (Math.random() - 0.5) * 100 + 'px'; // -50px to 50px x-axis drift
+                const opacity = Math.random() * 0.3 + 0.1; // 0.1 to 0.4 opacity
+
+                // Apply styles
+                heart.style.fontSize = `${size}px`;
+                heart.style.left = `${left}%`;
+                heart.style.color = Math.random() > 0.5 ? '#fbcfe8' : '#f472b6'; // pink-200 or pink-400
+                heart.style.opacity = opacity;
+                heart.style.setProperty('--opacity', opacity);
+                heart.style.setProperty('--drift', drift);
+                heart.style.animation = `float-heart ${duration}s linear infinite`;
+                heart.style.animationDelay = `${delay}s`;
+
+                container.appendChild(heart);
+            }
+        }
+        initFloatingHearts();
+    </script>
+</body>
+
+</html>
