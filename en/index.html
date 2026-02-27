@@ -4,22 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    
+
     <!-- SEO & Meta Tags -->
-    <meta name="description" content="Hamet Agency - We build premium websites, mobile applications, and integrate AI & automation solutions. Digital experiences engineered for growth." />
-    <meta name="keywords" content="digital agency, web development, mobile apps, artificial intelligence, AI integration, process automation, software house" />
+    <meta name="description"
+        content="Hamet Agency - We build premium websites, mobile applications, and integrate AI & automation solutions. Digital experiences engineered for growth." />
+    <meta name="keywords"
+        content="digital agency, web development, mobile apps, artificial intelligence, AI integration, process automation, software house" />
     <meta name="author" content="Hamet Agency" />
     <meta name="theme-color" content="#1C1C1C" />
     <link rel="canonical" href="https://hamet.agency/en/" />
     <link rel="alternate" hreflang="pl" href="https://hamet.agency/" />
     <link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hamet.agency/en/" />
     <meta property="og:title" content="Hamet Agency | Web Development, Mobile Apps, AI" />
-    <meta property="og:description" content="We craft digital experiences that feel natural, intuitive, and profoundly effective for your business growth." />
-    <meta property="og:image" content="https://hamet.agency/og_hamet.webp" />
+    <meta property="og:description"
+        content="We craft digital experiences that feel natural, intuitive, and profoundly effective for your business growth." />
+    <meta property="og:image" content="https://hamet.agency/images/og_hamet.webp" />
     <meta property="og:locale" content="en_US" />
 
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -30,8 +34,8 @@
       "@type": "ProfessionalService",
       "name": "Hamet Agency",
       "url": "https://hamet.agency/en/",
-      "logo": "https://hamet.agency/hero_bg.webp",
-      "image": "https://hamet.agency/hero_bg.webp",
+      "logo": "https://hamet.agency/images/hero_bg.webp",
+      "image": "https://hamet.agency/images/hero_bg.webp",
       "description": "Hamet Agency - Premium web development, mobile applications, AI integration, and workflow automation.",
       "address": {
         "@type": "PostalAddress",
@@ -39,7 +43,54 @@
       },
       "priceRange": "$$",
       "telephone": "+48791474721",
-      "email": "smappcorp@gmail.com"
+      "email": "hamet.agency@gmail.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How long does it take to create a website or app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The timeline depends on project complexity. Website development usually takes up to 1 week. Developing more complex mobile and web apps takes up to 1 month."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you offer post-launch support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide comprehensive technical support after launch. We ensure security updates and the stability of the created apps."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How much does a mobile app or website cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our professionally built websites start from 799 zł, and mobile apps from 2999 zł. The final cost is calculated individually based on the scope."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you help with AI integration in my company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! We handle language model integration, chatbot deployment, and business process automation to save your time."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you help publish the app on Google Play and the App Store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, upon the client's request we provide the app in the leading stores: Apple App Store and Google Play. Before publishing, we also conduct necessary testing."
+        }
+      }]
     }
     </script>
     <link rel="preload" href="../fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -126,15 +177,16 @@
         </div>
         <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
     </div>
-    <div class="relative z-10">
-        <img src="../hero_bg.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-70" alt="Hero Background">
+    <main class="relative z-10">
+        <img src="../images/hero_bg.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-70"
+            alt="Hero Background" fetchpriority="high">
         <!-- Smooth Gradient Overlay -->
-        <div class="absolute top-0 left-0 w-full h-[110vh] -z-10" 
-             style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
+        <div class="absolute top-0 left-0 w-full h-[110vh] -z-10"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
         </div>
-        <div
-            class="fixed top-10 left-0 w-full z-50 flex justify-center px-12 md:px-80 pointer-events-none transition-all duration-300">
-            <div class="layout-container flex justify-center w-full max-w-[1280px]">
+        <header
+            class="fixed top-10 left-0 w-full z-50 flex justify-center px-4 pointer-events-none transition-all duration-300 z-[100]">
+            <div class="layout-container flex justify-center w-full max-w-[950px]">
                 <div
                     class="flex flex-1 w-full px-6 py-2 items-center justify-between glass-nav rounded-3xl pointer-events-auto">
                     <div class="flex items-center gap-3 text-charcoal">
@@ -160,33 +212,37 @@
                             href="#valuation">Valuation</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a href="../index.html" class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">PL</a>
+                        <a href="../index.html"
+                            class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">PL</a>
                         <a href="#contact"
                             class="hidden sm:flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold">
                             <span class="truncate">Let's Talk</span>
                         </a>
-                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-charcoal backdrop-blur-md border border-white/20">
+                        <button id="mobile-menu-toggle"
+                            class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-charcoal backdrop-blur-md border border-white/20">
                             <span class="material-symbols-outlined">menu</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
+        </header>
+        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
             <div class="relative flex flex-col items-center justify-start min-h-[85vh] w-full overflow-hidden pt-10">
                 <div
                     class="relative z-10 px-4 md:px-10 flex flex-col items-center max-w-[1000px] text-center space-y-8">
                     <h1
                         class="text-white text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
                         We Build <br />
-                        <span class="font-bold text-white relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
-                            <span class="absolute top-0 left-1/2 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
-                                style="transform: translateX(-50%);"
-                                id="text-cycler">Websites</span>
+                        <span
+                            class="font-bold text-white relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
+                            <span
+                                class="absolute top-0 left-1/2 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
+                                style="transform: translateX(-50%);" id="text-cycler">Websites</span>
                         </span>
                     </h1>
                     <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
-                        Premium web development, mobile applications, AI integration, and workflow automation. We craft digital experiences
+                        Premium web development, mobile applications, AI integration, and workflow automation. We craft
+                        digital experiences
                         that feel natural, intuitive, and profoundly effective.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 md:pt-0 relative z-30">
@@ -204,44 +260,53 @@
                     <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
                 </div>
             </div>
-            <div class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;" id="services">
+            <section class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;"
+                id="services">
                 <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-16 relative z-10">
                     <div
                         class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-charcoal/10 pb-8">
                         <div class="flex flex-col gap-4 w-full">
                             <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">Our Expertise</h2>
-                            <h3 class="text-charcoal text-4xl md:text-5xl font-medium leading-tight font-display whitespace-normal md:whitespace-nowrap">
-                                <span class="font-bold">IT</span> and <span class="font-bold">AI</span> services for you or your company
+                            <h3
+                                class="text-charcoal text-4xl md:text-5xl font-medium leading-tight font-display whitespace-normal md:whitespace-nowrap">
+                                Software <span class="font-bold">development</span> and<br class="hidden md:block" />
+                                <span class="font-bold">AI</span>
+                                tools for your company
                             </h3>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Websites & Web Apps -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden" 
-                             style="background: rgba(28, 28, 28, 0.95);">
+                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                            style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
-                            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+                            <div
+                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
+                            </div>
 
                             <!-- Image Section -->
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="../web.webp" 
-                                     alt="Websites & Apps" 
-                                     loading="lazy"
-                                     class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
+                                <img src="../images/web.webp" alt="Websites & Apps" loading="lazy"
+                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                                </div>
                             </div>
-                            
+
                             <div class="p-6 flex flex-col gap-3 relative z-10">
                                 <!-- Header Row -->
                                 <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light" style="font-size: 20px;">devices</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
+                                        <span class="material-symbols-outlined font-light"
+                                            style="font-size: 20px;">devices</span>
                                     </div>
-                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">Web Sites & Apps</h4>
+                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">Web Sites &
+                                        Apps</h4>
                                 </div>
                                 <!-- Description -->
                                 <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Attractive landing pages, complex websites, and web applications adapted to any device and business needs.
+                                    Attractive landing pages, complex websites, and web applications adapted to any
+                                    device and business needs.
                                 </p>
                                 <!-- Price -->
                                 <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
@@ -253,30 +318,35 @@
 
                         <!-- Mobile Apps -->
                         <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
-                             style="background: rgba(28, 28, 28, 0.95);">
-                             <!-- Top Decor (Gradient) -->
-                            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+                            style="background: rgba(28, 28, 28, 0.95);">
+                            <!-- Top Decor (Gradient) -->
+                            <div
+                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
+                            </div>
 
                             <!-- Image Section -->
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="../app.webp" 
-                                     alt="Mobile Apps" 
-                                     loading="lazy"
-                                     class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
+                                <img src="../images/app.webp" alt="Mobile Apps" loading="lazy"
+                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                                </div>
                             </div>
 
                             <div class="p-6 flex flex-col gap-3 relative z-10">
                                 <!-- Header Row -->
                                 <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light" style="font-size: 20px;">smartphone</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
+                                        <span class="material-symbols-outlined font-light"
+                                            style="font-size: 20px;">smartphone</span>
                                     </div>
-                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">Mobile Apps</h4>
+                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">Mobile Apps
+                                    </h4>
                                 </div>
                                 <!-- Description -->
                                 <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Cross-platform mobile solutions, one app - two platforms. Fast deployment, testing, and publishing on iOS and Android.
+                                    Cross-platform mobile solutions, one app - two platforms. Fast deployment, testing,
+                                    and publishing on iOS and Android.
                                 </p>
                                 <!-- Price -->
                                 <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
@@ -288,52 +358,62 @@
 
                         <!-- AI Tools -->
                         <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
-                             style="background: rgba(28, 28, 28, 0.95);">
-                             <!-- Top Decor (Gradient) -->
-                             <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+                            style="background: rgba(28, 28, 28, 0.95);">
+                            <!-- Top Decor (Gradient) -->
+                            <div
+                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
+                            </div>
 
                             <!-- Image Section -->
                             <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="../ai.webp" 
-                                     alt="AI Tools" 
-                                     loading="lazy"
-                                     class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80"></div>
+                                <img src="../images/ai.webp" alt="AI Tools" loading="lazy"
+                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                                </div>
                             </div>
 
                             <div class="p-6 flex flex-col gap-3 relative z-10">
                                 <!-- Header Row -->
                                 <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light" style="font-size: 20px;">smart_toy</span>
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
+                                        <span class="material-symbols-outlined font-light"
+                                            style="font-size: 20px;">smart_toy</span>
                                     </div>
-                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">AI Tools</h4>
+                                    <h4 class="text-cream text-xl font-bold font-display leading-none pt-1">AI Tools
+                                    </h4>
+                                </div>
+                                <!-- Description -->
+                                <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
+                                    Integration of language models, implementation of chatbots and intelligent
+                                    automation tools supporting company workflows.
+                                </p>
                                 <!-- Price -->
                                 <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
                                     <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
                                     <span class="text-cream text-lg font-bold">from 999 zł</span>
                                 </div>
-                                </div>
-                                <!-- Description -->
-                                <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Integration of language models, implementation of chatbots and intelligent automation tools supporting company workflows.
-                                </p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-16 text-center max-w-3xl mx-auto px-4">
                         <p class="text-taupe text-lg font-medium leading-relaxed">
-                            Didn't find what you're looking for? <a href="#contact" class="inline-flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold mx-2 align-middle hover:scale-105 transition-transform duration-300"><span class="truncate">Contact us</span></a> – we'll help regardless of the challenge. For us, nothing is impossible!
+                            Didn't find what you're looking for? <a href="#contact"
+                                class="inline-flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold mx-2 align-middle hover:scale-105 transition-transform duration-300"><span
+                                    class="truncate">Contact us</span></a> – we'll help regardless of the challenge. For
+                            us, nothing is impossible!
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;" id="process">
+            </section>
+            <section class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;"
+                id="process">
                 <div class="layout-content-container flex flex-col max-w-[1100px] w-full gap-16">
                     <div class="text-center w-full mx-auto space-y-4">
                         <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">How We Work</h2>
-                        <h3 class="text-charcoal text-3xl md:text-4xl font-medium font-display leading-[1.2] whitespace-normal md:whitespace-nowrap">
+                        <h3
+                            class="text-charcoal text-3xl md:text-4xl font-medium font-display leading-[1.2] whitespace-normal md:whitespace-nowrap">
                             From concept to launch in three steps
                         </h3>
                     </div>
@@ -347,7 +427,8 @@
                                 01</div>
                             <div class="space-y-4 px-4 flex flex-col items-center">
                                 <h4 class="text-xl font-bold text-charcoal font-display">Discovery & Quote</h4>
-                                <p class="text-taupe text-sm leading-relaxed">We analyze your requirements, select appropriate technologies, and precisely estimate the budget and schedule.</p>
+                                <p class="text-taupe text-sm leading-relaxed">We analyze your requirements, select
+                                    appropriate technologies, and precisely estimate the budget and schedule.</p>
                                 <a href="#valuation"
                                     class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold w-fit hover:scale-105 transition-transform duration-300">
                                     <span class="truncate">Get Quote</span>
@@ -360,7 +441,10 @@
                                 02</div>
                             <div class="space-y-2 px-4">
                                 <h4 class="text-xl font-bold text-charcoal font-display">Development</h4>
-                                <p class="text-taupe text-sm leading-relaxed">We build a dedicated solution, ensuring the highest code quality and regularly consulting progress to meet your expectations.</p>
+                                <p class="text-taupe text-sm leading-relaxed">We build a dedicated solution,
+                                    ensuring
+                                    the highest code quality and regularly consulting progress to meet your
+                                    expectations.</p>
                             </div>
                         </div>
                         <div class="flex flex-col items-center text-center gap-6 relative z-10">
@@ -369,13 +453,16 @@
                                 03</div>
                             <div class="space-y-2 px-4">
                                 <h4 class="text-xl font-bold text-charcoal font-display">Launch</h4>
-                                <p class="text-taupe text-sm leading-relaxed">We comprehensively deploy the finished product, configure the production environment, and ensure a stable, trouble-free start for your application.</p>
+                                <p class="text-taupe text-sm leading-relaxed">We comprehensively deploy the finished
+                                    product, configure the production environment, and ensure a stable, trouble-free
+                                    start for your application.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="relative pt-28 pb-4 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;" id="work">
+            </section>
+            <section class="relative pt-28 pb-4 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;"
+                id="work">
                 <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-12">
                     <div class="flex flex-col gap-3 text-center md:text-left">
                         <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Selected Work</h2>
@@ -383,10 +470,11 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Aufix - Car Manager App -->
-                        <div
-                            class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
+                        <a href="https://aufix.pl" target="_blank" rel="noopener noreferrer"
+                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../aufix.webp');" role="img" aria-label="Aufix App">
+                                style="background-image: url('../images/aufix.webp');" role="img"
+                                aria-label="Aufix App">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -394,19 +482,21 @@
                             <div
                                 class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                                 <span
-                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Mobile App</span>
+                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Mobile
+                                    App</span>
                                 <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">Aufix</h3>
                                 <p
                                     class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
                                     Comprehensive car management and cost tracking app</p>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- BrinMe - Delivery Marketplace -->
-                        <div
-                            class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
+                        <a href="https://brinme.pl" target="_blank" rel="noopener noreferrer"
+                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../brinme.webp');" role="img" aria-label="BrinMe App">
+                                style="background-image: url('../images/brinme.webp');" role="img"
+                                aria-label="BrinMe App">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -414,19 +504,21 @@
                             <div
                                 class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                                 <span
-                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Web app</span>
+                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Web
+                                    app</span>
                                 <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">BrinMe</h3>
                                 <p
                                     class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
                                     Marketplace platform connecting senders with drivers</p>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Druk3DWaw - 3D Printing -->
-                        <div
-                            class="group relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
+                        <a href="https://druk3dwaw.pl" target="_blank" rel="noopener noreferrer"
+                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('../druk.webp');" role="img" aria-label="Druk3DWaw Website">
+                                style="background-image: url('../images/druk.webp');" role="img"
+                                aria-label="Druk3DWaw Website">
                             </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
@@ -435,56 +527,154 @@
                                 class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                                 <span
                                     class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Website</span>
-                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">Druk3DWaw</h3>
+                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">Druk3DWaw
+                                </h3>
                                 <p
                                     class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
                                     Professional 3D printing services with online ordering</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="mt-8 text-center max-w-3xl mx-auto px-4">
                         <p class="text-taupe text-lg font-medium leading-relaxed">
-                            Your project could be next! Get a quote <span class="font-bold">within a few hours</span>.
+                            Your project could be next! Get a quote <span class="font-bold">within a few
+                                hours</span>.
                         </p>
                     </div>
                 </div>
-            </div>
-            
+            </section>
+
             <!-- Valuation / File Drop Section -->
-            <div id="valuation" class="relative pt-16 pb-20 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;">
-                <div class="layout-content-container flex flex-col md:flex-row items-center justify-between max-w-[1000px] w-full gap-12">
+            <section id="valuation" class="relative pt-16 pb-20 px-4 md:px-10 flex justify-center"
+                style="background-color: #f3f3f1;">
+                <div
+                    class="layout-content-container flex flex-col md:flex-row items-center justify-between max-w-[1000px] w-full gap-12">
                     <!-- Left: SVG Animation -->
                     <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-                        <img src="../valuation-anim-en.svg" alt="Valuation animation" class="w-3/4 md:w-full max-w-[345px]" width="345" height="230">
+                        <img src="../images/valuation-anim-en.svg" alt="Valuation animation"
+                            class="w-3/4 md:w-full max-w-[345px]" width="345" height="230">
                     </div>
-                    
+
                     <!-- Right: Content -->
                     <div class="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
                         <div class="space-y-2">
                             <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">Get a Quote</h2>
-                            <h3 class="text-charcoal text-2xl md:text-3xl font-medium font-display">Have a specification or idea?</h3>
+                            <h3 class="text-charcoal text-2xl md:text-3xl font-medium font-display">Have a
+                                specification
+                                or idea?</h3>
                         </div>
                         <p class="text-taupe text-lg leading-relaxed">
-                            Upload a file or write directly on WhatsApp or email. It's the fastest way to get a precise quote for your project.
+                            Upload a file or write directly on WhatsApp or email. It's the fastest way to get a
+                            precise
+                            quote for your project.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                             <a href="https://wa.me/791474721" class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
+                            <a href="https://wa.me/791474721"
+                                class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
                                 <span class="material-symbols-outlined">attach_file</span>
                                 Send on WhatsApp
-                             </a>
-                             <a href="mailto:smappcorp@gmail.com" class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
+                            </a>
+                            <a href="mailto:hamet.agency@gmail.com"
+                                class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
                                 <span class="material-symbols-outlined">mail</span>
                                 Send via Email
-                             </a>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;"
+                id="faq">
+                <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12 text-charcoal">
+                    <div class="flex flex-col gap-3 text-center md:text-left">
+                        <h2 class="text-taupe font-bold tracking-widest text-xs uppercase">Knowledge</h2>
+                        <h3 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Frequently Asked
+                            Questions (FAQ)</h3>
+                    </div>
+
+                    <div class="flex flex-col gap-4" id="faq-list">
+                        <!-- FAQ Item 1 -->
+                        <details
+                            class="group bg-white/50 backdrop-blur-sm rounded-2xl border border-charcoal/5 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between cursor-pointer p-6 font-display font-medium text-lg">
+                                <span>How long does it take to create a website or app?</span>
+                                <span
+                                    class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
+                                The timeline depends on project complexity. Website development usually takes up to 1
+                                week. Developing more complex mobile and web apps takes up to 1 month.
+                            </div>
+                        </details>
+                        <!-- FAQ Item 2 -->
+                        <details
+                            class="group bg-white/50 backdrop-blur-sm rounded-2xl border border-charcoal/5 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between cursor-pointer p-6 font-display font-medium text-lg">
+                                <span>Do you offer post-launch support?</span>
+                                <span
+                                    class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
+                                Yes, we provide comprehensive technical support after launch. We ensure security updates
+                                and the stability of the created apps.
+                            </div>
+                        </details>
+                        <!-- FAQ Item 3 -->
+                        <details
+                            class="group bg-white/50 backdrop-blur-sm rounded-2xl border border-charcoal/5 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between cursor-pointer p-6 font-display font-medium text-lg">
+                                <span>How much does a mobile app or website cost?</span>
+                                <span
+                                    class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
+                                Our professionally built websites start from 799 zł, and mobile apps from 2999 zł. The
+                                final
+                                cost is calculated individually based on the scope.
+                            </div>
+                        </details>
+                        <!-- FAQ Item 4 -->
+                        <details
+                            class="group bg-white/50 backdrop-blur-sm rounded-2xl border border-charcoal/5 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between cursor-pointer p-6 font-display font-medium text-lg">
+                                <span>Do you help with AI integration in my company?</span>
+                                <span
+                                    class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
+                                Absolutely! We handle language model integration, chatbot deployment, and business
+                                process automation to save your time.
+                            </div>
+                        </details>
+                        <!-- FAQ Item 5 -->
+                        <details
+                            class="group bg-white/50 backdrop-blur-sm rounded-2xl border border-charcoal/5 [&_summary::-webkit-details-marker]:hidden">
+                            <summary
+                                class="flex items-center justify-between cursor-pointer p-6 font-display font-medium text-lg">
+                                <span>Do you help publish the app on Google Play and the App Store?</span>
+                                <span
+                                    class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
+                                Yes, upon the client's request we provide the app in the leading stores: Apple App Store
+                                and Google Play. Before publishing, we also conduct necessary testing.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
 
             <!-- Floating Contact & Footer Section -->
-            <div class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #EAE8E4;" id="contact">
-                <div class="rounded-[2.5rem] overflow-hidden relative z-20 shadow-2xl shadow-charcoal/20 mx-auto max-w-[1400px]" style="background-color: #0e1116;">
-                    
+            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #EAE8E4;" id="contact">
+                <div class="rounded-[2.5rem] overflow-hidden relative z-20 shadow-2xl shadow-charcoal/20 mx-auto max-w-[1400px]"
+                    style="background-color: #0e1116;">
+
                     <!-- Get in Touch -->
                     <div class="relative py-16 md:py-24 px-4 flex justify-center text-cream overflow-hidden">
                         <div
@@ -494,17 +684,23 @@
                             class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-black/40 rounded-full blur-[80px] pointer-events-none -translate-x-1/3 translate-y-1/3">
                         </div>
                         <div class="relative z-10 flex flex-col items-center text-center max-w-3xl gap-10">
-                            <h2 class="text-cream text-4xl md:text-7xl font-medium tracking-tight leading-none font-display">
+                            <h2
+                                class="text-cream text-4xl md:text-7xl font-medium tracking-tight leading-none font-display">
                                 Get in Touch</h2>
-                            <p class="text-white/80 text-xl font-light max-w-xl">Reach out to us directly to discuss your project.</p>
+                            <p class="text-white/80 text-xl font-light max-w-xl">Reach out to us directly to discuss
+                                your project.</p>
                             <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-center px-4">
-                                <a href="mailto:smappcorp@gmail.com" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                <a href="mailto:hamet.agency@gmail.com"
+                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
                                     <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
-                                    smappcorp@gmail.com
+                                    hamet.agency@gmail.com
                                 </a>
-                                <a href="https://wa.me/791474721" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                <a href="https://wa.me/791474721"
+                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                                     </svg>
                                     WhatsApp
                                 </a>
@@ -521,26 +717,31 @@
                                     <p>© 2026 Hamet Agency. All rights reserved.</p>
                                 </div>
                                 <div class="flex gap-8">
-                                    <a class="hover:text-cream transition-colors" href="privacy.html">Privacy Policy</a>
+                                    <a class="hover:text-cream transition-colors" href="privacy.html">Privacy
+                                        Policy</a>
                                 </div>
                             </div>
                         </div>
                     </footer>
-                </div>
-            </div>
-        </div>
-    </div>
+            </section>
+    </main>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#EAE8E4] z-[100] transform translate-x-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center items-center gap-8 md:hidden">
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#EAE8E4] z-[100] transform translate-x-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center items-center gap-8 md:hidden">
         <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-charcoal">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#services">Services</a>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#process">Process</a>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#work">Portfolio</a>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#valuation">Quote</a>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#contact">Contact</a>
+        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
+            href="#services">Services</a>
+        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
+            href="#process">Process</a>
+        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
+            href="#work">Portfolio</a>
+        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
+            href="#valuation">Quote</a>
+        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
+            href="#contact">Contact</a>
     </div>
 </body>
 <script src="../script.js"></script>
