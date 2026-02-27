@@ -26,9 +26,6 @@
     <meta property="og:image" content="https://hamet.agency/images/og_hamet.webp" />
     <meta property="og:locale" content="pl_PL" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Agencja Hamet | Strony www, Aplikacje, AI</title>
     <script type="application/ld+json">
@@ -42,6 +39,9 @@
       "description": "Agencja Hamet - Tworzymy nowoczesne strony internetowe, aplikacje mobilne oraz wdrażamy rozwiązania AI i automatyzację dla biznesu.",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Warszawa",
+        "addressLocality": "Warszawa",
+        "postalCode": "02-123",
         "addressCountry": "PL"
       },
       "priceRange": "$",
@@ -104,7 +104,12 @@
     <link rel="stylesheet" href="fonts.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+    </noscript>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {

@@ -39,6 +39,9 @@
       "description": "Hamet Agency - Premium web development, mobile applications, AI integration, and workflow automation.",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Warsaw",
+        "addressLocality": "Warsaw",
+        "postalCode": "02-123",
         "addressCountry": "PL"
       },
       "priceRange": "$$",
@@ -101,7 +104,12 @@
     <link rel="stylesheet" href="../fonts.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+    </noscript>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
