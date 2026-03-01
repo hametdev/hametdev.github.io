@@ -46,12 +46,7 @@
       },
       "priceRange": "$$",
       "telephone": "+48791474721",
-      "email": "hamet.agency@gmail.com",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "15"
-      }
+      "email": "hamet.agency@gmail.com"
     }
     </script>
     <script type="application/ld+json">
@@ -98,9 +93,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preload" href="../fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../fonts/Playfair-Latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../fonts.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -110,61 +103,6 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
             rel="stylesheet" />
     </noscript>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "cream": "#F9F8F4",
-                        "sand": "#EAE8E4",
-                        "charcoal": "#1C1C1C",
-                        "taupe": "#595552",
-                        "accent": "#D1CCC2",
-                        "clay": "#9E968B",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"],
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "1rem",
-                        "2xl": "1.5rem",
-                        "3xl": "2rem",
-                        "full": "9999px"
-                    },
-                    animation: {
-                        'blob': 'blob 20s infinite alternate',
-                        'float': 'float 6s ease-in-out infinite',
-                        'drift': 'drift 30s linear infinite alternate',
-                        'breathe': 'breathe 10s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9) rotate(5deg)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        drift: {
-                            '0%': { transform: 'rotate(0deg) translate(0, 0)' },
-                            '100%': { transform: 'rotate(5deg) translate(50px, 20px)' },
-                        },
-                        breathe: {
-                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
-                            '50%': { opacity: '0.4', transform: 'scale(1.05)' },
-                        }
-                    }
-                },
-            },
-        }
-    </script>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -200,7 +138,7 @@
             <div class="layout-container flex justify-center w-full max-w-[950px]">
                 <div
                     class="flex flex-1 w-full px-6 py-2 items-center justify-between glass-nav rounded-3xl pointer-events-auto">
-                    <div class="flex items-center gap-3 text-charcoal">
+                    <a href="/en/" class="flex items-center gap-3 text-charcoal hover:opacity-80 transition-opacity">
                         <div
                             class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
@@ -211,7 +149,7 @@
                             </svg>
                         </div>
                         <h2 class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</h2>
-                    </div>
+                    </a>
                     <div class="hidden md:flex flex-1 justify-center gap-2">
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
                             href="#services">Services</a>

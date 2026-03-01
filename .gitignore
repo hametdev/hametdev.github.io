@@ -1,0 +1,19 @@
+# ── Dev / build ──────────────────────
+node_modules/
+package-lock.json
+src/
+tailwind.config.js
+package.json
+
+# ── Unused images (not referenced anywhere) ──
+images/og_hamet.png
+images/webpage.png
+images/hamet_workspace.png
+images/hero_bg.png
+images/workspace.png
+images/header_store.png
+
+# ── OS / editor ──────────────────────
+.DS_Store
+Thumbs.db
+.vscode/

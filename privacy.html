@@ -7,37 +7,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Polityka Prywatności - Hamet Agency</title>
     <link rel="preload" href="fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Playfair-Latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fonts.css">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "cream": "#F9F8F4",
-                        "sand": "#EAE8E4",
-                        "charcoal": "#1C1C1C",
-                        "taupe": "#595552",
-                        "accent": "#D1CCC2",
-                        "clay": "#9E968B",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"],
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "1rem",
-                        "2xl": "1.5rem",
-                        "3xl": "2rem",
-                        "full": "9999px"
-                    }
-                },
-            },
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="font-display antialiased selection:bg-taupe selection:text-white bg-sand text-charcoal">
@@ -47,11 +18,14 @@
              <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-taupe/5 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
 
             <div class="mb-12 relative z-10">
-                <a href="index.html" class="inline-flex items-center gap-2 text-taupe hover:text-charcoal transition-colors mb-8 text-sm font-semibold uppercase tracking-wider">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="rotate-180">
-                        <path d="M10 17l5-5-5-5v10z"/>
-                    </svg>
-                    Powrót
+                <a href="index.html" class="inline-flex items-center gap-3 text-charcoal hover:opacity-70 transition-opacity">
+                    <div class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5 shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1L12.5 8.5L20 11L12.5 13.5L10 21L7.5 13.5L0 11L7.5 8.5L10 1Z" />
+                            <path d="M19.5 3L20.5 6L23.5 7L20.5 8L19.5 11L18.5 8L15.5 7L18.5 6L19.5 3Z" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold leading-tight tracking-tight font-display">hamet</span>
                 </a>
             </div>
 
