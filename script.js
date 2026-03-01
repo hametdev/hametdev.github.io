@@ -3,6 +3,8 @@ let phraseIndex = 0;
 const textElement = document.getElementById('text-cycler');
 
 if (textElement) {
+    textElement.textContent = phrases[0]; // Reset to first phrase (HTML contains all for SEO)
+
     // Initialize styles
     textElement.style.transition = 'all 0.5s ease-in-out';
     textElement.style.opacity = '1';
