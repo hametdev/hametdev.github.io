@@ -5,6 +5,9 @@ src/
 tailwind.config.js
 package.json
 
+# ── Replaced by .webp ────────────────
+images/noise.png
+
 # ── Unused images (not referenced anywhere) ──
 images/og_hamet.png
 images/webpage.png
