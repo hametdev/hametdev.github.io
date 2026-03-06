@@ -5,8 +5,9 @@
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,8 +16,9 @@
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -25,18 +27,114 @@
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/</loc>
+        <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
+        <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/tworzenie-stron.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/aplikacje-mobilne.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/integracje-ai.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/en/web-development.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/en/mobile-apps.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/en/ai-integrations.html</loc>
+        <lastmod>2026-03-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/hr/izrada-web-stranica.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/hr/mobilne-aplikacije.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/hr/ai-integracije.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/</loc>
+        <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
+        <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/razrabotka-saytov.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/mobilnye-prilozheniya.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/ai-integracii.html</loc>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://hamet.agency/privacy.html</loc>
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/privacy.html" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/privacy.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/privacy.html" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/privacy.html" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
@@ -45,8 +143,9 @@
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/privacy.html" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/privacy.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/privacy.html" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/privacy.html" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
@@ -55,8 +154,20 @@
         <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/privacy.html" />
         <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/privacy.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/privacy.html" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/privacy.html" />
-        <lastmod>2026-03-04</lastmod>
+        <lastmod>2026-03-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://hamet.agency/ru/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://hamet.agency/en/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/privacy.html" />
+        <lastmod>2026-03-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>

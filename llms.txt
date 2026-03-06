@@ -1,35 +1,98 @@
 # Hamet Agency
 
+> Multilingual software house — web development, mobile apps, AI integrations.
+> Languages: Polish (PL) · English (EN) · Russian (RU)
+
+---
+
+## 🇵🇱 Polski
+
 Hamet Agency to nowoczesny software house, który specjalizuje się w tworzeniu stron internetowych, aplikacji mobilnych (iOS/Android) oraz wdrażaniu sztucznej inteligencji (AI) w procesach biznesowych.
 
-## O nas
+### O nas
 Jesteśmy ekspertami od dostarczania zaawansowanych aplikacji internetowych, innowacyjnych wizytówek online oraz optymalizacji i automatyzacji biznesów przy pomocy sztucznej inteligencji i modeli LLM (Large Language Models). Rozwiązujemy skomplikowane problemy IT za pomocą prostych, elastycznych we wdrożeniu i w zarządzaniu rozwiązań.
 
-## Główne usługi (Portfolio i oferta)
-1. **Strony i Aplikacje Webowe**
-   - Czas realizacji: tworzymy w czasie do 1 tygodnia.
-   - Atrakcyjne wizytówki firmowe oraz platformy (od 799 zł).
-   - Sklepy eCommerce, dedykowane portale internetowe i narzędzia biznesowe B2B.
+### Główne usługi
+1. **Strony i Aplikacje Webowe** — od 799 zł, realizacja do 1 tygodnia
+   - Wizytówki firmowe, sklepy eCommerce, portale internetowe, narzędzia B2B
+   - Szczegóły: https://hamet.agency/tworzenie-stron.html
 
-2. **Aplikacje Mobilne iOS i Android**
-   - Czas realizacji: budujemy w czasie do 1 miesiąca.
-   - Jedna baza kodu - dostępność dla obu platform mobilnych równocześnie (cross-platform).
-   - Ceny od 2999 zł. Błyskawiczne wdrażanie, testowanie oraz kompletna pomoc z publikacją (wydaniem) aplikacji w App Store i Google Play.
+2. **Aplikacje Mobilne iOS i Android** — od 2999 zł, realizacja do 1 miesiąca
+   - Cross-platform (jedna baza kodu), publikacja w App Store i Google Play
+   - Szczegóły: https://hamet.agency/aplikacje-mobilne.html
 
-3. **Narzędzia AI i Automatyzacje**
-   - Integracje z OpenAI, wdrażanie niestandardowych chatbotów wspierających obsługę klienta lub przepływy pracy.
-   - Narzędzia zmniejszające koszty operacyjne (ceny integracji od 999 zł).
+3. **Narzędzia AI i Automatyzacje** — od 999 zł
+   - Integracje z OpenAI/Claude/Gemini, chatboty, RAG, automatyzacje n8n
+   - Szczegóły: https://hamet.agency/integracje-ai.html
 
-## Jednocześnie...
-Po wdrożeniu kompleksowo wspieramy każdy produkt, m.in. pomagamy bezstresowo przejść proces wrzucenia aplikacji do Apple App Store i Google Play Store.
+### Przykłady z Portfolio
+- BrinMe — Marketplace (https://brinme.pl)
+- Aufix — Car Manager (https://aufix.pl)
+- Druk3DWaw — e-commerce (https://druk3dwaw.pl)
 
-## Najczęstsze realizacje (Przykłady z Portfolio)
-- Startup'y / Platformy Webowe (np. BrinMe - Marketplace, adres: https://brinme.pl).
-- Aplikacje użyteczności / mobilne (np. Aufix - Car Manager, adres: https://aufix.pl).
-- Strumienie e-commerce / wizytówki w sieci (np. Druk3DWaw, adres: https://druk3dwaw.pl).
+### Strona główna (PL): https://hamet.agency/
 
-## Kontakt
-- **Strona WWW**: https://hamet.agency
+---
+
+## 🇬🇧 English
+
+Hamet Agency is a modern software house specialising in web development, mobile applications (iOS/Android) and AI integrations for business processes.
+
+### About Us
+We build advanced web applications, corporate websites and AI-powered automation tools. We turn complex IT challenges into simple, maintainable solutions — delivered fast and ready to scale.
+
+### Core Services
+1. **Web Development** — from 799 PLN, delivered within 1 week
+   - Business landing pages, eCommerce stores, custom web portals, B2B tools
+   - Details: https://hamet.agency/en/web-development.html
+
+2. **Mobile Apps (iOS & Android)** — from 2999 PLN, delivered within 1 month
+   - Cross-platform codebase, full App Store & Google Play launch support
+   - Details: https://hamet.agency/en/mobile-apps.html
+
+3. **AI Tools & Integrations** — from 999 PLN
+   - OpenAI / Claude / Gemini integrations, RAG pipelines, n8n automations, custom chatbots
+   - Details: https://hamet.agency/en/ai-integrations.html
+
+### Portfolio Highlights
+- BrinMe — Marketplace platform (https://brinme.pl)
+- Aufix — Car Manager mobile app (https://aufix.pl)
+- Druk3DWaw — 3D printing eCommerce (https://druk3dwaw.pl)
+
+### Homepage (EN): https://hamet.agency/en/
+
+---
+
+## 🇷🇺 Русский
+
+Hamet Agency — современный software house, специализирующийся на разработке сайтов, мобильных приложений (iOS/Android) и внедрении инструментов искусственного интеллекта в бизнес-процессы.
+
+### О нас
+Мы разрабатываем продвинутые веб-приложения, корпоративные сайты и инструменты автоматизации на базе ИИ. Решаем сложные IT-задачи с помощью простых, гибких и легко управляемых решений — быстро и с прицелом на масштаб.
+
+### Основные услуги
+1. **Разработка сайтов** — от 799 зł, срок до 1 недели
+   - Визитки, интернет-магазины, порталы, B2B-инструменты
+   - Подробнее: https://hamet.agency/ru/razrabotka-saytov.html
+
+2. **Мобильные приложения iOS и Android** — от 2999 zł, срок до 1 месяца
+   - Кроссплатформенная разработка, полное сопровождение публикации в App Store и Google Play
+   - Подробнее: https://hamet.agency/ru/mobilnye-prilozheniya.html
+
+3. **ИИ-инструменты и автоматизации** — от 999 zł
+   - Интеграции с OpenAI / Claude / Gemini, RAG, автоматизации n8n, чат-боты
+   - Подробнее: https://hamet.agency/ru/ai-integracii.html
+
+### Примеры из портфолио
+- BrinMe — маркетплейс (https://brinme.pl)
+- Aufix — приложение Car Manager (https://aufix.pl)
+- Druk3DWaw — 3D-печать, интернет-магазин (https://druk3dwaw.pl)
+
+### Главная страница (RU): https://hamet.agency/ru/
+
+---
+
+## Контакт / Contact / Kontakt
+- **Website**: https://hamet.agency
 - **Email**: hamet.agency@gmail.com
-- **Telefon/WhatsApp**: +48 791 474 721
-Zapoznaj się z pełną ofertą bezpośrednio na stronie hamet.agency lub skontaktuj się aby uzyskać szczegółową wycenę projektową. W wypadku gotowego pomysłu i specyfikacji można w łatwy sposób wysłać ją bezpośrednio przez e-mail lub komunikator na stronie głównej.
+- **Phone / WhatsApp**: +48 791 474 721

@@ -16,6 +16,7 @@
     <link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
     <link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
     <link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+    <link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
     <link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
 
     <!-- Open Graph / Facebook -->
@@ -32,64 +33,71 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Hamet Agency",
-      "url": "https://hamet.agency/en/",
-      "logo": "https://hamet.agency/images/hero_bg.webp",
-      "image": "https://hamet.agency/images/hero_bg.webp",
-      "description": "Hamet Agency - Premium web development, mobile applications, AI integration, and workflow automation.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Warsaw",
-        "addressLocality": "Warsaw",
-        "postalCode": "02-123",
-        "addressCountry": "PL"
-      },
-      "priceRange": "$$",
-      "telephone": "+48791474721",
-      "email": "hamet.agency@gmail.com"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "How long does it take to create a website or app?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The timeline depends on project complexity. Website development usually takes up to 1 week. Developing more complex mobile and web apps takes up to 1 month."
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Hamet Agency",
+          "url": "https://hamet.agency/en/",
+          "logo": "https://hamet.agency/images/hero_bg.webp",
+          "image": "https://hamet.agency/images/hero_bg.webp",
+          "description": "Hamet Agency - Premium web development, mobile applications, AI integration, and workflow automation.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Władysława Korotyńskiego 20",
+            "addressLocality": "Warszawa",
+            "postalCode": "02-123",
+            "addressCountry": "PL"
+          },
+          "priceRange": "PLN",
+          "telephone": "+48791474721",
+          "email": "hamet.agency@gmail.com"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does it take to create a website or app?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The timeline depends on project complexity. Website development usually takes up to 1 week. Developing more complex mobile and web apps takes up to 1 month."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer post-launch support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we provide comprehensive technical support after launch. We ensure security updates and the stability of the created apps."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a mobile app or website cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our professionally built websites start from 799 zł, and mobile apps from 2999 zł. The final cost is calculated individually based on the scope."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you help with AI integration in my company?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! We handle language model integration, chatbot deployment, and business process automation to save your time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you help publish the app on Google Play and the App Store?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, upon the client's request we provide the app in the leading stores: Apple App Store and Google Play. Before publishing, we also conduct necessary testing."
+              }
+            }
+          ]
         }
-      }, {
-        "@type": "Question",
-        "name": "Do you offer post-launch support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we provide comprehensive technical support after launch. We ensure security updates and the stability of the created apps."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How much does a mobile app or website cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our professionally built websites start from 799 zł, and mobile apps from 2999 zł. The final cost is calculated individually based on the scope."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you help with AI integration in my company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! We handle language model integration, chatbot deployment, and business process automation to save your time."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you help publish the app on Google Play and the App Store?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, upon the client's request we provide the app in the leading stores: Apple App Store and Google Play. Before publishing, we also conduct necessary testing."
-        }
-      }]
+      ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,15 +163,11 @@
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
                             href="#work">Portfolio</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
-                            href="#faq">FAQ</a>
-                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
                             href="#valuation">Valuation</a>
+                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
+                            href="#faq">FAQ</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a href="/"
-                            class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">PL</a>
-                        <a href="/hr/"
-                            class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">HR</a>
                         <a href="#contact"
                             class="hidden sm:flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold">
                             <span class="truncate">Let's Talk</span>
@@ -227,7 +231,7 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Websites & Web Apps -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="web-development.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -264,10 +268,10 @@
                                     <span class="text-cream text-lg font-bold">from 799 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Mobile Apps -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="mobile-apps.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -304,10 +308,10 @@
                                     <span class="text-cream text-lg font-bold">from 2999 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- AI Tools -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="ai-integrations.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -344,7 +348,7 @@
                                     <span class="text-cream text-lg font-bold">from 999 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mt-16 text-center max-w-3xl mx-auto px-4">
@@ -689,9 +693,9 @@
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
             href="#work">Portfolio</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
-            href="#faq">FAQ</a>
+            href="#valuation">Valuation</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
-            href="#valuation">Quote</a>
+            href="#faq">FAQ</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link"
             href="#contact">Contact</a>
     </div>

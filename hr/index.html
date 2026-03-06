@@ -16,6 +16,7 @@
     <link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
     <link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
     <link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+    <link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
     <link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
 
     <!-- Open Graph / Facebook -->
@@ -32,64 +33,71 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Hamet Agency",
-      "url": "https://hamet.agency/hr/",
-      "logo": "https://hamet.agency/images/hero_bg.webp",
-      "image": "https://hamet.agency/images/hero_bg.webp",
-      "description": "Hamet Agency - Izrada modernih web stranica i mobilnih aplikacija te AI integracija i automatizacija za poslovanje.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Zagreb",
-        "addressLocality": "Zagreb",
-        "postalCode": "10000",
-        "addressCountry": "HR"
-      },
-      "priceRange": "$$",
-      "telephone": "+385919735635",
-      "email": "hamet.agency@gmail.com"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Koliko traje izrada web stranice ili aplikacije",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rok ovisi o složenosti projekta. Izrada web stranice obično traje do 1 tjedna, a kompleksnije web i mobilne aplikacije do 1 mjeseca."
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Hamet Agency",
+          "url": "https://hamet.agency/hr/",
+          "logo": "https://hamet.agency/images/hero_bg.webp",
+          "image": "https://hamet.agency/images/hero_bg.webp",
+          "description": "Hamet Agency - Izrada modernih web stranica i mobilnih aplikacija te AI integracija i automatizacija za poslovanje.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Zagreb",
+            "addressLocality": "Zagreb",
+            "postalCode": "10000",
+            "addressCountry": "HR"
+          },
+          "priceRange": "EUR",
+          "telephone": "+385919735635",
+          "email": "hamet.agency@gmail.com"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Koliko traje izrada web stranice ili aplikacije",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Rok ovisi o složenosti projekta. Izrada web stranice obično traje do 1 tjedna, a kompleksnije web i mobilne aplikacije do 1 mjeseca."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Nudite li podršku nakon lansiranja",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da, pruzamo sveobuhvatnu tehničku podršku nakon lansiranja. Brinemo o sigurnosnim nadogradnjama i stabilnosti izrađenih aplikacija."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Koliko košta mobilna aplikacija ili web stranica",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cijene profesionalno izrađenih web stranica počinju od 190 €, a mobilnih aplikacija od 700 €. Konačna cijena formira se individualno prema opsegu projekta."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pomažete li s AI integracijom u mojoj tvrtki",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Apsolutno! Radimo integraciju jezičnih modela, implementaciju chatbotova i automatizaciju poslovnih procesa kako bismo vam ustedjeli vrijeme."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pomažete li s objavom aplikacije na Google Playu i App Storeu",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Da, na zahtjev klijenta objavljujemo aplikaciju u vodećim trgovinama: Apple App Store i Google Play. Prije objave provodimo i potrebna testiranja."
+              }
+            }
+          ]
         }
-      }, {
-        "@type": "Question",
-        "name": "Nudite li podršku nakon lansiranja",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Da, pruzamo sveobuhvatnu tehničku podršku nakon lansiranja. Brinemo o sigurnosnim nadogradnjama i stabilnosti izrađenih aplikacija."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Koliko košta mobilna aplikacija ili web stranica",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cijene profesionalno izrađenih web stranica počinju od 190 €, a mobilnih aplikacija od 700 €. Konačna cijena formira se individualno prema opsegu projekta."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Pomažete li s AI integracijom u mojoj tvrtki",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Apsolutno! Radimo integraciju jezičnih modela, implementaciju chatbotova i automatizaciju poslovnih procesa kako bismo vam ustedjeli vrijeme."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Pomažete li s objavom aplikacije na Google Playu i App Storeu",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Da, na zahtjev klijenta objavljujemo aplikaciju u vodećim trgovinama: Apple App Store i Google Play. Prije objave provodimo i potrebna testiranja."
-        }
-      }]
+      ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -225,7 +233,7 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Web stranice i web aplikacije -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="izrada-web-stranica.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -262,10 +270,10 @@
                                     <span class="text-cream text-lg font-bold">od 190 €</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Mobilne aplikacije -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="mobilne-aplikacije.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -302,10 +310,10 @@
                                     <span class="text-cream text-lg font-bold">od 700 €</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- AI alati -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="ai-integracije.html" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -342,7 +350,7 @@
                                     <span class="text-cream text-lg font-bold">od 230 €</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mt-16 text-center max-w-3xl mx-auto px-4">

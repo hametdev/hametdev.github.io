@@ -14,6 +14,7 @@
     <link rel="alternate" hreflang="pl-PL" href="https://hamet.agency/" />
     <link rel="alternate" hreflang="hr-HR" href="https://hamet.agency/hr/" />
     <link rel="alternate" hreflang="en" href="https://hamet.agency/en/" />
+    <link rel="alternate" hreflang="ru" href="https://hamet.agency/ru/" />
     <link rel="alternate" hreflang="x-default" href="https://hamet.agency/en/" />
 
     <!-- Open Graph / Facebook -->
@@ -30,64 +31,79 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "WebSite",
       "name": "Hamet Agency",
-      "url": "https://hamet.agency/",
-      "logo": "https://hamet.agency/images/hero_bg.webp",
-      "image": "https://hamet.agency/images/hero_bg.webp",
-      "description": "Agencja Hamet - Tworzymy nowoczesne strony internetowe, aplikacje mobilne oraz wdrażamy rozwiązania AI i automatyzację dla biznesu.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Warszawa",
-        "addressLocality": "Warszawa",
-        "postalCode": "02-123",
-        "addressCountry": "PL"
-      },
-      "priceRange": "$",
-      "telephone": "+48791474721",
-      "email": "hamet.agency@gmail.com"
+      "url": "https://hamet.agency/"
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Ile trwa stworzenie strony internetowej lub aplikacji?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Czas realizacji zależy od stopnia skomplikowania projektu. Tworzenie stron internetowych zajmuje do 1 tygodnia, natomiast bardziej złożone aplikacje webowe i mobilne tworzymy w czasie do 1 miesiąca."
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Hamet Agency",
+          "url": "https://hamet.agency/",
+          "logo": "https://hamet.agency/images/hero_bg.webp",
+          "image": "https://hamet.agency/images/hero_bg.webp",
+          "description": "Agencja Hamet - Tworzymy nowoczesne strony internetowe, aplikacje mobilne oraz wdrażamy rozwiązania AI i automatyzację dla biznesu.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Władysława Korotyńskiego 20",
+            "addressLocality": "Warszawa",
+            "postalCode": "02-123",
+            "addressCountry": "PL"
+          },
+          "priceRange": "PLN",
+          "telephone": "+48791474721",
+          "email": "hamet.agency@gmail.com"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ile trwa stworzenie strony internetowej lub aplikacji?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Czas realizacji zależy od stopnia skomplikowania projektu. Tworzenie stron internetowych zajmuje do 1 tygodnia, natomiast bardziej złożone aplikacje webowe i mobilne tworzymy w czasie do 1 miesiąca."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy oferujecie wsparcie po wdrożeniu projektu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, zapewniamy kompleksowe wsparcie techniczne po wdrożeniu. Dbamy o aktualizacje bezpieczeństwa oraz stabilność stworzonych aplikacji."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje aplikacja mobilna lub strona internetowa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ceny naszych stron zaczynają się od 799 zł, natomiast aplikacji mobilnych od 2999 zł. Ostateczny koszt wyliczany jest indywidualnie na podstawie zakresu prac."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy pomagacie z wdrożeniem AI w mojej firmie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oczywiście! Zajmujemy się integracją modeli językowych, obsługą chatbotów oraz automatyzacją procesów biznesowych, by zaoszczędzić Twój czas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy pomagacie opublikować aplikację w sklepach Google Play i App Store?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, na życzenie klienta udostępniamy aplikację w wiodących sklepach: Apple App Store oraz Google Play. Przed publikacją przeprowadzamy również niezbędne testy."
+              }
+            }
+          ]
         }
-      }, {
-        "@type": "Question",
-        "name": "Czy oferujecie wsparcie po wdrożeniu projektu?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tak, zapewniamy kompleksowe wsparcie techniczne po wdrożeniu. Dbamy o aktualizacje bezpieczeństwa oraz stabilność stworzonych aplikacji."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Ile kosztuje aplikacja mobilna lub strona internetowa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ceny naszych stron zaczynają się od 799 zł, natomiast aplikacji mobilnych od 2999 zł. Ostateczny koszt wyliczany jest indywidualnie na podstawie zakresu prac."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Czy pomagacie z wdrożeniem AI w mojej firmie?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oczywiście! Zajmujemy się integracją modeli językowych, obsługą chatbotów oraz automatyzacją procesów biznesowych, by zaoszczędzić Twój czas."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Czy pomagacie opublikować aplikację w sklepach Google Play i App Store?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tak, na życzenie klienta udostępniamy aplikację w wiodących sklepach: Apple App Store oraz Google Play. Przed publikacją przeprowadzamy również niezbędne testy."
-        }
-      }]
+      ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -222,7 +238,7 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Websites & Web Apps -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="tworzenie-stron.html" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -261,10 +277,10 @@
                                     <span class="text-cream text-lg font-bold">od 799 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Mobile Apps -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="aplikacje-mobilne.html" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -303,10 +319,10 @@
                                     <span class="text-cream text-lg font-bold">od 2999 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- AI Tools -->
-                        <div class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
+                        <a href="integracje-ai.html" target="_blank" rel="noopener noreferrer" class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
                             style="background: rgba(28, 28, 28, 0.95);">
                             <!-- Top Decor (Gradient) -->
                             <div
@@ -345,7 +361,7 @@
                                     <span class="text-cream text-lg font-bold">od 999 zł</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="mt-16 text-center max-w-3xl mx-auto px-4">
