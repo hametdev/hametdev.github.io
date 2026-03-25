@@ -113,8 +113,26 @@
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,smart_toy,smartphone&display=swap" rel="stylesheet" />
     </noscript>
-    <link rel="stylesheet" href="../styles.css">
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1c1c1c',
+                        taupe:    '#595552',
+                        cream:    '#f9f8f4',
+                        sand:     '#eae8e4',
+                        accent:   '#d1ccc2',
+                        clay:     '#9e958a',
+                    },
+                    fontFamily: {
+                        display: ['Manrope', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script></head>
 
 <body class="font-display overflow-x-hidden antialiased selection:bg-taupe selection:text-white relative">
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
