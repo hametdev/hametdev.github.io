@@ -125,14 +125,10 @@
     </div>
 
     <main class="relative z-10">
-        <img src="../images/hero_bg.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-70" alt="Hamet Agency — цифровое агентство" fetchpriority="high">
-        <div class="absolute top-0 left-0 w-full h-[110vh] -z-10"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
-        </div>
-
         <header class="fixed top-10 left-0 w-full z-[100] flex justify-center px-4 pointer-events-none transition-all duration-300">
             <div class="layout-container flex justify-center w-full max-w-[950px]">
-                <div class="flex flex-1 w-full px-6 py-2 items-center justify-between glass-nav rounded-3xl pointer-events-auto">
+                <div class="flex flex-1 w-full px-6 py-2 items-center justify-between rounded-3xl pointer-events-auto border border-charcoal/10 shadow-sm"
+                    style="background-color:#ffffff;">
                     <a href="/ru/" class="flex items-center gap-3 text-charcoal hover:opacity-80 transition-opacity">
                         <div class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -145,15 +141,14 @@
                     <div class="hidden md:flex flex-1 justify-center gap-2">
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#services">Услуги</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#process">Процесс</a>
-                        <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#work">Портфолио</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#valuation">Оценка</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#faq">FAQ</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a href="#contact" class="hidden sm:flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold">
+                        <a href="#contact" class="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-neutral-100 text-charcoal border border-charcoal/15 text-sm font-bold hover:bg-neutral-200/90 transition-colors">
                             <span class="truncate">Написать</span>
                         </a>
-                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-charcoal backdrop-blur-md border border-white/20">
+                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/5 text-charcoal border border-charcoal/10">
                             <span class="material-symbols-outlined">menu</span>
                         </button>
                     </div>
@@ -161,29 +156,59 @@
             </div>
         </header>
 
-        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
+        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32 bg-[#fafafa]">
             <div class="relative flex flex-col items-center justify-start min-h-[85vh] w-full overflow-hidden pt-10">
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-90"
+                    style="top: 20%; left: 5%;">
+                    <img src="../images/rocket-svgrepo-com%20(1).svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 50%; left: 8%;">
+                    <img src="../images/laptop-illustration-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-90"
+                    style="bottom: 25%; left: 15%; animation-duration: 25s;">
+                    <img src="../images/robot-svgrepo-com.svg" alt="" class="w-[72%] h-[72%] object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-90"
+                    style="top: 25%; right: 10%; animation-delay: 2s;">
+                    <img src="../images/phone-android-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 45%; right: 8%; animation-delay: 1.5s;">
+                    <img src="../images/keyboard-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-90"
+                    style="bottom: 20%; right: 15%; animation-duration: 20s; animation-delay: 1s;">
+                    <img src="../images/speaker-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
                 <div class="relative z-10 px-4 md:px-10 flex flex-col items-center max-w-[1000px] text-center space-y-8">
-                    <h1 class="text-white text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
+                    <h1 class="text-charcoal text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
                         Мы создаём <br />
-                        <span class="font-bold text-white relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
+                        <span class="font-bold text-charcoal relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
                             <span class="absolute top-0 left-1/2 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
                                 style="transform: translateX(-50%);" id="text-cycler">Сайты · Мобильные приложения · ИИ</span>
                         </span>
                     </h1>
-                    <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
+                    <p class="text-charcoal/75 text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
                         Разработка сайтов, мобильных приложений, интеграция ИИ и автоматизация процессов. Создаём цифровые продукты, которые работают на ваш бизнес.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 md:pt-0 relative z-30">
                         <a href="#valuation" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button-dark text-sm md:text-base font-medium">
                             Рассчитать
                         </a>
-                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button text-sm md:text-base font-medium">
+                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-white text-charcoal border border-charcoal/12 hover:bg-neutral-50 shadow-sm transition-colors text-sm md:text-base font-medium">
                             Контакт
                         </a>
                     </div>
                 </div>
-                <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-white/50 z-10">
+                <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-charcoal/35 z-10">
                     <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
                 </div>
             </div>
@@ -480,7 +505,13 @@
                         <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
                             <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
                                 <p>© 2026 Hamet Agency. Все права защищены.</p>
-                                <div class="flex gap-8">
+                                <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6">
+                                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
+                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">EN</a>
+                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">PL</a>
+                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">HR</a>
+                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">RU</a>
+                                    </nav>
                                     <a class="hover:text-cream transition-colors" href="privacy.html">Политика конфиденциальности</a>
                                 </div>
                             </div>
@@ -497,7 +528,6 @@
         </button>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#services">Услуги</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#process">Процесс</a>
-        <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#work">Портфолио</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#valuation">Оценка</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#faq">FAQ</a>
         <a class="text-3xl font-bold text-charcoal font-display hover:text-taupe transition-colors mobile-link" href="#contact">Контакт</a>
