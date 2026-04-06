@@ -140,45 +140,147 @@
                     fontFamily: {
                         display: ['Manrope', 'sans-serif'],
                     },
+                    animation: {
+                        'blob': 'blob 20s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                        'drift': 'drift 30s linear infinite alternate',
+                        'breathe': 'breathe 10s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9) rotate(5deg)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        drift: {
+                            '0%': { transform: 'rotate(0deg) translate(0, 0)' },
+                            '100%': { transform: 'rotate(5deg) translate(50px, 20px)' },
+                        },
+                        breathe: {
+                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                            '50%': { opacity: '0.4', transform: 'scale(1.05)' },
+                        }
+                    }
                 }
             }
         }
-    </script></head>
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .glass-panel {
+                background: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+                border-radius: 1.5rem;
+            }
+            .glass-nav {
+                background: rgba(249, 248, 244, 0.6);
+                backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+            }
+            .glass-button {
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+                color: #1C1C1C;
+            }
+            .glass-button:hover, .glass-button-active {
+                background: rgba(255, 255, 255, 0.5);
+                border-color: rgba(255, 255, 255, 0.6);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+                transform: translateY(-2px);
+            }
+            .glass-button-dark {
+                background: rgba(5, 5, 5, 0.95);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+                color: #FFFFFF;
+                position: relative;
+                overflow: hidden;
+            }
+            .glass-button-dark:hover {
+                background: #000000;
+                border-color: rgba(255, 255, 255, 0.3);
+                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+                transform: translateY(-2px);
+            }
+            .glass-button-dark::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 60%;
+                height: 100%;
+                background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transform: skewX(-25deg);
+                transition: none;
+            }
+            .glass-button-dark:hover::after {
+                left: 150%;
+                transition: 0.7s ease-in-out;
+            }
+            .nav-link {
+                padding: 0.5rem 1.25rem;
+                border-radius: 9999px;
+                transition: all 0.3s ease;
+            }
+            .nav-link:hover {
+                background: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(8px);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+                color: #1C1C1C;
+            }
+        }
+        ::-webkit-scrollbar { width: 8px }
+        ::-webkit-scrollbar-track { background: #F9F8F4 }
+        ::-webkit-scrollbar-thumb { background: #D1CCC2; border-radius: 4px }
+    </style>
+</head>
 
-<body class="font-display overflow-x-hidden antialiased selection:bg-taupe selection:text-white relative">
+<body class="bg-cream text-charcoal font-display overflow-x-hidden antialiased selection:bg-taupe selection:text-white relative">
 
     <!-- Animated background blobs -->
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div class="absolute inset-0 bg-cream/80 z-0"></div>
-        <div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-neutral-200/70 rounded-full mix-blend-multiply filter blur-[120px] animate-blob opacity-80"></div>
-        <div class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000 opacity-60"></div>
-        <div class="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#d9dde3]/60 rounded-full mix-blend-multiply filter blur-[80px] animate-drift animation-delay-4000 opacity-70"></div>
-        <div class="absolute bottom-[-20%] right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-taupe/10 rounded-full mix-blend-multiply filter blur-[120px] animate-breathe animation-delay-2000 opacity-50"></div>
-        <div class="absolute bottom-[20%] left-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-clay/20 rounded-full mix-blend-multiply filter blur-[90px] animate-float animation-delay-6000 opacity-40"></div>
-        <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
+        <div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-sand/70 rounded-full mix-blend-multiply filter blur-[120px] animate-blob opacity-80"></div>
+        <div class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob [animation-delay:2s] opacity-60"></div>
+        <div class="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#E0DDD5]/60 rounded-full mix-blend-multiply filter blur-[80px] animate-drift [animation-delay:4s] opacity-70"></div>
+        <div class="absolute bottom-[-20%] right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-taupe/10 rounded-full mix-blend-multiply filter blur-[120px] animate-breathe [animation-delay:2s] opacity-50"></div>
+        <div class="absolute bottom-[20%] left-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-clay/20 rounded-full mix-blend-multiply filter blur-[90px] animate-float [animation-delay:6s] opacity-40"></div>
+        <div class="absolute inset-0 bg-[url('images/noise.webp')] opacity-[0.07] mix-blend-overlay z-10"></div>
     </div>
 
     <main class="relative z-10">
-
-        <!-- Hero background image -->
-        <img src="images/web.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-60"
-            alt="Tworzenie stron internetowych i aplikacji webowych" fetchpriority="high">
-        <div class="absolute top-0 left-0 w-full h-[110vh] -z-10"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.45) 15%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
-        </div>
-
-        <!-- Navigation -->
-        <header class="fixed top-10 left-0 w-full z-[100] flex justify-center px-4 pointer-events-none transition-all duration-300">
-            <div class="layout-container flex justify-center w-full max-w-[807px]">
-                <div class="flex flex-1 w-full px-6 py-3 items-center justify-between bg-white rounded-full pointer-events-auto border border-charcoal/10 shadow-sm">
+        <header
+            class="fixed top-10 left-0 w-full z-[100] flex justify-center px-4 pointer-events-none transition-all duration-300">
+            <div class="layout-container flex justify-center w-full max-w-[950px]">
+                <div
+                    class="flex flex-1 w-full px-6 py-2 items-center justify-between rounded-3xl pointer-events-auto border border-charcoal/10 shadow-sm"
+                    style="background-color:#ffffff;">
                     <a href="/" class="flex items-center gap-3 text-charcoal hover:opacity-80 transition-opacity">
-                        <div class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                            class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 1L12.5 8.5L20 11L12.5 13.5L10 21L7.5 13.5L0 11L7.5 8.5L10 1Z" />
-                                <path d="M19.5 3L20.5 6L23.5 7L20.5 8L19.5 11L18.5 8L15.5 7L18.5 6L19.5 3Z" opacity="0.9" />
+                                <path d="M19.5 3L20.5 6L23.5 7L20.5 8L19.5 11L18.5 8L15.5 7L18.5 6L19.5 3Z"
+                                    opacity="0.9" />
                             </svg>
                         </div>
-                        <span class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</span>
+                        <span
+                            class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</span>
                     </a>
                     <div class="hidden md:flex flex-1 justify-center gap-6">
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#features">Oferta</a>
@@ -186,11 +288,14 @@
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#faq">FAQ</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a href="#contact" class="hidden sm:flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-white text-sm font-bold">
+                        <a href="/en/web-development.html"
+                            class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">EN</a>
+                        <a href="#contact"
+                            class="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-neutral-100 text-charcoal border border-charcoal/15 text-sm font-bold hover:bg-neutral-200/90 transition-colors">
                             <span class="truncate">Kontakt</span>
                         </a>
-                        <a href="/en/web-development.html" class="hidden md:inline-flex items-center text-[11px] font-mono tracking-widest border border-taupe/20 rounded-full px-3 py-1.5 text-taupe hover:text-charcoal transition-colors">EN</a>
-                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-charcoal backdrop-blur-md border border-white/20">
+                        <button id="mobile-menu-toggle"
+                            class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/5 text-charcoal backdrop-blur-md border border-charcoal/10">
                             <span class="material-symbols-outlined">menu</span>
                         </button>
                     </div>
@@ -199,46 +304,84 @@
         </header>
 
         <!-- Hero -->
-        <section class="relative flex flex-col min-h-screen w-full pt-14 md:pt-24">
-            <div class="relative flex flex-col items-center justify-start min-h-[82vh] w-full overflow-hidden pt-4">
+        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
+            <div class="relative flex flex-col items-center justify-start min-h-[85vh] w-full overflow-hidden pt-10">
+                
+                <!-- Left Side hero icons -->
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="top: 20%; left: 5%;">
+                    <img src="images/rocket-svgrepo-com%20(1).svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 50%; left: 8%;">
+                    <img src="images/laptop-illustration-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="bottom: 25%; left: 15%; animation-duration: 25s;">
+                    <img src="images/robot-svgrepo-com.svg" alt="" class="w-[72%] h-[72%] object-contain" width="72" height="72"
+                        loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+
+                <!-- Right Side hero icons -->
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="top: 25%; right: 10%; animation-delay: 2s;">
+                    <img src="images/phone-android-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 45%; right: 8%; animation-delay: 1.5s;">
+                    <img src="images/keyboard-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="bottom: 20%; right: 15%; animation-duration: 20s; animation-delay: 1s;">
+                    <img src="images/speaker-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72" height="72"
+                        loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+
                 <div class="relative z-10 px-4 md:px-10 flex flex-col items-center max-w-[900px] text-center space-y-8">
-                    <h1 class="text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight font-display w-full text-center">
+                    <h1 class="text-charcoal text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight font-display w-full text-center">
                         Tworzenie stron<br />
-                        <span class="font-bold text-white">internetowych</span>
+                        <span class="font-bold text-charcoal">internetowych</span>
                     </h1>
-                    <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed max-w-[620px]">
+                    <p class="text-charcoal/80 text-lg md:text-xl font-normal leading-relaxed max-w-[620px]">
                         Projektujemy i wdrążamy strony WWW, które wyglądają świetnie, ładują się błyskawicznie, są zoptymalizowane pod SEO i zamieniają odwiedzających w klientów.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 relative z-30">
-                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-charcoal text-white hover:bg-black text-sm md:text-base font-medium transition-colors">
+                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button-dark text-sm md:text-base font-medium">
                             Bezpłatna wycena
                         </a>
-                        <a href="#features" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button text-sm md:text-base font-medium">
+                        <a href="#features" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-white text-charcoal border border-charcoal/12 hover:bg-neutral-50 shadow-sm transition-colors text-sm md:text-base font-medium">
                             Zobacz, co oferujemy
                         </a>
                     </div>
                     <!-- Quick stats -->
-                    <div class="flex flex-wrap gap-8 justify-center pt-4">
+                    <div class="flex flex-wrap gap-8 justify-center pt-4 relative z-30">
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">od 799 zł</p>
-                            <p class="text-white/60 text-sm mt-1">prosta wizytówka</p>
+                            <p class="text-charcoal text-3xl font-bold font-display">od 799 zł</p>
+                            <p class="text-charcoal/60 text-sm mt-1">prosta wizytówka</p>
                         </div>
-                        <div class="w-px bg-white/20 hidden sm:block"></div>
+                        <div class="w-px bg-charcoal/20 hidden sm:block"></div>
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">3–7 dni</p>
-                            <p class="text-white/60 text-sm mt-1">czas realizacji</p>
+                            <p class="text-charcoal text-3xl font-bold font-display">3–7 dni</p>
+                            <p class="text-charcoal/60 text-sm mt-1">czas realizacji</p>
                         </div>
-                        <div class="w-px bg-white/20 hidden sm:block"></div>
+                        <div class="w-px bg-charcoal/20 hidden sm:block"></div>
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">90+</p>
-                            <p class="text-white/60 text-sm mt-1">Google PageSpeed</p>
+                            <p class="text-charcoal text-3xl font-bold font-display">90+</p>
+                            <p class="text-charcoal/60 text-sm mt-1">Google PageSpeed</p>
                         </div>
                     </div>
+                </div>
+                <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-charcoal/40 z-10">
+                    <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
                 </div>
             </div>
 
             <!-- Features section -->
-            <section class="relative py-28 px-4 md:px-10" style="background-color: #f2f4f7;" id="features">
+            <section class="relative py-28 px-4 md:px-10" style="background-color: #f3f3f1;" id="features">
                 <div class="flex flex-col w-full gap-16">
                     <div class="flex flex-col gap-4 pb-8 max-w-[1000px] mx-auto w-full">
                         <p class="text-taupe font-bold tracking-widest text-xs uppercase">Co robimy</p>
@@ -394,7 +537,7 @@
             </section>
 
             <!-- Pricing section -->
-            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #f2f4f7;" id="pricing">
+            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;" id="pricing">
                 <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12">
                     <div class="text-center space-y-4">
                         <p class="text-taupe font-bold tracking-widest text-xs uppercase">Cennik</p>
@@ -457,7 +600,7 @@
 
             <!-- Process section -->
             <!-- FAQ -->
-            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #f2f4f7;" id="faq">
+            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;" id="faq">
                 <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12 text-charcoal">
                     <div class="flex flex-col gap-3">
                         <p class="text-taupe font-bold tracking-widest text-xs uppercase">FAQ</p>
@@ -514,7 +657,7 @@
             </section>
 
             <!-- Contact + Footer -->
-            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #f2f4f7;" id="contact">
+            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #EAE8E4;" id="contact">
                 <div class="rounded-[2.5rem] overflow-hidden relative z-20 shadow-2xl shadow-charcoal/20 mx-auto max-w-[1400px]" style="background-color: #0e1116;">
                     <div class="relative py-16 md:py-24 px-4 flex justify-center text-cream overflow-hidden">
                         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-taupe/20 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
@@ -560,7 +703,7 @@
     </main>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#f2f4f7] z-[100] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 bg-[#EAE8E4] z-[100] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 md:hidden">
         <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-charcoal">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>Privacy Policy - HealthLog</title>
+    <link rel="preload" href="../fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../fonts.css">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1c1c1c',
+                        taupe:    '#595552',
+                        cream:    '#f9f8f4',
+                        sand:     '#eae8e4',
+                        accent:   '#d1ccc2',
+                        clay:     '#9e958a',
+                    },
+                    fontFamily: {
+                        display: ['Manrope', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-display antialiased selection:bg-taupe selection:text-white bg-cream text-charcoal">
+    <div class="min-h-screen flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden">
+        <!-- Animated background blobs matching site style -->
+        <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute inset-0 bg-cream/80 z-0"></div>
+            <div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-sand/70 rounded-full mix-blend-multiply filter blur-[120px] opacity-80"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-60"></div>
+        </div>
+
+        <div class="max-w-3xl w-full bg-white/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-charcoal/10 shadow-xl relative z-10">
+            <div class="mb-12">
+                <a href="../index.html" class="inline-flex items-center gap-3 text-charcoal hover:opacity-70 transition-opacity">
+                    <div class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5 shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1L12.5 8.5L20 11L12.5 13.5L10 21L7.5 13.5L0 11L7.5 8.5L10 1Z" />
+                            <path d="M19.5 3L20.5 6L23.5 7L20.5 8L19.5 11L18.5 8L15.5 7L18.5 6L19.5 3Z" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">hamet</span>
+                </a>
+            </div>
+
+            <!-- Content Placeholder -->
+            <div id="content-container" class="prose prose-neutral prose-headings:font-display prose-headings:font-bold prose-headings:text-charcoal prose-p:text-charcoal/80 prose-a:text-charcoal prose-li:text-charcoal/80 max-w-none">
+                <h1>Privacy Policy for Health Log</h1>
+                <p><strong>Last Updated:</strong> April 4, 2026</p>
+
+                <h2>1. Introduction</h2>
+                <p>Welcome to Health Log ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains how your personal and health information is collected, used, shared, and stored when you use our mobile application.</p>
+
+                <h2>2. Information We Collect</h2>
+                <p>We collect information to provide and improve our services. The types of data we collect include:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Account Information:</strong> Email address, name, and profile pictures (via Google Sign-In, Apple Sign-In, or email).</li>
+                    <li><strong>Profile Data:</strong> Age, gender, height, and weight.</li>
+                    <li><strong>Health & Medical Data:</strong> Information you choose to log, including symptoms, medications, schedules, medication adherence (taken/skipped), doctor profiles, and medical notes.</li>
+                    <li><strong>Usage & Device Data:</strong> Application crashes, diagnostic data, device type, OS version, and app language.</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p>We use your data exclusively to provide and enhance the app's functionality:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>To store and display your health logs across your devices.</li>
+                    <li>To generate downloadable health reports (PDFs) upon your request.</li>
+                    <li>To send you push notifications to remind you to take your medications.</li>
+                    <li>To power the in-app AI Assistant, which may process your health queries to provide relevant information.</li>
+                    <li>To process subscription access and premium features.</li>
+                </ul>
+
+                <h2>4. Third-Party Services</h2>
+                <p>We do not sell your personal or medical data to third parties. However, we use trusted third-party services to operate the app. These services process data according to their own privacy policies:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Google Firebase & Google Cloud:</strong> Used for secure database storage (Firestore), user authentication, and crash reporting.</li>
+                    <li><strong>RevenueCat:</strong> Used to securely manage in-app purchases and premium subscriptions without accessing your medical data.</li>
+                    <li><strong>Expo:</strong> Used to deliver local and push notifications to your device.</li>
+                    <li><strong>AI Providers (e.g., OpenAI / Gemini):</strong> If you use the in-app AI Assistant, your specific text prompts may be processed by third-party AI APIs to generate responses. We do not use your personal health data to train public AI models.</li>
+                </ul>
+
+                <h2>5. Data Storage and Security</h2>
+                <p>We implement industry-standard security measures (such as Google Firestore Security Rules) to ensure that your data is only accessible by you. Your account data requires secure authentication to be accessed. However, please be aware that no method of electronic transmission or cloud storage is 100% secure.</p>
+
+                <h2>6. Data Deletion and Your Rights</h2>
+                <p>You have the right to access and delete your personal data.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Account Deletion:</strong> You can delete your account and all associated health data permanently at any time by going to Settings &gt; Delete my data inside the app.</li>
+                    <li>Once deleted, your data is completely removed from our active database and cannot be recovered.</li>
+                </ul>
+
+                <h2>7. Important Medical Disclaimer</h2>
+                <p>Health Log is a tracking and organizational tool. It is NOT a medical device and does not provide professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+
+                <h2>8. Children’s Privacy</h2>
+                <p>Our application is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such data, we will take steps to delete it immediately.</p>
+
+                <h2>9. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy, and for significant changes, by placing a prominent notice within the app.</p>
+
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:<br>
+                <strong>Email:</strong> <a href="mailto:hamet.dev@gmail.com">hamet.dev@gmail.com</a></p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
