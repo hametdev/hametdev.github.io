@@ -631,24 +631,38 @@
 
                     <!-- Compact Footer -->
                     <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">
-                        <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
-                            <div
-                                class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
-                                <div class="flex items-center gap-2">
-                                    <p>© 2026 Hamet Agency. All rights reserved.</p>
-                                </div>
-                                <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6">
-                                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
-                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">EN</a>
-                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">PL</a>
-                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">HR</a>
-                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">RU</a>
+    <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
+        <div class="flex flex-col w-full max-w-[1000px] gap-1 md:gap-2 text-white/50 text-sm">
+            
+            <!-- Первая строка (Адрес с флагом слева, Языки справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Адрес -->
+                <div class="flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 16 12" class="rounded-[2px] shadow-sm border border-white/10"><rect width="16" height="12" fill="#fff"/><rect width="16" height="6" y="6" fill="#dc143c"/></svg>
+                    <span class="tracking-wide text-white/50">Poland, Warsaw, Korotyńskiego 20</span>
+                </div>
+                <!-- Языки -->
+                <div class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
+                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">EN</a>
+                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">PL</a>
+                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">HR</a>
+                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">RU</a>
                                     </nav>
-                                    <a class="hover:text-cream transition-colors" href="privacy.html">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                </div>
+            </div>
+            
+            <!-- Вторая строка (Копирайт слева, Политика справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Copyright -->
+                <p>© 2026 Hamet Agency. All rights reserved.</p>
+                <!-- Privacy Policy -->
+                <a class="hover:text-white transition-colors" href="privacy.html">Privacy Policy</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
                 </div>
             </section>
     </main>

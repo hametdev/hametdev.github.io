@@ -113,43 +113,64 @@
     <link rel="preload" href="fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fonts.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,smart_toy,smartphone&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=arrow_outward,attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,send,smart_toy,smartphone&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,smart_toy,smartphone&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=arrow_outward,attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,send,smart_toy,smartphone&display=swap"
             rel="stylesheet" />
     </noscript>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1c1c1c',
+                        taupe:    '#595552',
+                        cream:    '#f9f8f4',
+                        sand:     '#eae8e4',
+                        accent:   '#d1ccc2',
+                        clay:     '#9e958a',
+                    },
+                    fontFamily: {
+                        display: ['Manrope', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'breathe': 'breathe 8s ease-in-out infinite',
+                        'drift': 'drift 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        breathe: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        },
+                        drift: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '33%': { transform: 'translate(10px, -15px) rotate(3deg)' },
+                            '66%': { transform: 'translate(-15px, 10px) rotate(-3deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="font-display overflow-x-hidden antialiased selection:bg-taupe selection:text-white relative">
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 bg-cream/80 z-0"></div>
-        <div
-            class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-sand/70 rounded-full mix-blend-multiply filter blur-[120px] animate-blob opacity-80">
-        </div>
-        <div
-            class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000 opacity-60">
-        </div>
-        <div
-            class="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#E0DDD5]/60 rounded-full mix-blend-multiply filter blur-[80px] animate-drift animation-delay-4000 opacity-70">
-        </div>
-        <div
-            class="absolute bottom-[-20%] right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-taupe/10 rounded-full mix-blend-multiply filter blur-[120px] animate-breathe animation-delay-2000 opacity-50">
-        </div>
-        <div
-            class="absolute bottom-[20%] left-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-clay/20 rounded-full mix-blend-multiply filter blur-[90px] animate-float animation-delay-6000 opacity-40">
-        </div>
-        <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
+        <div class="absolute inset-0 bg-neutral-100 z-0"></div>
     </div>
     <main class="relative z-10">
         <header
             class="fixed top-10 left-0 w-full z-[100] flex justify-center px-4 pointer-events-none transition-all duration-300">
-            <div class="layout-container flex justify-center w-full max-w-[950px]">
-                <div
-                    class="flex flex-1 w-full px-6 py-2 items-center justify-between rounded-3xl pointer-events-auto border border-charcoal/10 shadow-sm"
-                    style="background-color:#ffffff;">
+            <div class="layout-container flex justify-center w-full max-w-[807px]">
+                <div class="flex flex-1 w-full px-6 py-3 items-center justify-between bg-white rounded-full border border-charcoal/10 pointer-events-auto shadow-sm">
                     <a href="/" class="flex items-center gap-3 text-charcoal hover:opacity-80 transition-opacity">
                         <div
                             class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
@@ -163,7 +184,7 @@
                         <span
                             class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</span>
                     </a>
-                    <div class="hidden md:flex flex-1 justify-center gap-2">
+                    <div class="hidden md:flex flex-1 justify-center gap-6">
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
                             href="#services">Usługi</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide"
@@ -177,7 +198,7 @@
                         <a href="/en/"
                             class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">EN</a>
                         <a href="#contact"
-                            class="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-neutral-100 text-charcoal border border-charcoal/15 text-sm font-bold hover:bg-neutral-200/90 transition-colors">
+                            class="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-charcoal text-white text-sm font-bold hover:bg-black transition-colors">
                             <span class="truncate">Porozmawiajmy</span>
                         </a>
                         <button id="mobile-menu-toggle"
@@ -188,10 +209,10 @@
                 </div>
             </div>
         </header>
-        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
-            <div class="relative flex flex-col items-center justify-start min-h-[85vh] w-full overflow-hidden pt-10">
+        <section class="relative flex flex-col min-h-screen w-full pt-14 md:pt-24">
+            <div class="relative flex flex-col items-center justify-start min-h-[88vh] w-full overflow-hidden pt-4">
                 <!-- Left Side hero icons -->
-                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-10 h-10 sm:w-12 sm:h-12 md:w-[3.5rem] md:h-[3.5rem] flex items-center justify-center pointer-events-none opacity-95"
                     style="top: 20%; left: 5%;">
                     <img src="images/rocket-svgrepo-com%20(1).svg" alt="" class="w-full h-full object-contain" width="72"
                         height="72" loading="lazy" decoding="async" aria-hidden="true">
@@ -225,7 +246,7 @@
                 </div>
 
                 <div
-                    class="relative z-30 px-4 md:px-10 flex flex-col items-center max-w-[1000px] text-center space-y-8 mt-10 md:mt-16">
+                    class="relative z-30 px-4 md:px-10 flex flex-col items-center max-w-[1000px] text-center space-y-8 mt-10 md:mt-16 mb-20 md:mb-24">
                     <h1
                         class="text-charcoal text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight font-display w-full text-center relative z-20">
                         Tworzymy <br />
@@ -233,17 +254,15 @@
                             class="font-bold text-charcoal relative h-[2.5em] sm:h-[1.2em] w-full block overflow-visible">
                             <span
                                 class="absolute top-0 left-1/2 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
-                                style="transform: translateX(-50%);" id="text-cycler">Strony internetowe · Aplikacje
-                                mobilne · Integracje AI</span>
+                                style="transform: translateX(-50%);" id="text-cycler">Strony internetowe · Aplikacje mobilne · Integracje AI</span>
                         </span>
                     </h1>
                     <p class="text-charcoal/80 text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
-                        Wysokiej klasy aplikacje internetowe i mobilne, integracja AI i automatyzacja procesów. Tworzymy
-                        cyfrowe doświadczenia, które są naturalne, intuicyjne i niezwykle skuteczne.
+                        Wysokiej klasy aplikacje internetowe i mobilne, integracja AI i automatyzacja procesów. Tworzymy cyfrowe doświadczenia, które są naturalne, intuicyjne i niezwykle skuteczne.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 md:pt-0 relative z-30">
                         <a href="#valuation"
-                            class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button-dark text-sm md:text-base font-medium">
+                            class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-charcoal text-white hover:bg-black text-sm md:text-base font-medium transition-colors">
                             Wycena
                         </a>
                         <a href="#contact"
@@ -252,150 +271,122 @@
                         </a>
                     </div>
                 </div>
-                <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-charcoal/40 z-10">
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 animate-bounce text-charcoal/40 z-10">
                     <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
                 </div>
             </div>
-            <section class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;"
+            <section class="relative py-28 px-4 md:px-10 flex justify-center bg-[#EDEDED]"
                 id="services">
-                <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-16 relative z-10">
-                    <div
-                        class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-charcoal/10 pb-8">
-                        <div class="flex flex-col gap-4 w-full">
-                            <p class="text-taupe font-bold tracking-widest text-xs uppercase">Nasze Kompetencje</p>
-                            <h2
-                                class="text-charcoal text-4xl md:text-5xl font-medium leading-tight font-display whitespace-normal md:whitespace-nowrap">
-                                Rozwój <span class="font-bold">oprogramowania</span> oraz<br class="hidden md:block" />
-                                narzędzi <span class="font-bold">AI</span> dla Twojej firmy
-                            </h2>
+                <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-12 relative z-10">
+                    <div class="flex flex-col items-center text-center gap-5">
+                        <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm">Nasze Kompetencje</p>
+                        <h2 class="text-charcoal text-4xl md:text-5xl lg:text-6xl font-medium leading-tight font-display max-w-4xl">
+                            <span class="font-bold">Rozwój oprogramowania oraz<br class="hidden md:block" />
+                            narzędzi AI dla Twojej firmy</span>
+                        </h2>
+                        <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-4 md:gap-x-12 w-full mb-6">
+                        <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">Zaufali nam:</span>
+                        <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12">
+                            <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">AUFIX.PL</span>
+                            <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">BrinMe</span>
+                            <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">Druk3DWaw.pl</span>
+                            <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">Health Log</span>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                         <!-- Websites & Web Apps -->
                         <a href="tworzenie-stron.html" target="_blank" rel="noopener noreferrer"
-                            class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
-                            style="background: rgba(28, 28, 28, 0.95);">
-                            <!-- Top Decor (Gradient) -->
-                            <div
-                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
-                            </div>
-
-                            <!-- Image Section -->
-                            <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="images/web.webp"
-                                    alt="Projekty i tworzenie stron internetowych oraz aplikacji webowych"
-                                    loading="lazy"
-                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                            class="bg-white w-full rounded-[2rem] p-8 flex flex-col group hover:-translate-y-1 transition-all duration-300 border border-charcoal/10 shadow-sm">
+                            
+                            <div class="flex justify-between items-start w-full mb-8">
+                                <div class="w-20 h-20 rounded-[1.25rem] bg-[#f4f4f4] flex items-center justify-center p-3 transition-colors group-hover:bg-[#ebebeb]">
+                                    <img src="images/laptop-illustration-svgrepo-com.svg"
+                                        alt="Projekty Webowe" loading="lazy" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm">
                                 </div>
+                                <span class="text-charcoal/30 text-lg font-medium font-display">01</span>
                             </div>
 
-                            <div class="p-6 flex flex-col gap-3 relative z-10">
-                                <!-- Header Row -->
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light"
-                                            style="font-size: 20px;">devices</span>
+                            <h3 class="text-charcoal text-2xl font-medium font-display leading-[1.3] mb-4">Strony i<br>aplikacje Webowe</h3>
+                            
+                            <p class="text-charcoal/70 text-[15px] leading-relaxed font-light flex-grow mb-10">
+                                Atrakcyjne wizytówki, strony złożone, i aplikacje internetowe dopasowane do dowolnych urządzeń i potrzeb biznesowych.
+                            </p>
+
+                            <div class="pt-6 border-t border-charcoal/10 flex items-center justify-between mt-auto">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-charcoal/50 text-sm">od</span>
+                                    <span class="text-charcoal text-lg font-medium">799 zł</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-medium text-charcoal/60 group-hover:text-charcoal transition-colors">Szczegóły</span>
+                                    <div class="w-11 h-11 rounded-full border border-charcoal/15 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white group-hover:border-charcoal transition-all duration-300">
+                                        <span class="material-symbols-outlined text-[20px]">arrow_outward</span>
                                     </div>
-                                    <h3 class="text-cream text-xl font-bold font-display leading-none pt-1">Strony i
-                                        aplikacje Webowe</h3>
-                                </div>
-                                <!-- Description -->
-                                <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Atrakcyjne wizytówki, strony złożone, i aplikacje internetowe dopasowane do
-                                    dowolnych urządzeń i potrzeb biznesowych.
-                                </p>
-                                <!-- Price -->
-                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
-                                    <span class="text-cream text-lg font-bold">od 799 zł</span>
                                 </div>
                             </div>
                         </a>
 
-                        <!-- Mobile Apps -->
+                        <!-- Aplikacje Mobilne -->
                         <a href="aplikacje-mobilne.html" target="_blank" rel="noopener noreferrer"
-                            class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
-                            style="background: rgba(28, 28, 28, 0.95);">
-                            <!-- Top Decor (Gradient) -->
-                            <div
-                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
-                            </div>
-
-                            <!-- Image Section -->
-                            <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="images/app.webp"
-                                    alt="Tworzenie aplikacji mobilnych na telefony z systemem iOS oraz Android"
-                                    loading="lazy"
-                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                            class="bg-white w-full rounded-[2rem] p-8 flex flex-col group hover:-translate-y-1 transition-all duration-300 border border-charcoal/10 shadow-sm">
+                            
+                            <div class="flex justify-between items-start w-full mb-8">
+                                <div class="w-20 h-20 rounded-[1.25rem] bg-[#f4f4f4] flex items-center justify-center p-3 transition-colors group-hover:bg-[#ebebeb]">
+                                    <img src="images/phone-android-svgrepo-com.svg"
+                                        alt="Aplikacje Mobilne" loading="lazy" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm">
                                 </div>
+                                <span class="text-charcoal/30 text-lg font-medium font-display">02</span>
                             </div>
 
-                            <div class="p-6 flex flex-col gap-3 relative z-10">
-                                <!-- Header Row -->
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light"
-                                            style="font-size: 20px;">smartphone</span>
+                            <h3 class="text-charcoal text-2xl font-medium font-display leading-[1.3] mb-4">Aplikacje Mobilne</h3>
+                            
+                            <p class="text-charcoal/70 text-[15px] leading-relaxed font-light flex-grow mb-10">
+                                Wieloplatformowe rozwiązania mobilne, jedna aplikacja - dwie platformy. Szybkie wdrozenie, testowanie i publikacja na iOS oraz Android.
+                            </p>
+
+                            <div class="pt-6 border-t border-charcoal/10 flex items-center justify-between mt-auto">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-charcoal/50 text-sm">od</span>
+                                    <span class="text-charcoal text-lg font-medium">2999 zł</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-medium text-charcoal/60 group-hover:text-charcoal transition-colors">Szczegóły</span>
+                                    <div class="w-11 h-11 rounded-full border border-charcoal/15 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white group-hover:border-charcoal transition-all duration-300">
+                                        <span class="material-symbols-outlined text-[20px]">arrow_outward</span>
                                     </div>
-                                    <h3 class="text-cream text-xl font-bold font-display leading-none pt-1">Aplikacje
-                                        Mobilne</h3>
-                                </div>
-                                <!-- Description -->
-                                <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Wieloplatformowe rozwiązania mobilne, jedna aplikacja - dwie platformy. Szybkie
-                                    wdrozenie, testowanie i publikacja na iOS oraz Android.
-                                </p>
-                                <!-- Price -->
-                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
-                                    <span class="text-cream text-lg font-bold">od 2999 zł</span>
                                 </div>
                             </div>
                         </a>
 
-                        <!-- AI Tools -->
+                        <!-- Narzędzia AI -->
                         <a href="integracje-ai.html" target="_blank" rel="noopener noreferrer"
-                            class="glass-panel rounded-3xl flex flex-col group hover:border-white/20 transition-all duration-500 hover:shadow-xl hover:shadow-black/5 relative overflow-hidden"
-                            style="background: rgba(28, 28, 28, 0.95);">
-                            <!-- Top Decor (Gradient) -->
-                            <div
-                                class="absolute top-0 right-0 w-[400px] h-[400px] bg-taupe/20 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3">
-                            </div>
-
-                            <!-- Image Section -->
-                            <div class="h-64 w-full overflow-hidden relative bg-white/5 z-10">
-                                <img src="images/ai.webp"
-                                    alt="Wdrażanie rozwiązań sztucznej inteligencji, AI, LLM i automatyzacji"
-                                    loading="lazy"
-                                    class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700">
-                                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent opacity-80">
+                            class="bg-white w-full rounded-[2rem] p-8 flex flex-col group hover:-translate-y-1 transition-all duration-300 border border-charcoal/10 shadow-sm">
+                            
+                            <div class="flex justify-between items-start w-full mb-8">
+                                <div class="w-20 h-20 rounded-[1.25rem] bg-[#f4f4f4] flex items-center justify-center p-3 transition-colors group-hover:bg-[#ebebeb]">
+                                    <img src="images/robot-svgrepo-com.svg"
+                                        alt="Narzędzia AI" loading="lazy" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-sm">
                                 </div>
+                                <span class="text-charcoal/30 text-lg font-medium font-display">03</span>
                             </div>
 
-                            <div class="p-6 flex flex-col gap-3 relative z-10">
-                                <!-- Header Row -->
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-cream shadow-sm shrink-0 border border-white/5">
-                                        <span class="material-symbols-outlined font-light"
-                                            style="font-size: 20px;">smart_toy</span>
+                            <h3 class="text-charcoal text-2xl font-medium font-display leading-[1.3] mb-4">Narzędzia AI</h3>
+                            
+                            <p class="text-charcoal/70 text-[15px] leading-relaxed font-light flex-grow mb-10">
+                                Integracja modeli językowych, implementacja chatbotów i inteligentnych narzędzi automatyzacji wspierających przepływ pracy w firmie.
+                            </p>
+
+                            <div class="pt-6 border-t border-charcoal/10 flex items-center justify-between mt-auto">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-charcoal/50 text-sm">od</span>
+                                    <span class="text-charcoal text-lg font-medium">999 zł</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-sm font-medium text-charcoal/60 group-hover:text-charcoal transition-colors">Szczegóły</span>
+                                    <div class="w-11 h-11 rounded-full border border-charcoal/15 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white group-hover:border-charcoal transition-all duration-300">
+                                        <span class="material-symbols-outlined text-[20px]">arrow_outward</span>
                                     </div>
-                                    <h3 class="text-cream text-xl font-bold font-display leading-none pt-1">Narzędzia AI
-                                    </h3>
-                                </div>
-                                <!-- Description -->
-                                <p class="text-white/60 text-sm leading-relaxed pl-[3.5rem] font-light">
-                                    Integracja modeli językowych, implementacja chatbotów i inteligentnych narzędzi
-                                    automatyzacji wspierających przepływ pracy w firmie.
-                                </p>
-                                <!-- Price -->
-                                <div class="pl-[3.5rem] pt-2 flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-cream/80 text-2xl">payments</span>
-                                    <span class="text-cream text-lg font-bold">od 999 zł</span>
                                 </div>
                             </div>
                         </a>
@@ -404,188 +395,119 @@
                     <div class="mt-16 text-center max-w-3xl mx-auto px-4">
                         <p class="text-taupe text-lg font-medium leading-relaxed">
                             Nie znalazłeś na liście tego, czego szukasz? <a href="#contact"
-                                class="inline-flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold mx-2 align-middle hover:scale-105 transition-transform duration-300"><span
-                                    class="truncate">Napisz do nas</span></a> – pomożemy niezależnie od wyzwania. Dla
-                            nas nie ma rzeczy niemożliwych!
+                                class="inline-flex items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-charcoal text-white text-sm font-bold mx-2 align-middle hover:scale-105 transition-transform duration-300"><span
+                                    class="truncate">Napisz do nas</span></a> Pomożemy niezależnie od wyzwania. Dla nas nie ma rzeczy niemożliwych!
                         </p>
                     </div>
                 </div>
             </section>
-            <section class="relative py-28 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;"
+            <section class="relative py-28 px-4 md:px-10 flex justify-center bg-[#0e1116] bg-gradient-to-b from-[#0e1116] to-[#14181f]"
                 id="process">
                 <div class="layout-content-container flex flex-col max-w-[1100px] w-full gap-16">
                     <div class="text-center w-full mx-auto space-y-4">
-                        <p class="text-taupe font-bold tracking-widest text-xs uppercase">Jak Pracujemy</p>
+                        <p class="text-white/80 font-bold tracking-widest text-xs uppercase inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm backdrop-blur-sm">Jak Pracujemy</p>
                         <h2
-                            class="text-charcoal text-3xl md:text-4xl font-medium font-display leading-[1.2] whitespace-normal md:whitespace-nowrap">
+                            class="text-cream text-3xl md:text-4xl font-medium font-display leading-[1.2] whitespace-normal md:whitespace-nowrap">
                             Od koncepcji do wdrożenia w trzech krokach
                         </h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                         <div
-                            class="hidden md:block absolute top-12 left-[16%] right-[16%] h-[1px] bg-gradient-to-r from-transparent via-charcoal/20 to-transparent">
+                            class="hidden md:block absolute top-12 left-[16%] right-[16%] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent">
                         </div>
                         <div class="flex flex-col items-center text-center gap-6 relative z-10">
                             <div
-                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display text-charcoal backdrop-blur-md">
-                                01</div>
+                                class="w-24 h-24 rounded-full bg-white/5 border border-white/10 shadow-sm flex items-center justify-center text-2xl font-display text-cream backdrop-blur-md">
+                                <svg viewBox="0 0 24 24" class="w-10 h-10 text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="8" cy="10" r="3" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2"></circle>
+                                    <path d="M5.83,12.12,3,15M8,7a3,3,0,1,0,3,3A3,3,0,0,0,8,7Zm3,10h6m-2-4h2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    <path d="M8,3H20a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
                             <div class="space-y-4 px-4 flex flex-col items-center">
-                                <h3 class="text-xl font-bold text-charcoal font-display">Analiza i Wycena</h3>
-                                <p class="text-taupe text-sm leading-relaxed">Przeprowadzamy szczegółową analizę
-                                    wymagań, dobieramy adekwatne technologie i precyzyjnie szacujemy budżet oraz
-                                    harmonogram prac.</p>
+                                <h3 class="text-xl font-bold text-cream font-display">Analiza i Wycena</h3>
+                                <p class="text-white/60 text-sm leading-relaxed">Przeprowadzamy szczegółową analizę wymagań, dobieramy adekwatne technologie i precyzyjnie szacujemy budżet oraz harmonogram prac.</p>
                                 <a href="#valuation"
-                                    class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-sm font-bold w-fit hover:scale-105 transition-transform duration-300">
+                                    class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-white text-charcoal hover:bg-neutral-200 text-sm font-bold w-fit hover:scale-105 transition-all duration-300">
                                     <span class="truncate">Wycena</span>
                                 </a>
                             </div>
                         </div>
                         <div class="flex flex-col items-center text-center gap-6 relative z-10">
                             <div
-                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display text-charcoal backdrop-blur-md">
-                                02</div>
+                                class="w-24 h-24 rounded-full bg-white/5 border border-white/10 shadow-sm flex items-center justify-center text-2xl font-display text-cream backdrop-blur-md">
+                                <svg viewBox="0 0 24 24" class="w-10 h-10 text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V18C22 19.6569 20.6569 21 19 21H5C3.34315 21 2 19.6569 2 18V6ZM5 5C4.44772 5 4 5.44772 4 6V7H20V6C20 5.44772 19.5523 5 19 5H5ZM4 18V9H20V18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18ZM7.70711 11.2929C7.31658 10.9024 6.68342 10.9024 6.29289 11.2929C5.90237 11.6834 5.90237 12.3166 6.29289 12.7071L7.58579 14L6.29289 15.2929C5.90237 15.6834 5.90237 16.3166 6.29289 16.7071C6.68342 17.0976 7.31658 17.0976 7.70711 16.7071L9.70711 14.7071C10.0976 14.3166 10.0976 13.6834 9.70711 13.2929L7.70711 11.2929Z" fill="currentColor"/>
+                                </svg>
+                            </div>
                             <div class="space-y-2 px-4">
-                                <h3 class="text-xl font-bold text-charcoal font-display">Rozwój</h3>
-                                <p class="text-taupe text-sm leading-relaxed">Budujemy dedykowane rozwiązanie,
-                                    dbając o
-                                    najwyższą jakość kodu i regularnie konsultując postępy, aby projekt spełniał
-                                    Twoje
-                                    oczekiwania.</p>
+                                <h3 class="text-xl font-bold text-cream font-display">Rozwój</h3>
+                                <p class="text-white/60 text-sm leading-relaxed">Budujemy dedykowane rozwiązanie, dbając o najwyższą jakość kodu i regularnie konsultując postępy, aby projekt spełniał Twoje oczekiwania.</p>
                             </div>
                         </div>
                         <div class="flex flex-col items-center text-center gap-6 relative z-10">
                             <div
-                                class="w-24 h-24 rounded-full bg-cream/80 border border-charcoal/5 shadow-sm flex items-center justify-center text-2xl font-display text-charcoal backdrop-blur-md">
-                                03</div>
+                                class="w-24 h-24 rounded-full bg-white/5 border border-white/10 shadow-sm flex items-center justify-center text-2xl font-display text-cream backdrop-blur-md">
+                                <svg viewBox="0 0 500.538 500.538" class="w-10 h-10 text-white" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" d="M444.082,142.644c0-1.045,0-2.09,0-3.135c0-72.098-57.469-129.567-129.567-129.567 c-44.931,0-84.637,22.988-108.669,58.514c-12.539-5.224-26.122-8.359-40.751-8.359c-50.155,0-90.906,34.482-101.355,81.502 C27.167,146.824,0,178.171,0,215.787c0,40.751,33.437,74.188,74.188,74.188h352.131c40.751,0,74.188-33.437,74.188-74.188 C501.551,179.216,476.473,149.959,444.082,142.644z"/>
+                                    <g fill="currentColor" fill-opacity="0.6">
+                                        <polygon points="419.004,434.171 419.004,397.599 334.367,397.599 334.367,288.93 376.163,288.93 376.163,355.803 419.004,355.803 419.004,319.232 480.653,376.701 "/>
+                                        <polygon points="308.245,428.946 250.775,490.595 193.306,428.946 229.878,428.946 229.878,288.93 271.673,288.93 271.673,428.946 "/>
+                                        <polygon points="169.273,288.93 169.273,397.599 83.592,397.599 83.592,434.171 20.898,376.701 83.592,319.232 83.592,355.803 127.478,355.803 127.478,288.93 "/>
+                                    </g>
+                                    <g fill="currentColor" fill-opacity="0.3">
+                                        <rect x="127.478" y="288.93" width="41.796" height="15.673"/>
+                                        <rect x="229.878" y="288.93" width="41.796" height="15.673"/>
+                                        <rect x="334.367" y="288.93" width="41.796" height="15.673"/>
+                                    </g>
+                                </svg>
+                            </div>
                             <div class="space-y-2 px-4">
-                                <h3 class="text-xl font-bold text-charcoal font-display">Wdrożenie</h3>
-                                <p class="text-taupe text-sm leading-relaxed">Kompleksowo wdrażamy gotowy produkt,
-                                    konfigurujemy środowisko produkcyjne i zapewniamy stabilny, bezproblemowy start
-                                    Twojej aplikacji.</p>
+                                <h3 class="text-xl font-bold text-cream font-display">Wdrożenie</h3>
+                                <p class="text-white/60 text-sm leading-relaxed">Kompleksowo wdrażamy gotowy produkt, konfigurujemy środowisko produkcyjne i zapewniamy stabilny, bezproblemowy start Twojej aplikacji.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="relative pt-28 pb-4 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;"
-                id="work">
-                <div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-12">
-                    <div class="flex flex-col gap-3 text-center md:text-left">
-                        <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Wybrane Realizacje
-                        </h2>
-                        <p class="text-taupe text-lg">Zobacz, jak przekształcamy pomysły w rzeczywistość.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Aufix - Car Manager App -->
-                        <a href="https://aufix.pl" target="_blank" rel="noopener noreferrer"
-                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('images/aufix.webp');" role="img"
-                                aria-label="Aplikacja mobilna Aufix do zarządzania kosztami utrzymania samochodu">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                                <span
-                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Mobile
-                                    App</span>
-                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">Aufix</h3>
-                                <p
-                                    class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
-                                    Kompleksowa aplikacja do zarządzania samochodami i sledzeniem kosztów</p>
-                            </div>
-                        </a>
-
-                        <!-- BrinMe - Delivery Marketplace -->
-                        <a href="https://brinme.pl" target="_blank" rel="noopener noreferrer"
-                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('images/brinme.webp');" role="img"
-                                aria-label="Platforma webowa BrinMe łącząca nadawców przesyłek z kierowcami">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                                <span
-                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Web
-                                    app</span>
-                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">BrinMe</h3>
-                                <p
-                                    class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
-                                    Platforma typu marketplace łącząca nadawców z kierowcami</p>
-                            </div>
-                        </a>
-
-                        <!-- Druk3DWaw - 3D Printing -->
-                        <a href="https://druk3dwaw.pl" target="_blank" rel="noopener noreferrer"
-                            class="group block relative rounded-2xl overflow-hidden aspect-[16/11] bg-sand cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-charcoal/10 transition-all duration-500 border border-white/40">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                style="background-image: url('images/druk.webp');" role="img"
-                                aria-label="Aplikacja webowa e-commerce dla drukarni 3D Druk3DWaw">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity">
-                            </div>
-                            <div
-                                class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                                <span
-                                    class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-3">Strona
-                                    internetowa</span>
-                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2 font-display">Druk3DWaw
-                                </h3>
-                                <p
-                                    class="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75 font-light">
-                                    Profesjonalne usługi druku 3D z zamowieniami online</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-8 text-center max-w-3xl mx-auto px-4">
-                        <p class="text-taupe text-lg font-medium leading-relaxed">
-                            Twój projekt może być następny! Oceń go <span class="font-bold">w ciągu kilku
-                                godzin</span>.
-                        </p>
-                    </div>
+            <!-- Valuation / Messenger Section -->
+            <section id="valuation" class="relative py-28 px-4 md:px-10 flex justify-center bg-[#EDEDED] overflow-hidden">
+                <!-- Background animated elements -->
+                <div class="absolute -left-5 md:left-[5%] top-1/4 w-16 h-16 md:w-28 md:h-28 opacity-90 pointer-events-none drop-shadow-2xl animate-float">
+                    <video src="images/Money.webm" autoplay loop muted playsinline class="w-full h-full object-contain"></video>
                 </div>
-            </section>
+                
+                <div class="absolute -right-5 md:right-[5%] bottom-1/4 w-14 h-14 md:w-24 md:h-24 opacity-90 pointer-events-none drop-shadow-2xl animate-float" style="animation-delay: 1.5s;">
+                    <video src="images/3D%20coin.webm" autoplay loop muted playsinline class="w-full h-full object-contain"></video>
+                </div>
 
-            <!-- Valuation / File Drop Section -->
-            <section id="valuation" class="relative pt-16 pb-20 px-4 md:px-10 flex justify-center"
-                style="background-color: #f3f3f1;">
-                <div
-                    class="layout-content-container flex flex-col md:flex-row items-center justify-between max-w-[1000px] w-full gap-12">
-                    <!-- Left: SVG Animation -->
-                    <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-                        <img src="images/valuation-anim.svg"
-                            alt="Ilustracja procesu bezpłatnej i szybkiej wyceny Twojego projektu IT"
-                            class="w-3/4 md:w-full max-w-[345px]" width="345" height="230">
+                <div class="layout-content-container flex flex-col items-center max-w-[800px] w-full gap-10 relative z-10">
+                    <!-- Text Area -->
+                    <div class="space-y-6 flex flex-col text-center w-full">
+                        <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block w-fit self-center bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm relative z-20">Wycena</p>
+                        <h2 class="text-charcoal text-4xl md:text-5xl lg:text-7xl font-medium font-display leading-[1.1] relative z-20">Masz specyfikację<br>lub pomysł?</h2>
+                        <p class="text-taupe text-lg md:text-xl leading-relaxed max-w-2xl mx-auto relative z-20">
+                            <span class="text-charcoal font-medium">Oceń projekt w ciągu dwóch godzin.</span><br>
+                            Wyślij wiadomość bezpośrednio na WhatsApp. To najszybszy sposób na precyzyjną wycenę.
+                        </p>
                     </div>
 
-                    <!-- Right: Content -->
-                    <div class="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
-                        <div class="space-y-2">
-                            <p class="text-taupe font-bold tracking-widest text-xs uppercase">Wycena</p>
-                            <h2 class="text-charcoal text-2xl md:text-3xl font-medium font-display">Masz
-                                specyfikację
-                                lub pomysł?</h2>
-                        </div>
-                        <p class="text-taupe text-lg leading-relaxed">
-                            Prześlij plik lub napisz bezpośrednio na WhatsApp lub e-mail. To najszybszy sposób na
-                            otrzymanie precyzyjnej wyceny Twojego projektu.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="https://wa.me/791474721"
-                                class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
-                                <span class="material-symbols-outlined">attach_file</span>
-                                Wyślij na WhatsApp
-                            </a>
+                    <!-- Messenger fake input -->
+                    <div class="w-full flex flex-col items-center gap-6 mt-4 relative z-30">
+                        <a href="https://wa.me/791474721" target="_blank"
+                            class="w-full max-w-[700px] bg-white rounded-full p-2 pl-6 pr-2 shadow-xl hover:shadow-2xl border border-charcoal/10 hover:border-[#25D366]/50 transition-all duration-300 flex items-center justify-between group cursor-text">
+                            <span class="text-neutral-400 text-base md:text-xl group-hover:text-neutral-500 transition-colors">Napisz do nas na WhatsApp...</span>
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shrink-0 group-hover:scale-105 group-hover:shadow-lg transition-transform cursor-pointer">
+                                <span class="material-symbols-outlined ml-1 text-2xl">send</span>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-2 text-taupe font-medium mt-4">
+                            <span class="opacity-70">lub</span>
                             <a href="mailto:hamet.agency@gmail.com"
-                                class="flex items-center justify-center gap-2 text-charcoal font-semibold hover:opacity-70 transition-opacity">
-                                <span class="material-symbols-outlined">mail</span>
-                                Wyślij mailem
+                                class="flex items-center gap-1.5 text-charcoal hover:opacity-70 transition-opacity border-b border-charcoal/20 hover:border-charcoal pb-0.5">
+                                <span class="material-symbols-outlined text-xl">mail</span>
+                                Wyślij zapytanie e-mail
                             </a>
                         </div>
                     </div>
@@ -593,13 +515,12 @@
             </section>
 
             <!-- FAQ Section -->
-            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;"
+            <section class="relative py-24 px-4 md:px-10 flex justify-center bg-neutral-50"
                 id="faq">
                 <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12 text-charcoal">
-                    <div class="flex flex-col gap-3 text-center md:text-left">
-                        <p class="text-taupe font-bold tracking-widest text-xs uppercase">Wiedza</p>
-                        <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Najczęściej zadawane
-                            pytania (FAQ)</h2>
+                    <div class="flex flex-col gap-6 text-center">
+                        <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block w-fit self-center bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm">Wiedza</p>
+                        <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Najczęściej zadawane pytania (FAQ)</h2>
                     </div>
                     <div class="flex flex-col gap-4">
                         <!-- FAQ Item 1 -->
@@ -612,11 +533,7 @@
                                     class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
                             </summary>
                             <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
-                                Czas realizacji zależy od stopnia skomplikowania projektu. Tworzenie stron
-                                internetowych
-                                zajmuje nam zazwyczaj do 1 tygodnia. Natomiast tworzenie bardziej złożonych
-                                aplikacji
-                                mobilnych i webowych trwa do 1 miesiąca.
+                                Czas realizacji zależy od stopnia skomplikowania projektu. Tworzenie stron internetowych zajmuje nam zazwyczaj do 1 tygodnia. Natomiast tworzenie bardziej złożonych aplikacji mobilnych i webowych trwa do 1 miesiąca.
                             </div>
                         </details>
                         <!-- FAQ Item 2 -->
@@ -629,8 +546,7 @@
                                     class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
                             </summary>
                             <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
-                                Tak, zapewniamy kompleksowe wsparcie techniczne po wdrożeniu. Dbamy o aktualizacje
-                                bezpieczeństwa oraz stabilność stworzonych aplikacji.
+                                Tak, zapewniamy kompleksowe wsparcie techniczne po wdrożeniu. Dbamy o aktualizacje bezpieczeństwa oraz stabilność stworzonych aplikacji.
                             </div>
                         </details>
                         <!-- FAQ Item 3 -->
@@ -643,10 +559,7 @@
                                     class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
                             </summary>
                             <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
-                                Ceny profesjonalnie wdrażanych stron zaczynają się od 799 zł, natomiast aplikacji
-                                mobilnych od 2999 zł. Każdy projekt jest jednak unikalny i złożoność jego wyceny
-                                leży po
-                                stronie technologii, dlatego przygotowujemy szybką i bezpłatną wycenę dla klienta.
+                                Ceny profesjonalnie wdrażanych stron zaczynają się od 799 zł, natomiast aplikacji mobilnych od 2999 zł. Każdy projekt jest jednak unikalny i złożoność jego wyceny leży po stronie technologii, dlatego przygotowujemy szybką i bezpłatną wycenę dla klienta.
                             </div>
                         </details>
                         <!-- FAQ Item 4 -->
@@ -659,9 +572,7 @@
                                     class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
                             </summary>
                             <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
-                                Oczywiście! Zajmujemy się integracją modeli językowych, implementacją chatbotów
-                                inteligentnie obsługujących klientów oraz automatyzacją procesów biznesowych, które
-                                pozwolą zaoszczędzić Twój czas i środki przy działaniu firmy.
+                                Oczywiście! Zajmujemy się integracją modeli językowych, implementacją chatbotów inteligentnie obsługujących klientów oraz automatyzacją procesów biznesowych, które pozwolą zaoszczędzić Twój czas i środki przy działaniu firmy.
                             </div>
                         </details>
 
@@ -675,9 +586,7 @@
                                     class="material-symbols-outlined transition duration-300 group-open:-rotate-180">expand_more</span>
                             </summary>
                             <div class="px-6 pb-6 text-taupe text-base leading-relaxed">
-                                Tak, na życzenie klienta udostępniamy aplikację w wiodących sklepach: Apple App
-                                Store
-                                oraz Google Play. Przed publikacją przeprowadzamy również niezbędne testy.
+                                Tak, na życzenie klienta udostępniamy aplikację w wiodących sklepach: Apple App Store oraz Google Play. Przed publikacją przeprowadzamy również niezbędne testy.
                             </div>
                         </details>
                     </div>
@@ -685,11 +594,11 @@
             </section>
 
             <!-- Floating Contact & Footer Section -->
-            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #EAE8E4;" id="contact">
+            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20 bg-[#EDEDED]" id="contact">
                 <div class="rounded-[2.5rem] overflow-hidden relative z-20 shadow-2xl shadow-charcoal/20 mx-auto max-w-[1400px]"
                     style="background-color: #0e1116;">
 
-                    <!-- Get in Touch -->
+                    <!-- Skontaktuj się -->
                     <div class="relative py-16 md:py-24 px-4 flex justify-center text-cream overflow-hidden">
                         <div
                             class="absolute top-0 right-0 w-[600px] h-[600px] bg-taupe/20 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3">
@@ -701,17 +610,15 @@
                             <h2
                                 class="text-cream text-4xl md:text-7xl font-medium tracking-tight leading-none font-display">
                                 Skontaktuj się</h2>
-                            <p class="text-white/80 text-xl font-light max-w-xl">Napisz do nas bezpośrednio, aby
-                                omówić
-                                Twój projekt.</p>
+                            <p class="text-white/80 text-xl font-light max-w-xl">Napisz do nas bezpośrednio, aby omówić Twój projekt.</p>
                             <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-center px-4">
                                 <a href="mailto:hamet.agency@gmail.com"
-                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 bg-white text-charcoal border border-charcoal/12 text-sm md:text-base font-bold rounded-full hover:scale-105 hover:bg-neutral-50 transition-all duration-300 w-full sm:w-auto md:min-w-[280px]">
                                     <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
                                     hamet.agency@gmail.com
                                 </a>
                                 <a href="https://wa.me/791474721"
-                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                    class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 bg-white text-charcoal border border-charcoal/12 text-sm md:text-base font-bold rounded-full hover:scale-105 hover:bg-neutral-50 transition-all duration-300 w-full sm:w-auto md:min-w-[280px]">
                                     <svg viewBox="0 0 24 24" fill="currentColor"
                                         class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0">
                                         <path
@@ -725,32 +632,45 @@
 
                     <!-- Compact Footer -->
                     <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">
-                        <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
-                            <div
-                                class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
-                                <div class="flex items-center gap-2">
-                                    <p>© 2026 Hamet Agency. All rights reserved.</p>
-                                </div>
-                                <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6">
-                                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
-                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">EN</a>
-                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">PL</a>
-                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">HR</a>
-                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">RU</a>
+    <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
+        <div class="flex flex-col w-full max-w-[1000px] gap-1 md:gap-2 text-white/50 text-sm">
+            
+            <!-- Первая строка (Адрес с флагом слева, Языки справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Адрес -->
+                <div class="flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 16 12" class="rounded-[2px] shadow-sm border border-white/10"><rect width="16" height="12" fill="#fff"/><rect width="16" height="6" y="6" fill="#dc143c"/></svg>
+                    <span class="tracking-wide text-white/50">Polska, Warszawa, Korotyńskiego 20</span>
+                </div>
+                <!-- Языки -->
+                <div class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
+                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">EN</a>
+                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">PL</a>
+                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">HR</a>
+                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">RU</a>
                                     </nav>
-                                    <a class="hover:text-cream transition-colors" href="privacy.html">Polityka
-                                        Prywatności</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                </div>
+            </div>
+            
+            <!-- Вторая строка (Копирайт слева, Политика справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Copyright -->
+                <p>© 2026 Hamet Agency. All rights reserved.</p>
+                <!-- Privacy Policy -->
+                <a class="hover:text-white transition-colors" href="privacy-policy.html">Polityka Prywatności</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
                 </div>
             </section>
     </main>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-[#EAE8E4] z-[100] transform translate-x-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center items-center gap-8 md:hidden">
+        class="fixed inset-0 bg-[#f2f4f7] z-[100] transform translate-x-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center items-center gap-8 md:hidden">
         <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-charcoal">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>

@@ -257,7 +257,7 @@
                         </span>
                     </h1>
                     <p class="text-charcoal/80 text-lg md:text-xl font-normal leading-relaxed max-w-[680px]">
-                        Высококлассные веб- и мобильные приложения, интеграция ИИ и автоматизация процессов. Мы создаем цифровые решения, которые естественны, интуитивно понятны и невероятно эффективны.
+                        Высококлассные веб и мобильные приложения, интеграция ИИ и автоматизация процессов. Мы создаем цифровые решения, которые естественны, интуитивно понятны и невероятно эффективны.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 md:pt-0 relative z-30">
                         <a href="#valuation"
@@ -276,7 +276,7 @@
                     <div class="flex flex-col items-center text-center gap-5">
                         <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm">Наша экспертиза</p>
                         <h2 class="text-charcoal text-4xl md:text-5xl lg:text-6xl font-medium leading-tight font-display max-w-[1150px] w-full">
-                            <span class="font-bold">Разработка сайтов, приложений и ИИ-инструменты<br class="hidden md:block" /> для вашей компании</span>
+                            <span class="font-bold">Разработка сайтов, приложений и ИИ-инструментов<br class="hidden md:block" /> для вашей компании</span>
                         </h2>
                         <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-4 md:gap-x-12 w-full mb-6">
                         <span class="text-charcoal/60 font-bold tracking-wide text-base md:text-lg">Trusted by:</span>
@@ -626,24 +626,37 @@
 
                     <!-- Compact Footer -->
                     <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">
-                        <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
-                            <div
-                                class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
-                                <div class="flex items-center gap-2">
-                                    <p>© 2026 Hamet Agency. Все права защищены.</p>
-                                </div>
-                                <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6">
-                                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
-                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">EN</a>
-                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">PL</a>
-                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">HR</a>
-                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">RU</a>
+    <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
+        <div class="flex flex-col w-full max-w-[1000px] gap-1 md:gap-2 text-white/50 text-sm">
+            <!-- Первая строка (Адрес с флагом слева, Языки справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Адрес -->
+                <div class="flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 16 12" class="rounded-[2px] shadow-sm border border-white/10"><rect width="16" height="12" fill="#fff"/><rect width="16" height="6" y="6" fill="#dc143c"/></svg>
+                    <span class="tracking-wide text-white/50">Польша, Варшава, Korotyńskiego 20</span>
+                </div>
+                <!-- Языки -->
+                <div class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
+                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">EN</a>
+                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">PL</a>
+                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">HR</a>
+                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">RU</a>
                                     </nav>
-                                    <a class="hover:text-cream transition-colors" href="privacy.html">Политика конфиденциальности</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                </div>
+            </div>
+            
+            <!-- Вторая строка (Копирайт слева, Политика справа) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Copyright -->
+                <p>© 2026 Hamet Agency. Все права защищены.</p>
+                <!-- Privacy Policy -->
+                <a class="hover:text-white transition-colors" href="privacy.html">Политика конфиденциальности</a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
                 </div>
             </section>
     </main>
