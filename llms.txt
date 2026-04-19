@@ -1,4 +1,4 @@
-# Hamet Agency
+﻿# Hamet Agency
 
 > Multilingual software house — web development, mobile apps, AI integrations.
 > Languages: Polish (PL) · English (EN) · Russian (RU)
@@ -89,6 +89,37 @@ Hamet Agency — современный software house, специализиру
 - Druk3DWaw — 3D-печать, интернет-магазин (https://druk3dwaw.pl)
 
 ### Главная страница (RU): https://hamet.agency/ru/
+
+
+---
+
+## 🇭🇷 Hrvatski
+
+Hamet Agency je moderna IT agencija specijalizirana za izradu web stranica, mobilnih aplikacija (iOS/Android) i integraciju umjetne inteligencije (AI) u poslovne procese.
+
+### O nama
+Razvijamo napredne web aplikacije, korporativne stranice i alate za automatizaciju temeljene na umjetnoj inteligenciji. Rješavamo složene IT izazove pomoću jednostavnih i fleksibilnih rješenja - brzo i spremno za skaliranje.
+
+### Glavne usluge
+1. **Izrada web stranica** — od 199 €, rok od 1 tjedna
+   - Poslovne vizitke, web trgovine, portali, B2B alati
+   - Detalji: https://hamet.agency/hr/izrada-web-stranica.html
+
+2. **Mobilne aplikacije iOS i Android** — od 749 €, rok od 1 mjeseca
+   - Cross-platform rješenja, puna podrška za objavu u App Store i Google Play
+   - Detalji: https://hamet.agency/hr/mobilne-aplikacije.html
+
+3. **AI alati i automatizacije** — od 249 €
+   - Integracije s OpenAI/Claude/Gemini, RAG, chatbotovi, n8n automatizacija
+   - Detalji: https://hamet.agency/hr/ai-integracije.html
+
+### Primjeri iz portfelja
+- BrinMe — Marketplace (https://brinme.pl)
+- Aufix — Car Manager aplikacija (https://aufix.pl)
+- Druk3DWaw — Web trgovina (https://druk3dwaw.pl)
+
+### Početna stranica (HR): https://hamet.agency/hr/
+
 
 ---
 

@@ -111,9 +111,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="../fonts/Manrope-Latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../fonts.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,smart_toy,smartphone&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=arrow_outward,attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,send,smart_toy,smartphone&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,smart_toy,smartphone&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=arrow_outward,attach_file,close,devices,expand_more,keyboard_arrow_down,mail,menu,payments,send,smart_toy,smartphone&display=swap" rel="stylesheet" />
     </noscript>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -131,6 +131,34 @@
                     fontFamily: {
                         display: ['Manrope', 'sans-serif'],
                     },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'breathe': 'breathe 8s ease-in-out infinite',
+                        'drift': 'drift 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        breathe: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        },
+                        drift: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '33%': { transform: 'translate(10px, -15px) rotate(3deg)' },
+                            '66%': { transform: 'translate(-15px, 10px) rotate(-3deg)' },
+                        }
+                    }
                 }
             }
         }
@@ -140,27 +168,14 @@
 
     <!-- Animated background blobs -->
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 bg-cream/80 z-0"></div>
-        <div class="absolute top-[-20%] left-[-10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-sand/70 rounded-full mix-blend-multiply filter blur-[120px] animate-blob opacity-80"></div>
-        <div class="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-accent/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000 opacity-60"></div>
-        <div class="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-[#E0DDD5]/60 rounded-full mix-blend-multiply filter blur-[80px] animate-drift animation-delay-4000 opacity-70"></div>
-        <div class="absolute bottom-[-20%] right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-taupe/10 rounded-full mix-blend-multiply filter blur-[120px] animate-breathe animation-delay-2000 opacity-50"></div>
-        <div class="absolute bottom-[20%] left-[-10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-clay/20 rounded-full mix-blend-multiply filter blur-[90px] animate-float animation-delay-6000 opacity-40"></div>
-        <div class="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay z-10"></div>
+        <div class="absolute inset-0 bg-neutral-100 z-0"></div>
     </div>
 
     <main class="relative z-10">
-
-        <img src="../images/web.webp" class="absolute top-0 left-0 w-full h-[110vh] object-cover -z-10 opacity-60"
-            alt="Web development and website design" fetchpriority="high">
-        <div class="absolute top-0 left-0 w-full h-[110vh] -z-10"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.45) 15%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,0.15) 100%); backdrop-filter: blur(3px);">
-        </div>
-
         <!-- Navigation -->
         <header class="fixed top-10 left-0 w-full z-[100] flex justify-center px-4 pointer-events-none transition-all duration-300">
-            <div class="layout-container flex justify-center w-full max-w-[680px]">
-                <div class="flex flex-1 w-full px-6 py-2 items-center justify-between glass-nav rounded-3xl pointer-events-auto">
+            <div class="layout-container flex justify-center w-full max-w-[807px]">
+                <div class="flex flex-1 w-full px-6 py-3 items-center justify-between bg-white rounded-full border border-charcoal/10 pointer-events-auto shadow-sm">
                     <a href="/en/" class="flex items-center gap-3 text-charcoal hover:opacity-80 transition-opacity">
                         <div class="size-8 flex items-center justify-center bg-black text-white rounded-lg border border-white/10 shadow-lg shadow-white/5">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -170,16 +185,17 @@
                         </div>
                         <span class="text-charcoal text-xl font-bold leading-tight tracking-tight font-display">hamet</span>
                     </a>
-                    <div class="hidden md:flex flex-1 justify-center gap-2">
+                    <div class="hidden md:flex flex-1 justify-center gap-6">
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#features">Services</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#pricing">Pricing</a>
                         <a class="nav-link text-taupe hover:text-charcoal text-sm font-semibold tracking-wide" href="#faq">FAQ</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a href="#contact" class="hidden sm:flex items-center justify-center overflow-hidden rounded-full h-10 px-6 glass-button-dark text-white text-sm font-bold">
+                        <a href="/en/web-development.html" class="text-sm font-bold text-charcoal hover:text-taupe transition-colors px-2">EN</a>
+                        <a href="#contact" class="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-charcoal text-white text-sm font-bold hover:bg-black transition-colors">
                             <span class="truncate">Contact</span>
                         </a>
-                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/10 text-charcoal backdrop-blur-md border border-white/20">
+                        <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/5 text-charcoal backdrop-blur-md border border-charcoal/10">
                             <span class="material-symbols-outlined">menu</span>
                         </button>
                     </div>
@@ -188,214 +204,263 @@
         </header>
 
         <!-- Hero -->
-        <section class="relative flex flex-col min-h-screen w-full pt-20 md:pt-32">
-            <div class="relative flex flex-col items-center justify-start min-h-[85vh] w-full overflow-hidden pt-10">
-                <div class="relative z-10 px-4 md:px-10 flex flex-col items-center max-w-[900px] text-center space-y-8">
-                    <h1 class="text-white text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight font-display w-full text-center">
+        <section class="relative flex flex-col min-h-screen w-full pt-14 md:pt-24">
+            <div class="relative flex flex-col items-center justify-start min-h-[82vh] w-full overflow-hidden pt-4">
+
+                <!-- Left Side hero icons -->
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-10 h-10 sm:w-12 sm:h-12 md:w-[3.5rem] md:h-[3.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="top: 20%; left: 5%;">
+                    <img src="../images/rocket-svgrepo-com%20(1).svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 50%; left: 8%;">
+                    <img src="../images/laptop-illustration-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="bottom: 25%; left: 15%; animation-duration: 25s;">
+                    <img src="../images/robot-svgrepo-com.svg" alt="" class="w-[72%] h-[72%] object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+
+                <!-- Right Side hero icons -->
+                <div class="absolute animate-float drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="top: 25%; right: 10%; animation-delay: 2s;">
+                    <img src="../images/phone-android-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-breathe drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none hidden sm:flex"
+                    style="top: 45%; right: 8%; animation-delay: 1.5s;">
+                    <img src="../images/keyboard-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="absolute animate-drift drop-shadow-xl hover:scale-110 transition-transform duration-500 z-10 w-14 h-14 sm:w-16 sm:h-16 md:w-[4.5rem] md:h-[4.5rem] flex items-center justify-center pointer-events-none opacity-95"
+                    style="bottom: 20%; right: 15%; animation-duration: 20s; animation-delay: 1s;">
+                    <img src="../images/speaker-svgrepo-com.svg" alt="" class="w-full h-full object-contain" width="72"
+                        height="72" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+
+                <div class="relative z-10 px-4 md:px-20 flex flex-col items-center max-w-[900px] text-center space-y-8 mt-10 md:mt-16 mb-20 md:mb-24">
+                    <h1 class="text-charcoal text-5xl relative z-20 sm:text-6xl md:text-7xl font-bold leading-[1.05] tracking-tight font-display w-full text-center">
                         Website &amp;<br />
-                        <span class="font-bold text-white">Web Development</span>
+                        <span class="font-bold text-charcoal relative z-20">Web Development</span>
                     </h1>
-                    <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed max-w-[620px]">
+                    <p class="text-charcoal/80 text-lg md:text-xl font-normal leading-relaxed max-w-[620px] relative z-20">
                         We design and build websites that look stunning, load instantly, rank on Google, and turn visitors into customers.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center pt-2 relative z-30">
-                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button-dark text-sm md:text-base font-medium">
+                        <a href="#contact" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-charcoal text-white hover:bg-black text-sm md:text-base font-medium transition-colors">
                             Free Quote
                         </a>
-                        <a href="#features" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full glass-button text-sm md:text-base font-medium">
+                        <a href="#features" class="flex h-12 md:h-14 px-6 md:px-8 items-center justify-center rounded-full bg-white text-charcoal border border-charcoal/12 hover:bg-neutral-50 text-sm md:text-base font-medium transition-colors">
                             What we offer
                         </a>
                     </div>
                     <div class="flex flex-wrap gap-8 justify-center pt-4">
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">from 799 PLN</p>
-                            <p class="text-white/60 text-sm mt-1">simple landing page</p>
+                            <p class="text-charcoal text-3xl font-bold font-display relative z-20">from 799 PLN</p>
+                            <p class="text-charcoal/60 text-sm mt-1 relative z-20">simple landing page</p>
                         </div>
-                        <div class="w-px bg-white/20 hidden sm:block"></div>
+                        <div class="w-px bg-charcoal/20 hidden sm:block relative z-20"></div>
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">3–7 days</p>
-                            <p class="text-white/60 text-sm mt-1">delivery time</p>
+                            <p class="text-charcoal text-3xl font-bold font-display relative z-20">3–7 days</p>
+                            <p class="text-charcoal/60 text-sm mt-1 relative z-20">delivery time</p>
                         </div>
-                        <div class="w-px bg-white/20 hidden sm:block"></div>
+                        <div class="w-px bg-charcoal/20 hidden sm:block relative z-20"></div>
                         <div class="text-center">
-                            <p class="text-white text-3xl font-bold font-display">90+</p>
-                            <p class="text-white/60 text-sm mt-1">Google PageSpeed</p>
+                            <p class="text-charcoal text-3xl font-bold font-display relative z-20">90+</p>
+                            <p class="text-charcoal/60 text-sm mt-1 relative z-20">Google PageSpeed</p>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
 
-            <!-- Features section -->
-            <section class="relative py-28 px-4 md:px-10" style="background-color: #f3f3f1;" id="features">
+            <!-- Features -->
+            <section class="relative py-28 px-4 md:px-20 lg:px-24 xl:px-32 bg-white" id="features">
                 <div class="flex flex-col w-full gap-16">
-                    <div class="flex flex-col gap-4 pb-8 max-w-[1000px] mx-auto w-full">
-                        <p class="text-taupe font-bold tracking-widest text-xs uppercase">What we do</p>
+                    <div class="flex flex-col gap-4 pb-8 max-w-[1000px] mx-auto w-full items-center text-center">
+                        <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm">What we do</p>
                         <h2 class="text-charcoal text-4xl md:text-5xl font-medium leading-tight font-display">
-                            Websites that <span class="font-bold">work for you</span>
+                            <span class="font-bold">Websites that work for you</span>
                         </h2>
-                        <p class="text-taupe text-lg max-w-2xl leading-relaxed">
+                        <p class="text-taupe text-[17px] md:text-lg max-w-4xl leading-relaxed">
                             We design and build sites with full SEO baked in from the start — not as an afterthought, but as an integral part of every project. Great looks, speed, and Google visibility go hand in hand.
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-6 md:gap-x-6 md:gap-y-0 md:auto-rows-[minmax(90px,auto)]">
 
                         <!-- Card 1 -->
-                        <div class="md:col-span-2 flex flex-col gap-2">
+                        <div class="md:col-start-1 md:col-span-1 md:row-start-1 md:row-span-2 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">01</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(139,92,246,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(139,92,246,0.14);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M2 17h14"/><rect x="16" y="8" width="6" height="9" rx="1"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">Responsive Design</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#A78BFA;">mobile-first</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex flex-col items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(124,58,237,0.14);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M2 17h14"/><rect x="16" y="8" width="6" height="9" rx="1"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">Your site looks and works perfectly on every device. We design mobile-first — just like Google does when ranking sites in search results.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#A78BFA; background:rgba(139,92,246,0.1);">Mobile</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#A78BFA; background:rgba(139,92,246,0.1);">Tablet</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#A78BFA; background:rgba(139,92,246,0.1);">Desktop</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">Responsive Design</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#7C3AED;">mobile-first</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">Your site looks and works perfectly on every device. We design mobile-first — just like Google does when ranking sites in search results.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#7C3AED; background:rgba(124,58,237,0.1);">Mobile</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#7C3AED; background:rgba(124,58,237,0.1);">Tablet</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#7C3AED; background:rgba(124,58,237,0.1);">Desktop</span>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="md:col-span-1 flex flex-col gap-2">
+                        <div class="md:col-start-3 md:col-span-2 md:row-start-1 md:row-span-1 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">02</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(52,211,153,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(52,211,153,0.12);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-2 8 9-12h-7l3-8z"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">PageSpeed 90+</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#34D399;">Core Web Vitals</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(5,150,105,0.12);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-2 8 9-12h-7l3-8z"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">We optimize images, code and server so your site loads lightning fast. Speed is a key Google ranking signal.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#34D399; background:rgba(52,211,153,0.1);">LCP &lt;2.5s</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#34D399; background:rgba(52,211,153,0.1);">CLS=0</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#34D399; background:rgba(52,211,153,0.1);">FID &lt;100ms</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">PageSpeed 90+</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#059669;">Core Web Vitals</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">We optimize images, code and server so your site loads lightning fast. Speed is a key Google ranking signal.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#059669; background:rgba(5,150,105,0.1);">LCP &lt;2.5s</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#059669; background:rgba(5,150,105,0.1);">CLS=0</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#059669; background:rgba(5,150,105,0.1);">FID &lt;100ms</span>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="md:col-span-1 flex flex-col gap-2">
+                        <div class="md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-1 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">03</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(96,165,250,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(96,165,250,0.12);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">Technical SEO</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#60A5FA;">on-page from day one</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(37,99,235,0.12);">
+                                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">H1–H3 headings, meta tags, alt text, Schema.org, sitemap.xml, robots.txt and Search Console — all ready at launch, no extras.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#60A5FA; background:rgba(96,165,250,0.1);">Schema.org</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#60A5FA; background:rgba(96,165,250,0.1);">Meta Tags</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#60A5FA; background:rgba(96,165,250,0.1);">Sitemap</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">Technical SEO</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#2563EB;">on-page from day one</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">H1–H3 headings, meta tags, alt text, Schema.org, sitemap.xml, robots.txt and Search Console — all ready at launch, no extras.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2563EB; background:rgba(37,99,235,0.1);">Schema.org</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2563EB; background:rgba(37,99,235,0.1);">Meta Tags</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2563EB; background:rgba(37,99,235,0.1);">Sitemap</span>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="md:col-span-2 flex flex-col gap-2">
+                        <div class="md:col-start-4 md:col-span-1 md:row-start-3 md:row-span-2 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">04</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(251,191,36,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(251,191,36,0.12);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">CMS &amp; Content Editing</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#FBBF24;">no coding required</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex flex-col items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(217,119,6,0.12);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">Want to update content yourself? We'll add a CMS panel tailored to your needs — as easy as a document editor, no code involved.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#FBBF24; background:rgba(251,191,36,0.1);">Blog</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#FBBF24; background:rgba(251,191,36,0.1);">News</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#FBBF24; background:rgba(251,191,36,0.1);">Gallery</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">CMS &amp; Editing</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#D97706;">no coding required</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">Want to update content yourself? We'll add a CMS panel tailored to your needs — as easy as a document editor, no code involved.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#D97706; background:rgba(217,119,6,0.1);">Blog</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#D97706; background:rgba(217,119,6,0.1);">News</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#D97706; background:rgba(217,119,6,0.1);">Gallery</span>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="md:col-span-1 flex flex-col gap-2">
+                        <div class="md:col-start-1 md:col-span-2 md:row-start-3 md:row-span-1 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">05</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(244,114,182,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(244,114,182,0.12);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">Forms &amp; Analytics</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#F472B6;">tracking &amp; pixels</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(219,39,119,0.12);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DB2777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">We wire up contact forms, Google Analytics 4, Meta Pixel and GTM — ready to track conversions from day one.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#F472B6; background:rgba(244,114,182,0.1);">GA4</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#F472B6; background:rgba(244,114,182,0.1);">Meta Pixel</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#F472B6; background:rgba(244,114,182,0.1);">GTM</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">Forms &amp; Analytics</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#DB2777;">tracking &amp; pixels</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">We wire up contact forms, Google Analytics 4, Meta Pixel and GTM — ready to track conversions from day one.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#DB2777; background:rgba(219,39,119,0.1);">GA4</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#DB2777; background:rgba(219,39,119,0.1);">Meta Pixel</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#DB2777; background:rgba(219,39,119,0.1);">GTM</span>
+                            </div>
+                        </div>
                         </div>
 
                         <!-- Card 6 -->
-                        <div class="md:col-span-2 flex flex-col gap-2">
+                        <div class="md:col-start-2 md:col-span-2 md:row-start-4 md:row-span-1 flex flex-col gap-2 h-full">
                             <span class="text-[11px] font-mono tracking-wider pl-1 select-none" style="color:rgba(0,0,0,0.25);">06</span>
-                            <div class="flex-1 rounded-3xl p-8 relative overflow-hidden flex flex-col gap-6 hover:scale-105 transition-transform duration-300" style="background: rgba(18,18,18,0.97); border: 1px solid rgba(255,255,255,0.05);">
-                                <div class="absolute top-0 left-0 right-0 h-[2px] rounded-t-3xl" style="background: linear-gradient(90deg, rgba(45,212,191,0.85) 0%, transparent 65%);"></div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(45,212,191,0.12);">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-cream text-xl font-bold font-display leading-snug">Hosting &amp; SSL</h3>
-                                        <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#2DD4BF;">setup &amp; ongoing support</p>
-                                    </div>
+                        <div class="flex-1 rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-4 bg-neutral-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background: rgba(13,148,136,0.12);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                                 </div>
-                                <p class="text-white/50 text-sm leading-relaxed flex-1">We help choose and configure hosting, domain and SSL certificate. After launch we're available — updates, backups and minor fixes whenever needed.</p>
-                                <div class="flex flex-wrap gap-2 pt-5">
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2DD4BF; background:rgba(45,212,191,0.1);">SSL</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2DD4BF; background:rgba(45,212,191,0.1);">Domain</span>
-                                    <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#2DD4BF; background:rgba(45,212,191,0.1);">Hosting</span>
+                                <div>
+                                    <h3 class="text-charcoal text-xl font-bold font-display leading-snug">Hosting &amp; SSL</h3>
+                                    <p class="text-[12px] font-medium mt-0.5 tracking-wide" style="color:#0D9488;">setup &amp; ongoing support</p>
                                 </div>
                             </div>
+                            <p class="text-charcoal/70 text-sm leading-relaxed flex-1">We help choose and configure hosting, domain and SSL certificate. After launch we're available — updates, backups and minor fixes whenever needed.</p>
+                            <div class="flex flex-wrap gap-2 pt-5" style="border-color:rgba(0,0,0,0.05);">
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#0D9488; background:rgba(13,148,136,0.1);">SSL</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#0D9488; background:rgba(13,148,136,0.1);">Domain</span>
+                                <span class="text-[11px] px-4 py-1 rounded-full font-medium" style="color:#0D9488; background:rgba(13,148,136,0.1);">Hosting</span>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Empty Grid Icons -->
+                        <div class="hidden md:flex md:col-start-2 md:col-span-1 md:row-start-1 md:row-span-1 items-center justify-center p-8">
+                            <svg viewBox="0 0 384 512" fill="currentColor" class="w-full max-w-[100px] max-h-[100px] text-neutral-100 hover:scale-105 transition-transform duration-500"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                        </div>
+                        <div class="hidden md:flex md:col-start-4 md:col-span-1 md:row-start-2 md:row-span-1 items-center justify-center p-8">
+                            <svg viewBox="0 0 512 512" fill="currentColor" class="w-full max-w-[100px] max-h-[100px] text-neutral-100 hover:scale-105 transition-transform duration-500"><path d="M325.3 234.3c-13.7 0-24.9-11.9-24.9-26.4s11.1-26.4 24.9-26.4 24.9 11.9 24.9 26.4-11.2 26.4-24.9 26.4zm-143 0c-13.7 0-24.9-11.9-24.9-26.4s11.1-26.4 24.9-26.4 24.9 11.9 24.9 26.4-11.1 26.4-24.9 26.4zm229.4-106l34.8-59c2.8-4.8 1-11-3.9-13.8-4.9-2.9-11.1-1.2-13.9 3.7l-35.3 59.8C352.4 97.4 306.9 84 256 84s-96.4 13.4-137.4 35.1L83.3 59.3c-2.9-4.8-9.1-6.5-13.9-3.7-4.9 2.8-6.6 9-3.9 13.8l34.8 59C42.8 158 4 213 4 277.6h504c0-64.6-38.8-119.6-96.3-149.3zM4 316.4h504V428c0 15.5-12.6 28-28.1 28H32.1C16.6 456 4 443.5 4 428v-111.6z"/></svg>
+                        </div>
+                        <div class="hidden md:flex md:col-start-3 md:col-span-1 md:row-start-3 md:row-span-1 items-center justify-center p-8 pl-12 pb-10">
+                            <svg viewBox="0 0 512 512" fill="currentColor" class="w-full max-w-[100px] max-h-[100px] text-neutral-100 hover:scale-105 transition-transform duration-500"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                        </div>
+                        <div class="hidden md:flex md:col-start-1 md:col-span-1 md:row-start-4 md:row-span-1 items-center justify-center p-8">
+                            <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[100px] max-h-[100px] text-neutral-100 hover:scale-105 transition-transform duration-500">
+                                <circle cx="16" cy="16" r="14" fill="currentColor"/>
+                                <path d="M18.4468 8.65403C18.7494 8.12586 18.5685 7.45126 18.0428 7.14727C17.5171 6.84328 16.8456 7.02502 16.543 7.55318L16.0153 8.47442L15.4875 7.55318C15.1849 7.02502 14.5134 6.84328 13.9877 7.14727C13.462 7.45126 13.2811 8.12586 13.5837 8.65403L14.748 10.6864L11.0652 17.1149H8.09831C7.49173 17.1149 7 17.6089 7 18.2183C7 18.8277 7.49173 19.3217 8.09831 19.3217H18.4324C18.523 19.0825 18.6184 18.6721 18.5169 18.2949C18.3644 17.7279 17.8 17.1149 16.8542 17.1149H13.5997L18.4468 8.65403Z" fill="white"/>
+                                <path d="M11.6364 20.5419C11.449 20.3328 11.0292 19.9987 10.661 19.8888C10.0997 19.7211 9.67413 19.8263 9.45942 19.9179L8.64132 21.346C8.33874 21.8741 8.51963 22.5487 9.04535 22.8527C9.57107 23.1567 10.2425 22.975 10.5451 22.4468L11.6364 20.5419Z" fill="white"/>
+                                <path d="M22.2295 19.3217H23.9017C24.5083 19.3217 25 18.8277 25 18.2183C25 17.6089 24.5083 17.1149 23.9017 17.1149H20.9653L17.6575 11.3411C17.4118 11.5757 16.9407 12.175 16.8695 12.8545C16.778 13.728 16.9152 14.4636 17.3271 15.1839C18.7118 17.6056 20.0987 20.0262 21.4854 22.4468C21.788 22.975 22.4594 23.1567 22.9852 22.8527C23.5109 22.5487 23.6918 21.8741 23.3892 21.346L22.2295 19.3217Z" fill="white"/>
+                            </svg>
                         </div>
 
                     </div>
                 </div>
             </section>
 
-            <!-- Pricing section -->
-            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #EAE8E4;" id="pricing">
-                <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12">
-                    <div class="text-center space-y-4">
-                        <p class="text-taupe font-bold tracking-widest text-xs uppercase">Pricing</p>
-                        <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Transparent pricing</h2>
-                        <p class="text-taupe text-lg max-w-xl mx-auto">Every project is unique — we provide estimates, and you get a detailed free quote within 24h.</p>
+            <!-- Pricing -->
+            <section class="relative py-24 px-4 md:px-20 lg:px-32 md:py-28 flex justify-center bg-[#0e1116] bg-gradient-to-b from-[#0e1116] to-[#14181f]" id="pricing">
+                <div class="layout-content-container flex flex-col max-w-[900px] w-full gap-12">
+                    <div class="flex flex-col items-center text-center gap-5">
+                        <p class="text-white/80 font-bold tracking-widest text-xs uppercase inline-block bg-white/[0.03] backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 shadow-sm">Pricing</p>
+                        <h2 class="text-cream text-4xl md:text-5xl font-medium font-display">Transparent pricing</h2>
+                        <p class="text-white/60 text-lg max-w-xl mx-auto">Every project is unique — we provide estimates, and you get a detailed free quote within 24h.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                        <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col gap-4 border border-charcoal/5">
-                            <p class="text-taupe font-bold tracking-widest text-xs uppercase">Website + SEO</p>
-                            <p class="text-charcoal text-4xl font-bold font-display">from 799 PLN</p>
-                            <p class="text-taupe text-sm leading-relaxed">New business website designed for conversions and optimised for Google from day one.</p>
-                            <ul class="flex flex-col gap-2 mt-2 text-sm text-taupe">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-3xl px-8 py-12 flex flex-col gap-4 border border-white/10 transition-transform duration-300 hover:scale-105">
+                            <p class="text-white/70 font-bold tracking-widest text-xs uppercase">Website + SEO</p>
+                            <p class="text-cream text-4xl font-bold font-display">from 799 PLN</p>
+                            <p class="text-white/70 text-sm leading-relaxed">New business website designed for conversions and optimised for Google from day one.</p>
+                            <ul class="flex flex-col gap-2 mt-2 text-sm text-white/70">
                                 <li>&#10003; Responsive design (mobile-first)</li>
                                 <li>&#10003; PageSpeed 90+ &amp; Core Web Vitals</li>
                                 <li>&#10003; H1–H3 headings &amp; meta tags</li>
@@ -404,12 +469,12 @@
                             </ul>
                         </div>
 
-                        <div class="rounded-3xl p-8 flex flex-col gap-4 border relative overflow-hidden" style="background: rgba(18,18,18,0.97); border-color: rgba(255,255,255,0.05);">
-                            <div class="absolute top-4 right-4 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-widest">Existing site</div>
-                            <p class="text-white/60 font-bold tracking-widest text-xs uppercase">SEO Audit</p>
-                            <p class="text-cream text-4xl font-bold font-display">from 499 PLN</p>
-                            <p class="text-white/60 text-sm leading-relaxed">Have a site that doesn't show up in Google? Full technical audit and implementation of fixes.</p>
-                            <ul class="flex flex-col gap-2 mt-2 text-sm text-white/70">
+                        <div class="rounded-3xl px-8 py-12 flex flex-col gap-4 border relative overflow-hidden bg-white border-white/10 shadow-xl transition-transform duration-300 hover:scale-105">
+                            <div class="absolute top-4 right-4 px-3 py-1 bg-charcoal/5 rounded-full text-charcoal text-[10px] font-bold uppercase tracking-widest">Existing site</div>
+                            <p class="text-taupe font-bold tracking-widest text-xs uppercase">SEO Audit</p>
+                            <p class="text-charcoal text-4xl font-bold font-display">from 499 PLN</p>
+                            <p class="text-taupe text-sm leading-relaxed">Have a site that doesn't show up in Google? Full technical audit and implementation of fixes.</p>
+                            <ul class="flex flex-col gap-2 mt-2 text-sm text-taupe">
                                 <li>&#10003; Technical SEO audit</li>
                                 <li>&#10003; Meta tags &amp; heading optimisation</li>
                                 <li>&#10003; Schema.org structured data</li>
@@ -418,11 +483,11 @@
                             </ul>
                         </div>
 
-                        <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col gap-4 border border-charcoal/5">
-                            <p class="text-taupe font-bold tracking-widest text-xs uppercase">Web Application</p>
-                            <p class="text-charcoal text-4xl font-bold font-display">custom quote</p>
-                            <p class="text-taupe text-sm leading-relaxed">SaaS platforms, client portals, internal tools — complex systems built to spec.</p>
-                            <ul class="flex flex-col gap-2 mt-2 text-sm text-taupe">
+                        <div class="bg-white/[0.03] backdrop-blur-sm rounded-3xl px-8 py-12 flex flex-col gap-4 border border-white/10 transition-transform duration-300 hover:scale-105">
+                            <p class="text-white/70 font-bold tracking-widest text-xs uppercase">Web Application</p>
+                            <p class="text-cream text-4xl font-bold font-display">custom quote</p>
+                            <p class="text-white/70 text-sm leading-relaxed">SaaS platforms, client portals, internal tools — complex systems built to spec.</p>
+                            <ul class="flex flex-col gap-2 mt-2 text-sm text-white/70">
                                 <li>&#10003; Auth &amp; user accounts</li>
                                 <li>&#10003; API &amp; databases</li>
                                 <li>&#10003; Admin panel</li>
@@ -433,7 +498,7 @@
 
                     </div>
                     <div class="text-center">
-                        <a href="#contact" class="inline-flex h-14 px-10 items-center justify-center rounded-full glass-button-dark text-base font-medium">
+                        <a href="#contact" class="inline-flex h-14 px-10 items-center justify-center rounded-full bg-white text-charcoal hover:bg-neutral-200 text-sm md:text-base font-medium transition-colors">
                             Request a free quote
                         </a>
                     </div>
@@ -441,10 +506,10 @@
             </section>
 
             <!-- FAQ -->
-            <section class="relative py-24 px-4 md:px-10 flex justify-center" style="background-color: #f3f3f1;" id="faq">
+            <section class="relative py-24 px-4 md:px-10 flex justify-center bg-neutral-50" id="faq">
                 <div class="layout-content-container flex flex-col max-w-[1000px] w-full gap-12 text-charcoal">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-taupe font-bold tracking-widest text-xs uppercase">FAQ</p>
+                    <div class="flex flex-col gap-6 text-center">
+                        <p class="text-taupe font-bold tracking-widest text-xs uppercase inline-block w-fit self-center bg-white px-4 py-2 rounded-full border border-charcoal/10 shadow-sm">FAQ</p>
                         <h2 class="text-charcoal text-4xl md:text-5xl font-medium font-display">Common questions about web development</h2>
                     </div>
                     <div class="flex flex-col gap-4">
@@ -498,7 +563,7 @@
             </section>
 
             <!-- Contact + Footer -->
-            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20" style="background-color: #EAE8E4;" id="contact">
+            <section class="px-4 md:px-10 pb-4 md:pb-10 pt-20 bg-[#EDEDED]" id="contact">
                 <div class="rounded-[2.5rem] overflow-hidden relative z-20 shadow-2xl shadow-charcoal/20 mx-auto max-w-[1400px]" style="background-color: #0e1116;">
                     <div class="relative py-16 md:py-24 px-4 flex justify-center text-cream overflow-hidden">
                         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-taupe/20 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
@@ -507,11 +572,11 @@
                             <h2 class="text-cream text-4xl md:text-7xl font-medium tracking-tight leading-none font-display">Let's talk</h2>
                             <p class="text-white/80 text-xl font-light max-w-2xl">Tell us about your project and we'll get back to you with a quote within 24 hours.</p>
                             <div class="flex flex-col md:flex-row gap-6 w-full justify-center items-center px-4">
-                                <a href="mailto:hamet.agency@gmail.com" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                <a href="mailto:hamet.agency@gmail.com" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 bg-white text-charcoal border border-charcoal/12 text-sm md:text-base font-bold rounded-full hover:scale-105 hover:bg-neutral-50 transition-all duration-300 w-full sm:w-auto md:min-w-[280px]">
                                     <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
                                     hamet.agency@gmail.com
                                 </a>
-                                <a href="https://wa.me/791474721" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 glass-button glass-button-active text-charcoal text-sm md:text-base font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full sm:w-auto md:min-w-[280px]">
+                                <a href="https://wa.me/791474721" class="flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-5 bg-white text-charcoal border border-charcoal/12 text-sm md:text-base font-bold rounded-full hover:scale-105 hover:bg-neutral-50 transition-all duration-300 w-full sm:w-auto md:min-w-[280px]">
                                     <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0">
                                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                                     </svg>
@@ -520,30 +585,46 @@
                             </div>
                         </div>
                     </div>
-                    <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">
-                        <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
-                            <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] text-white/60 text-sm gap-6">
-                                <p>© 2026 Hamet Agency. All rights reserved.</p>
-                                <div class="flex flex-wrap items-center justify-center md:justify-end gap-4 md:gap-6">
-                                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
-                                        <a href="https://hamet.agency/en/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">EN</a>
-                                        <a href="https://hamet.agency/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">PL</a>
-                                        <a href="https://hamet.agency/hr/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">HR</a>
-                                        <a href="https://hamet.agency/ru/" class="text-xs font-bold tracking-wide text-white/65 hover:text-cream transition-colors">RU</a>
+                    <footer class="bg-[#111111]/50 border-t border-white/5 relative z-20">  
+    <div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
+        <div class="flex flex-col w-full max-w-[1000px] gap-1 md:gap-2 text-white/50 text-sm">
+
+            <!-- Pierwsza linia (Adres z flagą. Języki z prawej) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Adres -->
+                <div class="flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 16 12" class="rounded-[2px] shadow-sm border border-white/10"><rect width="16" height="12" fill="#fff"/><rect width="16" height="6" y="6" fill="#dc143c"/></svg>
+                    <span class="tracking-wide text-white/50">Poland, Warsaw, Korotyńskiego 20</span>
+                </div>
+                <!-- Języki -->
+                <div class="flex items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <nav class="flex items-center gap-3 md:gap-4" aria-label="Languages">
+                                        <a href="https://hamet.agency/en/web-development.html" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">EN</a>
+                                        <a href="https://hamet.agency/tworzenie-stron.html" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">PL</a>
+                                        <a href="https://hamet.agency/hr/izrada-web-stranica.html" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">HR</a>
+                                        <a href="https://hamet.agency/ru/razrabotka-saytov.html" class="text-xs font-bold tracking-wide text-white/50 hover:text-white transition-colors">RU</a>
                                     </nav>
-                                    <a href="/en/" class="hover:text-cream transition-colors">Home</a>
-                                    <a href="/en/privacy.html" class="hover:text-cream transition-colors">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                </div>
+            </div>
+
+            <!-- Druga linia (Copyright. Polityka z prawej) -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-1 w-full">
+                <!-- Copyright -->
+                <p>© 2026 Hamet Agency. All rights reserved.</p>
+                <!-- Privacy Policy -->
+                <a class="hover:text-white transition-colors" href="privacy.html">Privacy Policy</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
                 </div>
             </section>
 
         </section>
     </main>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#EAE8E4] z-[100] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 bg-[#f2f4f7] z-[100] transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center gap-8 md:hidden">
         <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-charcoal">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
